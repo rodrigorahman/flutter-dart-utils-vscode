@@ -1,24 +1,38 @@
 {
 	"name": "flutter-dart-utils",
-	"displayName": "flutter_dart_utils",
-	"description": "utilities for working with dart and flutter",
+	"displayName": "Flutter And Dart Utils",
+	"description": "Flutter And Dart Utilities, Clean Architecture Helper",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.1",
+	"version": "0.0.6",
+	"bugs": {
+		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
+		"email": "rodrigorahman@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode"
+	},
 	"engines": {
 		"vscode": "^1.46.0"
 	},
+	"keywords": [
+		"dart",
+		"flutter",
+		"clean architecture"
+	],
 	"categories": [
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.clean-architecture-folders"
+		"onCommand:extension.clean-architecture-folders",
+		"workspaceContains:**/pubspec.yaml"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
 				"command": "extension.clean-architecture-folders",
-				"title": "Clean Arc.: New Feature Backend "
+				"title": "Clean Arch.: New Feature Backend "
 			}
 		],
 		"menus": {
@@ -32,10 +46,10 @@
 		},
 		"snippets": [
 			{
-			  "language": "dart",
-			  "path": "./snippets/dart.json"
+				"language": "dart",
+				"path": "./snippets/dart.json"
 			}
-		  ]
+		]
 	},
 	"scripts": {
 		"lint": "eslint .",
@@ -52,6 +66,9 @@
 		"mocha": "^7.1.1",
 		"typescript": "^3.8.3",
 		"vscode-test": "^1.3.0",
+		"mkdirp": "^1.0.4"
+	},
+	"dependencies": {
 		"mkdirp": "^1.0.4"
 	}
 }

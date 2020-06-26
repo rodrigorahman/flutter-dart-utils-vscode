@@ -1,8 +1,13 @@
 # flutter-dart-utils README
 
-Extensão que vai facilitar sua vida na criação de testes, interfaces, classes e para trabalhar com clean architecture criando as pastas principais
+Extensão para facilitar sua vida na criação de testes, interfaces, classes e para trabalhar com clean architecture tendo a possiblidade de criar features
+
+## Installation
+Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=RodrigoRahman.flutter-dart-utils) or by [searching within VSCode](https://code.visualstudio.com/docs/editor/extension-gallery#_search-for-an-extension).
 
 ## Features
+
+![demo](https://github.com/rodrigorahman/flutter-dart-utils-vscode/clean-example.gif)
 
 ## Snippets Usage
 

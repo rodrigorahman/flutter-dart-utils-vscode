@@ -28,40 +28,43 @@ function activate(context) {
 
 	let disposable = vscode.commands.registerCommand("extension.clean-architecture-folders", async function (uri) {
 		const featureName = await promptForFeatureName();
-		mkdirp(uri.fsPath + '/' + featureName)
-		const baseUrl = uri.fsPath + '/' + featureName
-		mkdirp(baseUrl + '/data')
-			.then(() => {
-				mkdirp(baseUrl + '/data/datasource')
-				mkdirp(baseUrl + '/data/repository')
-			})
-			.catch((err) => console.log(err));
-
-		mkdirp(baseUrl + '/domain')
-			.then(() => {
-				mkdirp(baseUrl + '/domain/entities')
-				mkdirp(baseUrl + '/domain/ports')
-				mkdirp(baseUrl + '/domain/usecases')
-			})
-			.catch((err) => console.log(err));
-
-		mkdirp(baseUrl + '/presentation')
-			.then(() => {
-				mkdirp(baseUrl + '/presentation/controllers')
-				mkdirp(baseUrl + '/presentation/models')
-			})
-			.catch((err) => console.log(err));
+		if(featureName) {
+			mkdirp(uri.fsPath + '/' + featureName)
+			const baseUrl = uri.fsPath + '/' + featureName
+			mkdirp(baseUrl + '/data')
+				.then(() => {
+					mkdirp(baseUrl + '/data/datasource')
+					mkdirp(baseUrl + '/data/repository')
+				})
+				.catch((err) => console.log(err));
+	
+			mkdirp(baseUrl + '/domain')
+				.then(() => {
+					mkdirp(baseUrl + '/domain/entities')
+					mkdirp(baseUrl + '/domain/ports')
+					mkdirp(baseUrl + '/domain/usecases')
+				})
+				.catch((err) => console.log(err));
+	
+			mkdirp(baseUrl + '/presentation')
+				.then(() => {
+					mkdirp(baseUrl + '/presentation/controllers')
+					mkdirp(baseUrl + '/presentation/models')
+				})
+				.catch((err) => console.log(err));
+		}
+		
 	});
 
 	context.subscriptions.push(disposable);
 }
 
 function promptForFeatureName(){
-	const blocNamePromptOptions = {
+	const FeatureNamePromptOptions = {
 		prompt: "Feature Clean Architecture Name",
 		placeHolder: "Feature Name"
 	};
-	return vscode.window.showInputBox(blocNamePromptOptions);
+	return vscode.window.showInputBox(FeatureNamePromptOptions);
 }
 exports.activate = activate;
 
