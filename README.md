@@ -7,7 +7,7 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 
 ## Features
 
-![demo](https://github.com/rodrigorahman/flutter-dart-utils-vscode/blob/master/clean-example.gif)
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean-example.gif)
 
 ## Snippets Usage
 
