@@ -11,13 +11,13 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 
 ## Snippets Usage
 
-| Shortcut                      | Description                                          |
-| ----------------------------- | ---------------------------------------------------- |
-| `freezed`                     | Creates a Freezed class                              |
-| `freezed_json_serializable`   | Creates a Freezed with JsonSerializable              |
-| `interface`                   | Creates a Interfaces                                 |
-| `class_interface`             | Creates a Classes with interface                     |
-| `dart_test_init`              | Creates a dart tests                                 |
+| Shortcut                         | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| `fu-freezed`                     | Creates a Freezed class                              |
+| `fu-freezed_json_serializable`   | Creates a Freezed with JsonSerializable              |
+| `fu-interface`                   | Creates a Interfaces                                 |
+| `fu-class_interface`             | Creates a Classes with interface                     |
+| `fu-test_init`                   | Creates a dart tests                                 |
 
 ## Requirements
 
