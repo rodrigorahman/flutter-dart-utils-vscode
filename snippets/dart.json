@@ -1,0 +1,67 @@
+{
+	// Place your snippets for dart here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"freezed": {
+		"prefix": "freezed",
+		"body": [
+			"import 'package:freezed_annotation/freezed_annotation.dart';",
+			"",
+			"part '$TM_FILENAME_BASE.freezed.dart';",
+			"",
+			"@freezed",
+			"abstract class $1 with _$$1 {",
+			"   factory $1($2) = _$1;",
+			"}"
+		],
+		"description": "Freezed snippet"
+	},
+	"freezed_json_serializable": {
+		"prefix": "freezed_json_serializable",
+		"body": [
+			"import 'package:freezed_annotation/freezed_annotation.dart';",
+			"",
+			"part '$TM_FILENAME_BASE.freezed.dart';",
+			"part '$TM_FILENAME_BASE.g.dart';",
+			"",
+			"@freezed",
+			"abstract class $1 with _$$1 {",
+			"   factory $1($2) = _$1;",
+			"   factory $1.fromJson(Map<String, dynamic> json) => _$$1FromJson(json);"	,
+			"}"
+		],
+		"description": "Freezed snippet with jsonSerializable"
+	},
+	"interface": {
+		"prefix": "interface",
+		"body": [
+			"abstract class I$1 {",
+			"}"
+		],
+		"description": "Freezed snippet with jsonSerializable"
+	},
+	"class_interface": {
+		"prefix": "class_interface",
+		"body": [
+			"class $1 implements I$1 {",
+			"}"
+		],
+		"description": "Freezed snippet with jsonSerializable"
+	},
+	"dart_test_init": {
+		"prefix": "dart_test_init",
+		"body": [
+			"",
+			"void main() {",
+			"",
+			"  setUp((){});",
+			""  ,
+			"  test('$1', () async {});",
+			"",
+			"}",
+		],
+		"description": "Test Dart Init"
+	},
+}
