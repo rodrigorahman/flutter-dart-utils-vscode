@@ -17,6 +17,7 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-freezed_json_serializable`   | Creates a Freezed with JsonSerializable              |
 | `fu-interface`                   | Creates a Interfaces                                 |
 | `fu-class_interface`             | Creates a Classes with interface                     |
+| `fu-callable-class`              | Creates a Callable Classes                           |
 | `fu-test_init`                   | Creates a dart tests                                 |
 
 ## Requirements

@@ -1,9 +1,9 @@
 {
 	"name": "flutter-dart-utils",
-	"displayName": "Flutter And Dart Utils",
-	"description": "Flutter And Dart Utilities, Clean Architecture Helper",
+	"displayName": "Flutter & Dart Utilities",
+	"description": "Flutter & Dart Utilities, Clean Architecture Helper",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.9",
+	"version": "0.0.11",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@gmail.com"

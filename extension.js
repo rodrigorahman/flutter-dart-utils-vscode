@@ -28,7 +28,7 @@ function activate(context) {
 
 	let disposable = vscode.commands.registerCommand("extension.clean-architecture-folders", async function (uri) {
 		const featureName = await promptForFeatureName();
-		if(featureName) {
+		if (featureName) {
 			mkdirp(uri.fsPath + '/' + featureName)
 			const baseUrl = uri.fsPath + '/' + featureName
 			mkdirp(baseUrl + '/data')
@@ -37,7 +37,7 @@ function activate(context) {
 					mkdirp(baseUrl + '/data/repository')
 				})
 				.catch((err) => console.log(err));
-	
+
 			mkdirp(baseUrl + '/domain')
 				.then(() => {
 					mkdirp(baseUrl + '/domain/entities')
@@ -45,7 +45,7 @@ function activate(context) {
 					mkdirp(baseUrl + '/domain/usecases')
 				})
 				.catch((err) => console.log(err));
-	
+
 			mkdirp(baseUrl + '/presentation')
 				.then(() => {
 					mkdirp(baseUrl + '/presentation/controllers')
@@ -53,13 +53,14 @@ function activate(context) {
 				})
 				.catch((err) => console.log(err));
 		}
-		
+
 	});
 
 	context.subscriptions.push(disposable);
 }
 
-function promptForFeatureName(){
+
+function promptForFeatureName() {
 	const FeatureNamePromptOptions = {
 		prompt: "Feature Clean Architecture Name",
 		placeHolder: "Feature Name"
@@ -71,7 +72,10 @@ exports.activate = activate;
 // this method is called when your extension is deactivated
 function deactivate() { }
 
+
 module.exports = {
 	activate,
 	deactivate
 }
+
+
