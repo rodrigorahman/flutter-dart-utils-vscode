@@ -3,7 +3,7 @@
 	"displayName": "Flutter & Dart Utilities",
 	"description": "Flutter & Dart Utilities, Clean Architecture Helper",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.11",
+	"version": "0.0.12",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@gmail.com"
@@ -33,6 +33,10 @@
 			{
 				"command": "extension.clean-architecture-folders",
 				"title": "Clean Arch.: New Feature Backend "
+			},
+			{
+				"command": "extension.clean-architecture-folders-for-flutter",
+				"title": "Clean Arch.: New Feature Flutter "
 			}
 		],
 		"menus": {
@@ -40,6 +44,11 @@
 				{
 					"when": "explorerResourceIsFolder",
 					"command": "extension.clean-architecture-folders",
+					"group": "YourGroup@1"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.clean-architecture-folders-for-flutter",
 					"group": "YourGroup@1"
 				}
 			]

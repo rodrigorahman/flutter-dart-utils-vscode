@@ -56,7 +56,37 @@ function activate(context) {
 
 	});
 
+	let cleanForFlutter = vscode.commands.registerCommand("extension.clean-architecture-folders-for-flutter", async function (uri) {
+		const featureName = await promptForFeatureName();
+		if (featureName) {
+			mkdirp(uri.fsPath + '/' + featureName)
+			const baseUrl = uri.fsPath + '/' + featureName
+			mkdirp(baseUrl + '/data')
+				.then(() => {
+					mkdirp(baseUrl + '/data/datasource')
+					mkdirp(baseUrl + '/data/repository')
+				})
+				.catch((err) => console.log(err));
+
+			mkdirp(baseUrl + '/domain')
+				.then(() => {
+					mkdirp(baseUrl + '/domain/entities')
+					mkdirp(baseUrl + '/domain/ports')
+					mkdirp(baseUrl + '/domain/usecases')
+				})
+				.catch((err) => console.log(err));
+
+			mkdirp(baseUrl + '/presentation')
+				.then(() => {
+					mkdirp(baseUrl + '/presentation/pages')
+				})
+				.catch((err) => console.log(err));
+		}
+
+	});
+
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(cleanForFlutter);
 }
 
 
