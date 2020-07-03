@@ -37,19 +37,28 @@
 			{
 				"command": "extension.clean-architecture-folders-for-flutter",
 				"title": "Clean Arch.: New Feature Flutter "
-			}
+			},
+			{
+				"command": "extension.generateTestFile",
+                "title": "Generate Test Folder"
+            }
 		],
 		"menus": {
 			"explorer/context": [
 				{
 					"when": "explorerResourceIsFolder",
 					"command": "extension.clean-architecture-folders",
-					"group": "YourGroup@1"
+					"group": "FlutterUtils@1"
 				},
 				{
 					"when": "explorerResourceIsFolder",
 					"command": "extension.clean-architecture-folders-for-flutter",
-					"group": "YourGroup@1"
+					"group": "FlutterUtils@2"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.generateTestFile",
+					"group": "FlutterUtils@3"
 				}
 			]
 		},

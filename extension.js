@@ -85,7 +85,14 @@ function activate(context) {
 
 	});
 
+	let disposableGenerateTest = vscode.commands.registerCommand('extension.generateTestFile', async (uri) => {
+		const pathTest = uri.fsPath.replace('/lib/', '/test/');
+		mkdirp(pathTest)
+		vscode.window.showInformationMessage('Test Folder Generate' + pathTest);
+	  });
+
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(disposableGenerateTest);
 	context.subscriptions.push(cleanForFlutter);
 }
 
