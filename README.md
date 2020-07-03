@@ -11,7 +11,7 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean-example.gif)
 
 ### Generate Folders Clean Architecture for Flutter
-![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean-generate_flutter.gif)
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean_generate_flutter.gif)
 
 ### Generate Folders for test
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_folder_test_flutter.gif)
