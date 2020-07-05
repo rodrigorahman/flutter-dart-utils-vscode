@@ -24,7 +24,7 @@
 			"@freezed",
 			"abstract class $1 with _$$1 {",
 			"   factory $1($2) = _$1;",
-			"   factory $1.fromJson(Map<String, dynamic> json) => _$$1FromJson(json);"	,
+			"   factory $1.fromJson(Map<String, dynamic> json) => _$$1FromJson(json);",
 			"}"
 		],
 		"description": "Freezed snippet with jsonSerializable"
@@ -53,7 +53,7 @@
 			"void main() {",
 			"",
 			"  setUp((){});",
-			""  ,
+			"",
 			"  test('$1', () async {});",
 			"",
 			"}"
@@ -69,5 +69,5 @@
 			"}"
 		],
 		"description": "Test Dart Init"
-	},
+	}
 }

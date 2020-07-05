@@ -27,6 +27,16 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-callable-class`              | Creates a Callable Classes                           |
 | `fu-test_init`                   | Creates a dart tests                                 |
 
+## Modular Snippets
+
+| Shortcut                         | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| `fu-mcr`                         | Creates router with page                             |
+| `fu-mr`                          | Creates router module                                |
+| `fu-mir`                         | Creates router module with Modular.initialRoute      |
+| `fu-mirp`                        | Creates router page with Modular.initialRoute        |
+
+
 ## Requirements
 
 

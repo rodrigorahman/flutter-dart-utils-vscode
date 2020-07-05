@@ -1,0 +1,26 @@
+{
+	"modular-child-router": {
+		"prefix": "fu-mcr",
+		"body": [
+			"Router($1, child: (context, args) => $2)"
+		]
+	},
+	"modular-router": {
+		"prefix": "fu-mr",
+		"body": [
+			"Router($1, module: $2),"
+		]
+	},
+	"modular-inital-router": {
+		"prefix": "fu-mir",
+		"body": [
+			"Router(Modular.initialRoute, module: $2),"
+		]
+	},
+	"modular-inital-page-router": {
+		"prefix": "fu-mipr",
+		"body": [
+			"Router(Modular.initialRoute, child: (context, args) => $2)"
+		]
+	}
+}
