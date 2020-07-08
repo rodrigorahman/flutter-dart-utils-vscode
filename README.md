@@ -5,6 +5,7 @@ Extension that assists in the creation of tests, interfaces, classes and to work
 * Dart Snippets
 * Modular Snippets
 * Cubit Snippets
+* Flutter_bloc Snippets
 
 ## Installation
 Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=RodrigoRahman.flutter-dart-utils) or by [searching within VSCode](https://code.visualstudio.com/docs/editor/extension-gallery#_search-for-an-extension).
@@ -28,6 +29,13 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-mr`                          | Creates router module                                |
 | `fu-mir`                         | Creates router module with Modular.initialRoute      |
 | `fu-mirp`                        | Creates router page with Modular.initialRoute        |
+
+## Flutter Bloc Snippets
+
+| Shortcut                         | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| `fu-bloctransform`               | Override transformEvents method                      |
+
 
 ## Cubit Snippets
 

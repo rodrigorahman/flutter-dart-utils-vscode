@@ -1,0 +1,12 @@
+{
+	"flutter_bloc-transformEvents": {
+		"prefix": "fu-bloctransform",
+		"body": [
+			"@override",
+			" Stream<Transition<$1Event, $1State>> transformEvents(events, transitionFn) {",
+			"  $1",
+			"  return super.transformEvents(events, transitionFn);",
+			"}"
+		]
+	}
+}
