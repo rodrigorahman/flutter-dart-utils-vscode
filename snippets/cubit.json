@@ -1,0 +1,20 @@
+{
+	"cubit-onTransitional": {
+		"prefix": "fu-cubitot",
+		"body": [
+			"@override",
+			"void onTransition(Transition transition) {",
+			"  $1",
+			"  super.onTransition(transition);",
+			"}"
+		]
+	},
+	"cubit-action": {
+		"prefix": "fu-cubitaction",
+		"body": [
+			"void $1($2){",
+			"$3",
+			"}"
+		]
+	}
+}

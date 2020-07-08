@@ -1,20 +1,13 @@
 # flutter-dart-utils README
 
-Extension that assists in the creation of tests, interfaces, classes and to work with clean architecture having the possibility to create features and create folder tests
+Extension that assists in the creation of tests, interfaces, classes and to work with clean architecture having the possibility to create features and create folder tests.
+
+* Dart Snippets
+* Modular Snippets
+* Cubit Snippets
 
 ## Installation
 Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=RodrigoRahman.flutter-dart-utils) or by [searching within VSCode](https://code.visualstudio.com/docs/editor/extension-gallery#_search-for-an-extension).
-
-## Features
-
-### Generate Folders Clean Architecture for Backend
-![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean-example.gif)
-
-### Generate Folders Clean Architecture for Flutter
-![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean_generate_flutter.gif)
-
-### Generate Folders for test
-![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_folder_test_flutter.gif)
 
 ## Snippets Usage
 
@@ -35,6 +28,25 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-mr`                          | Creates router module                                |
 | `fu-mir`                         | Creates router module with Modular.initialRoute      |
 | `fu-mirp`                        | Creates router page with Modular.initialRoute        |
+
+## Cubit Snippets
+
+| Shortcut                         | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| `fu-cubitot`                     | Override onTransition method                         |
+| `fu-cubitaction`                 | Create cubit function action                         |
+
+
+## Features
+
+### Generate Folders Clean Architecture for Backend
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean-example.gif)
+
+### Generate Folders Clean Architecture for Flutter
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean_generate_flutter.gif)
+
+### Generate Folders for test
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_folder_test_flutter.gif)
 
 
 ## Requirements
