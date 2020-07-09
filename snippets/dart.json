@@ -69,5 +69,26 @@
 			"}"
 		],
 		"description": "Test Dart Init"
+	},
+	"dart_class_equatable": {
+		"prefix": "fu-class-equatable",
+		"body": [
+			"import 'package:equatable/equatable.dart';",
+			"",
+			"class ${1:${TM_FILENAME_BASE/^(.)([a-zA-Z0-9]*)([-_.])(.*)/${1:/pascalcase}${2}${4:/pascalcase}/}} extends Equatable {",
+			"",
+			"  @override",
+			"  List<Object> get props => [];",
+			"}"
+		]
+	},
+	"dart_class": {
+		"prefix": "fu-class",
+		"body": [
+			"",
+			"class ${1:${TM_FILENAME_BASE/^(.)([a-zA-Z0-9]*)([-_.])(.*)/${1:/pascalcase}${2}${4:/pascalcase}/}} {",
+			"  $2",
+			"}"
+		]
 	}
 }

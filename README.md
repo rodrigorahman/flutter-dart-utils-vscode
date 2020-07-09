@@ -20,6 +20,8 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-class_interface`             | Creates a Classes with interface                     |
 | `fu-callable-class`              | Creates a Callable Classes                           |
 | `fu-test_init`                   | Creates a dart tests                                 |
+| `fu-class`                       | Creates class with file name                         |
+| `fu-class-equatable`             | Creates class with file name and add Equatable       |
 
 ## Modular Snippets
 
