@@ -7,8 +7,8 @@
 			"part '$TM_FILENAME_BASE.freezed.dart';",
 			"",
 			"@freezed",
-			"abstract class $1 with _$$1 {",
-			"   factory $1($2) = _$1;",
+			"abstract class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} with _$${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
+			"   factory ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}($2) = _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}};",
 			"}"
 		],
 		"description": "Freezed snippet"
@@ -22,9 +22,9 @@
 			"part '$TM_FILENAME_BASE.g.dart';",
 			"",
 			"@freezed",
-			"abstract class $1 with _$$1 {",
-			"   factory $1($2) = _$1;",
-			"   factory $1.fromJson(Map<String, dynamic> json) => _$$1FromJson(json);",
+			"abstract class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} with _$${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
+			"   factory ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}($2) = _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}};",
+			"   factory ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}.fromJson(Map<String, dynamic> json) => _$${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}FromJson(json);",
 			"}"
 		],
 		"description": "Freezed snippet with jsonSerializable"
@@ -32,7 +32,7 @@
 	"interface": {
 		"prefix": "fu-interface",
 		"body": [
-			"abstract class I$1 {",
+			"abstract class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
 			"}"
 		],
 		"description": "Freezed snippet with jsonSerializable"
@@ -40,7 +40,7 @@
 	"class_interface": {
 		"prefix": "fu-class_interface",
 		"body": [
-			"class $1 implements I$1 {",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} implements I${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
 			"}"
 		],
 		"description": "Freezed snippet with jsonSerializable"
@@ -64,7 +64,7 @@
 		"prefix": "fu-callable-class",
 		"body": [
 			"",
-			"class $1 {",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
 			"  $2 call($3) {}",
 			"}"
 		],
