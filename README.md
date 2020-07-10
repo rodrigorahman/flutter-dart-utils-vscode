@@ -23,6 +23,13 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-class`                       | Creates class with file name                         |
 | `fu-class-equatable`             | Creates class with file name and add Equatable       |
 
+## Aqueduct Snippets
+
+| Shortcut                         | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| `fu-aqu-operation`               | Creates aqueduct operation                           |
+
+
 ## Modular Snippets
 
 | Shortcut                         | Description                                          |

@@ -1,0 +1,12 @@
+{
+	"aqueduct-create-operation": {
+		"prefix": "fu-aqu-operation",
+		"body": [
+			"@Operation.$1($2)",
+			"Future<Response> $3($4) async {",
+			"  return Response.ok({});",
+			"}"
+		]
+	}
+	
+}
