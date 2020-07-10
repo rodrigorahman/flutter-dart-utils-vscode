@@ -35,7 +35,7 @@
 			"abstract class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
 			"}"
 		],
-		"description": "Freezed snippet with jsonSerializable"
+		"description": "Create abstrct class 'interface'"
 	},
 	"class_interface": {
 		"prefix": "fu-class_interface",
@@ -43,7 +43,7 @@
 			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} implements I${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
 			"}"
 		],
-		"description": "Freezed snippet with jsonSerializable"
+		"description": "Create class with interface"
 	},
 	"dart_test_init": {
 		"prefix": "fu-test_init",
@@ -68,7 +68,7 @@
 			"  $2 call($3) {}",
 			"}"
 		],
-		"description": "Test Dart Init"
+		"description": "Create callable class"
 	},
 	"dart_class_equatable": {
 		"prefix": "fu-class-equatable",
@@ -80,7 +80,8 @@
 			"  @override",
 			"  List<Object> get props => [];",
 			"}"
-		]
+		],
+		"description": "create class with equatable"
 	},
 	"dart_class": {
 		"prefix": "fu-class",
@@ -89,6 +90,7 @@
 			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
 			"  $2",
 			"}"
-		]
+		],
+		"description": "Create class"
 	}
 }

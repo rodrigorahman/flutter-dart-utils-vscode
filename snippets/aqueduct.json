@@ -13,10 +13,10 @@
 		"body": [
 			"import 'package:aqueduct/aqueduct.dart';",
 			"",
-			"class $1 extends Serializable {",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends Serializable {",
 			"  @override",
 			"  Map<String, dynamic> asMap() {",
-			"    return {}",
+			"    return {};",
 			"  }",
 			"",
 			"  @override",
