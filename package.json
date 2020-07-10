@@ -3,7 +3,7 @@
 	"displayName": "Flutter & Dart Utilities",
 	"description": "Flutter & Dart Utilities, Clean Architecture Helper",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.21",
+	"version": "0.0.22",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@gmail.com"
@@ -78,6 +78,10 @@
 			{
 				"language": "dart",
 				"path": "./snippets/flutter_bloc.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/aqueduct.json"
 			}
 		]
 	},
