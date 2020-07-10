@@ -7,6 +7,24 @@
 			"  return Response.ok({});",
 			"}"
 		]
+	},
+	"aqueduct-create-serialization": {
+		"prefix": "fu-aqu-serializable",
+		"body": [
+			"import 'package:aqueduct/aqueduct.dart';",
+			"",
+			"class $1 extends Serializable {",
+			"  @override",
+			"  Map<String, dynamic> asMap() {",
+			"    return {}",
+			"  }",
+			"",
+			"  @override",
+			"  void readFromMap(Map<String, dynamic> object) {",
+			"    ",
+			"  }",
+			"}"
+		]
 	}
 	
 }

@@ -28,6 +28,7 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | Shortcut                         | Description                                          |
 | -------------------------------- | ---------------------------------------------------- |
 | `fu-aqu-operation`               | Creates aqueduct operation                           |
+| `fu-aqu-serializable`            | Creates aqueduct class serializable                  |
 
 
 ## Modular Snippets
