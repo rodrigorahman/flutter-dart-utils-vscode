@@ -11,7 +11,7 @@
 			"           appBar: AppBar(title: Text('$1'),),",
 			"           body: Container(),",
 			"       );",
-			"  };",
+			"  }",
 			"}"
 		],
 		"description": "Create Stateles Component with name of file and import material"
