@@ -10,7 +10,7 @@ Extension that assists in the creation of tests, interfaces, classes and to work
 ## Installation
 Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=RodrigoRahman.flutter-dart-utils) or by [searching within VSCode](https://code.visualstudio.com/docs/editor/extension-gallery#_search-for-an-extension).
 
-## Snippets Usage
+## Dart Snippets Usage
 
 | Shortcut                         | Description                                          |
 | -------------------------------- | ---------------------------------------------------- |
@@ -23,7 +23,13 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-class`                       | Creates class with file name                         |
 | `fu-class-equatable`             | Creates class with file name and add Equatable       |
 
-## Aqueduct Snippets
+
+## Flutter  Snippets Usage
+| Shortcut                         | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| `fu-stl`                         | Create StatelessWidget with Scaffold and AppBar      |
+
+## Aqueduct Snippets Usage
 
 | Shortcut                         | Description                                          |
 | -------------------------------- | ---------------------------------------------------- |
@@ -31,7 +37,7 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-aqu-serializable`            | Creates aqueduct class serializable                  |
 
 
-## Modular Snippets
+## Modular Snippets Usage
 
 | Shortcut                         | Description                                          |
 | -------------------------------- | ---------------------------------------------------- |
@@ -40,14 +46,14 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-mir`                         | Creates router module with Modular.initialRoute      |
 | `fu-mirp`                        | Creates router page with Modular.initialRoute        |
 
-## Flutter Bloc Snippets
+## Flutter Bloc Snippets Usage
 
 | Shortcut                         | Description                                          |
 | -------------------------------- | ---------------------------------------------------- |
 | `fu-bloctransform`               | Override transformEvents method                      |
 
 
-## Cubit Snippets
+## Cubit Snippets Usage
 
 | Shortcut                         | Description                                          |
 | -------------------------------- | ---------------------------------------------------- |

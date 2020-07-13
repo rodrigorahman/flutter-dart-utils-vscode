@@ -1,0 +1,19 @@
+{
+	"statelessWidget": {
+		"prefix": "fu-stl",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends StatelessWidget {",
+			"   @override",
+			"   Widget build(BuildContext context) {",
+			"       return Scaffold(",
+			"           appBar: AppBar(title: Text('$1'),),",
+			"           body: Container(),",
+			"       );",
+			"  };",
+			"}"
+		],
+		"description": "Create Stateles Component with name of file and import material"
+    }
+}
