@@ -3,9 +3,10 @@
 Extension that assists in the creation of tests, interfaces, classes and to work with clean architecture having the possibility to create features and create folder tests.
 
 * Dart Snippets
+* Flutter Snippets
 * Modular Snippets
 * Cubit Snippets
-* Flutter_bloc Snippets
+* flutter_bloc Snippets
 
 ## Installation
 Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=RodrigoRahman.flutter-dart-utils) or by [searching within VSCode](https://code.visualstudio.com/docs/editor/extension-gallery#_search-for-an-extension).
@@ -62,6 +63,13 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 
 
 ## Features
+
+### Generate Dart Interface
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_interface_flutter.gif)
+
+### Generate Dart Class
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_class_flutter.gif)
+
 
 ### Generate Folders Clean Architecture for Backend
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean-example.gif)

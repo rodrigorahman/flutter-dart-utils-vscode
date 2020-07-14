@@ -3,7 +3,7 @@
 	"displayName": "Flutter & Dart Utilities",
 	"description": "Flutter & Dart Utilities, Clean Architecture Helper",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.26",
+	"version": "0.0.27",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@gmail.com"
@@ -40,25 +40,43 @@
 			},
 			{
 				"command": "extension.generateTestFile",
-                "title": "Generate Test Folder"
-            }
+				"title": "Generate Test Folder"
+			},
+			{
+				"command": "extension.generateInterface",
+				"title": "Create Dart Interface"
+			},
+			{
+				"command": "extension.generateClass",
+				"title": "Create Dart Class"
+			}
 		],
 		"menus": {
 			"explorer/context": [
 				{
 					"when": "explorerResourceIsFolder",
+					"command": "extension.generateClass",
+					"group": "1_modification@1"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.generateInterface",
+					"group": "1_modification@2"
+				},
+				{
+					"when": "explorerResourceIsFolder",
 					"command": "extension.clean-architecture-folders",
-					"group": "FlutterUtils@1"
+					"group": "1_modification@3"
 				},
 				{
 					"when": "explorerResourceIsFolder",
 					"command": "extension.clean-architecture-folders-for-flutter",
-					"group": "FlutterUtils@2"
+					"group": "1_modification@4"
 				},
 				{
 					"when": "explorerResourceIsFolder",
 					"command": "extension.generateTestFile",
-					"group": "FlutterUtils@3"
+					"group": "1_modification@5"
 				}
 			]
 		},
@@ -107,6 +125,7 @@
 		"mkdirp": "^1.0.4"
 	},
 	"dependencies": {
+		"lodash": "^4.17.19",
 		"mkdirp": "^1.0.4"
 	}
 }
