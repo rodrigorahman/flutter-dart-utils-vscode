@@ -4,7 +4,6 @@ const vscode = require('vscode');
 const mkdirp = require('mkdirp');
 const fs = require('fs');
 const _ = require('lodash');
-const { createPrinter } = require('typescript');
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -188,15 +187,6 @@ function promptForFeatureName() {
 	return vscode.window.showInputBox(FeatureNamePromptOptions);
 }
 
-function promptForPathName(value) {
-	const FeatureNamePromptOptions = {
-		prompt: "Path",
-		placeHolder: "Path Name",
-		value: value,
-		valueSelection: [value.length, value.length],
-	};
-	return vscode.window.showInputBox(FeatureNamePromptOptions);
-}
 
 exports.activate = activate;
 

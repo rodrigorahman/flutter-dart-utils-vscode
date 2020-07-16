@@ -29,6 +29,7 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | Shortcut                         | Description                                          |
 | -------------------------------- | ---------------------------------------------------- |
 | `fu-stl`                         | Create StatelessWidget with Scaffold and AppBar      |
+| `fu-stf`                         | Create StatefulWidget with Scaffold and AppBar       |
 
 ## Aqueduct Snippets Usage
 

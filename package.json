@@ -3,7 +3,7 @@
 	"displayName": "Flutter & Dart Utilities",
 	"description": "Flutter & Dart Utilities, Clean Architecture Helper",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.28",
+	"version": "0.0.29",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@gmail.com"
@@ -27,7 +27,7 @@
 		"onCommand:extension.clean-architecture-folders",
 		"workspaceContains:**/pubspec.yaml"
 	],
-	"main": "./extension.js",
+	"main": "./src/extension.js",
 	"contributes": {
 		"commands": [
 			{

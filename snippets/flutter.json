@@ -15,5 +15,28 @@
 			"}"
 		],
 		"description": "Create Stateles Component with name of file and import material"
+	},
+	"statefulWidget": {
+		"prefix": "fu-stf",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends StatefulWidget {",
+			"  @override",
+			"  _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}State createState() => _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}State();",
+			"},",
+			"",
+			"class _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}State extends State<${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}> {",
+			"",
+			"   @override",
+			"   Widget build(BuildContext context) {",
+			"       return Scaffold(",
+			"           appBar: AppBar(title: Text('$2'),),",
+			"           body: Container(),",
+			"       );",
+			"  }",
+			"}"
+		],
+		"description": "Create Stateles Component with name of file and import material"
     }
 }
