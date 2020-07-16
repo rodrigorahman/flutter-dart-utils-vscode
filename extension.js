@@ -4,6 +4,7 @@ const vscode = require('vscode');
 const mkdirp = require('mkdirp');
 const fs = require('fs');
 const _ = require('lodash');
+const { createPrinter } = require('typescript');
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -114,13 +115,70 @@ function activate(context) {
 		vscode.window.showInformationMessage('Created a Dart Class');
 	});
 
+	context.subscriptions.push(
+		vscode.languages.registerCodeActionsProvider(
+			{ pattern: "**/*.{dart,dartx}", scheme: "file" },
+			new CodeActionProvider()
+		)
+	);
+
+	const implementsInterface = vscode.commands.registerCommand('extension.implementsInterface', async () => {
+		let editor = vscode.window.activeTextEditor;
+		const textFile = editor.document.getText();
+
+		const indexStart = textFile.indexOf('abstract class ');
+		const indexEnd = textFile.indexOf(' {');
+		const interfaceName = textFile.substr(indexStart, indexEnd).replace('abstract class', '').replace(' {', '');
+		const implementationName = interfaceName.replace('I', '');
+		let wsedit = new vscode.WorkspaceEdit();
+		const basePath = editor.document.uri.path.replace(`/${_.snakeCase(interfaceName)}.dart`, '/');
+		// const basePath = await promptForPathName(editor.document.uri.path.replace(`/${_.snakeCase(interfaceName)}.dart`, '/'));
+		if(basePath) {
+			const path = `${basePath}/${_.snakeCase(implementationName)}.dart`;
+			const filePath = vscode.Uri.file(path);
+			wsedit.createFile(filePath);
+			vscode.workspace.applyEdit(wsedit);
+			fs.writeFileSync(path, `import './${_.snakeCase(interfaceName)}.dart';
+	
+class${implementationName} implements ${interfaceName} {
+
+}`, 'utf8');
+	
+			vscode.workspace.openTextDocument(path).then(async doc => {
+				vscode.window.showTextDocument(doc);
+			});
+	
+		}
+	});
+
 	context.subscriptions.push(disposable);
 	context.subscriptions.push(disposableGenerateTest);
 	context.subscriptions.push(cleanForFlutter);
 	context.subscriptions.push(createInterface);
 	context.subscriptions.push(createClass);
+	context.subscriptions.push(implementsInterface);
 }
 
+
+class CodeActionProvider {
+	provideCodeActions() {
+		const editor = vscode.window.activeTextEditor;
+		if (!editor) {
+			return [];
+		}
+
+
+		const textFile = editor.document.getText();
+		const codeActions = [];
+		if (textFile.includes('abstract')) {
+			codeActions.push({
+				command: "extension.implementsInterface",
+				title: "Implements interface"
+			});
+		}
+		return codeActions;
+	}
+}
 
 function promptForFeatureName() {
 	const FeatureNamePromptOptions = {
@@ -129,6 +187,17 @@ function promptForFeatureName() {
 	};
 	return vscode.window.showInputBox(FeatureNamePromptOptions);
 }
+
+function promptForPathName(value) {
+	const FeatureNamePromptOptions = {
+		prompt: "Path",
+		placeHolder: "Path Name",
+		value: value,
+		valueSelection: [value.length, value.length],
+	};
+	return vscode.window.showInputBox(FeatureNamePromptOptions);
+}
+
 exports.activate = activate;
 
 // this method is called when your extension is deactivated

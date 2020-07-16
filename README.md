@@ -70,6 +70,8 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 ### Generate Dart Class
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_class_flutter.gif)
 
+### Implements Dart Interface
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/implements_class_flutter.gif)
 
 ### Generate Folders Clean Architecture for Backend
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean-example.gif)

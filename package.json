@@ -3,7 +3,7 @@
 	"displayName": "Flutter & Dart Utilities",
 	"description": "Flutter & Dart Utilities, Clean Architecture Helper",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.27",
+	"version": "0.0.28",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@gmail.com"
@@ -49,6 +49,10 @@
 			{
 				"command": "extension.generateClass",
 				"title": "Create Dart Class"
+			},
+			{
+				"command": "extension.implementsInterface",
+				"title": "Implements interface"
 			}
 		],
 		"menus": {
@@ -77,6 +81,10 @@
 					"when": "explorerResourceIsFolder",
 					"command": "extension.generateTestFile",
 					"group": "1_modification@5"
+				},
+				{
+					"command": "extension.implementsInterface",
+					"when": "editorLangId == dart"
 				}
 			]
 		},
