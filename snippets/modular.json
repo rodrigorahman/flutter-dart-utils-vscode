@@ -22,5 +22,11 @@
 		"body": [
 			"Router(Modular.initialRoute, child: (context, args) => $2)"
 		]
+	},
+	"modular-bind": {
+		"prefix": "fu-bind",
+		"body": [
+			"Bind((i) => $1($2))"
+		]
 	}
 }
