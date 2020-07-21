@@ -24,7 +24,7 @@
 		]
 	},
 	"modular-bind": {
-		"prefix": "fu-bind",
+		"prefix": "fu-mbind",
 		"body": [
 			"Bind((i) => $1($2)),"
 		]
