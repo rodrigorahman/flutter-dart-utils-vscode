@@ -7,6 +7,7 @@ Extension that assists in the creation of tests, interfaces, classes and to work
 * Modular Snippets
 * Cubit Snippets
 * flutter_bloc Snippets
+* Mockito Snippets
 
 ## Installation
 Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=RodrigoRahman.flutter-dart-utils) or by [searching within VSCode](https://code.visualstudio.com/docs/editor/extension-gallery#_search-for-an-extension).
@@ -65,6 +66,16 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-cubitaction`                 | Create cubit function action                         |
 
 
+## Mockito Snippets Usage
+
+| Shortcut                         | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| `fu-test-when-async`             | Add when mockito async                               |
+| `fu-test-when`                   | Add when mockito sync                                |
+| `fu-test-when-throw`             | Add when mockito sync                                |
+
+
+
 ## Features
 
 ### Generate Dart Interface
@@ -96,3 +107,4 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 
 
 ## Release Notes
+* 0.0.34 - Add snippets for mockito

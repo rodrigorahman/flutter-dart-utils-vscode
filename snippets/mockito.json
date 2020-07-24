@@ -1,0 +1,23 @@
+{
+	"test_init_when_async": {
+		"prefix": "fu-test-when-async",
+		"body": [
+			"when($1).thenAnswer((_) async => $2);"
+		],
+		"description": "Add when mockito async"
+    },
+    "test_init_when": {
+		"prefix": "fu-test-when",
+		"body": [
+			"when($1).thenReturn($2);"
+		],
+		"description": "Test add when mockito"
+    },
+    "test_init_when_throw": {
+		"prefix": "fu-test-when-throw",
+		"body": [
+			"when($1).thenThrow($2);"
+		],
+		"description": "Test add when mockito"
+	}
+}

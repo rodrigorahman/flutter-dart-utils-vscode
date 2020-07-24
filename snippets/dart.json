@@ -92,5 +92,12 @@
 			"}"
 		],
 		"description": "Create class"
+	},
+	"test_init_when_async": {
+		"prefix": "fu-test-when-async",
+		"body": [
+			"when($1).thenAnswer((_) async => $2);"
+		],
+		"description": "Test add when mockito"
 	}
 }
