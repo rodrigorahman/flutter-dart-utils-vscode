@@ -14,7 +14,7 @@
 		"description": "Freezed snippet"
 	},
 	"freezed_json_serializable": {
-		"prefix": "fu-freezed_json_serializable",
+		"prefix": "fu-freezed-json-serializable",
 		"body": [
 			"import 'package:freezed_annotation/freezed_annotation.dart';",
 			"",
@@ -38,7 +38,7 @@
 		"description": "Create abstrct class 'interface'"
 	},
 	"class_interface": {
-		"prefix": "fu-class_interface",
+		"prefix": "fu-class-interface",
 		"body": [
 			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} implements I${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
 			"}"
@@ -46,7 +46,7 @@
 		"description": "Create class with interface"
 	},
 	"dart_test_init": {
-		"prefix": "fu-test_init",
+		"prefix": "fu-d-test-init",
 		"body": [
 			"import 'package:test/test.dart';",
 			"",

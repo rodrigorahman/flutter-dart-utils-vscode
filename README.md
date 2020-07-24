@@ -16,11 +16,11 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | Shortcut                         | Description                                          |
 | -------------------------------- | ---------------------------------------------------- |
 | `fu-freezed`                     | Creates a Freezed class                              |
-| `fu-freezed_json_serializable`   | Creates a Freezed with JsonSerializable              |
+| `fu-freezed-json-serializable`   | Creates a Freezed with JsonSerializable              |
 | `fu-interface`                   | Creates a Interfaces                                 |
-| `fu-class_interface`             | Creates a Classes with interface                     |
+| `fu-class-interface`             | Creates a Classes with interface                     |
 | `fu-callable-class`              | Creates a Callable Classes                           |
-| `fu-test_init`                   | Creates a dart tests                                 |
+| `fu-d-test-init`                 | Creates a dart tests                                 |
 | `fu-class`                       | Creates class with file name                         |
 | `fu-class-equatable`             | Creates class with file name and add Equatable       |
 
@@ -30,6 +30,7 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | -------------------------------- | ---------------------------------------------------- |
 | `fu-stl`                         | Create StatelessWidget with Scaffold and AppBar      |
 | `fu-stf`                         | Create StatefulWidget with Scaffold and AppBar       |
+| `fu-f-test-init`                 | Creates a dart tests                                 |
 
 ## Aqueduct Snippets Usage
 
@@ -95,9 +96,3 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 
 
 ## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...

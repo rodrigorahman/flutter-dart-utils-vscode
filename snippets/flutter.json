@@ -38,5 +38,20 @@
 			"}"
 		],
 		"description": "Create Stateles Component with name of file and import material"
-    }
+	},
+	"flutter_test_init": {
+		"prefix": "fu-f-test-init",
+		"body": [
+			"import 'package:flutter_test/flutter_test.dart';",
+			"",
+			"void main() {",
+			"",
+			"  setUp((){});",
+			"",
+			"  test('$1', () async {});",
+			"",
+			"}"
+		],
+		"description": "Test Dart Init"
+	}
 }
