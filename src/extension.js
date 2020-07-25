@@ -22,14 +22,19 @@ function activate(context) {
 			mkdirp(baseUrl + '/data')
 				.then(() => {
 					mkdirp(baseUrl + '/data/datasource')
-					mkdirp(baseUrl + '/data/repository')
+					mkdirp(baseUrl + '/data/drivers')
 				})
 				.catch((err) => console.log(err));
+			mkdirp(baseUrl + '/infra').then(() => {
+				mkdirp(baseUrl + '/infra/repository')
+				mkdirp(baseUrl + '/infra/datasources')
+				mkdirp(baseUrl + '/infra/models')
+			})
 
 			mkdirp(baseUrl + '/domain')
 				.then(() => {
 					mkdirp(baseUrl + '/domain/entities')
-					mkdirp(baseUrl + '/domain/ports')
+					mkdirp(baseUrl + '/domain/repositories')
 					mkdirp(baseUrl + '/domain/usecases')
 				})
 				.catch((err) => console.log(err));
@@ -38,10 +43,10 @@ function activate(context) {
 				.then(() => {
 					mkdirp(baseUrl + '/presentation/controllers')
 					mkdirp(baseUrl + '/presentation/models')
+					mkdirp(baseUrl + '/presentation/usecases')
 				})
 				.catch((err) => console.log(err));
 		}
-
 	});
 
 	let cleanForFlutter = vscode.commands.registerCommand("extension.clean-architecture-folders-for-flutter", async function (uri) {
@@ -52,14 +57,19 @@ function activate(context) {
 			mkdirp(baseUrl + '/data')
 				.then(() => {
 					mkdirp(baseUrl + '/data/datasource')
-					mkdirp(baseUrl + '/data/repository')
 				})
 				.catch((err) => console.log(err));
+
+			mkdirp(baseUrl + '/infra').then(() => {
+				mkdirp(baseUrl + '/infra/repository')
+				mkdirp(baseUrl + '/infra/datasources')
+				mkdirp(baseUrl + '/infra/models')
+			})
 
 			mkdirp(baseUrl + '/domain')
 				.then(() => {
 					mkdirp(baseUrl + '/domain/entities')
-					mkdirp(baseUrl + '/domain/ports')
+					mkdirp(baseUrl + '/domain/datasource')
 					mkdirp(baseUrl + '/domain/usecases')
 				})
 				.catch((err) => console.log(err));
@@ -67,6 +77,7 @@ function activate(context) {
 			mkdirp(baseUrl + '/presentation')
 				.then(() => {
 					mkdirp(baseUrl + '/presentation/pages')
+					mkdirp(baseUrl + '/presentation/usecases')
 				})
 				.catch((err) => console.log(err));
 		}
@@ -132,7 +143,7 @@ function activate(context) {
 		let wsedit = new vscode.WorkspaceEdit();
 		const basePath = editor.document.uri.path.replace(`/${_.snakeCase(interfaceName)}.dart`, '/');
 		// const basePath = await promptForPathName(editor.document.uri.path.replace(`/${_.snakeCase(interfaceName)}.dart`, '/'));
-		if(basePath) {
+		if (basePath) {
 			const path = `${basePath}/${_.snakeCase(implementationName)}.dart`;
 			const filePath = vscode.Uri.file(path);
 			wsedit.createFile(filePath);
@@ -142,11 +153,11 @@ function activate(context) {
 class${implementationName} implements ${interfaceName} {
 
 }`, 'utf8');
-	
+
 			vscode.workspace.openTextDocument(path).then(async doc => {
 				vscode.window.showTextDocument(doc);
 			});
-	
+
 		}
 	});
 
