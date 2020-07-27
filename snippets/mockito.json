@@ -19,5 +19,12 @@
 			"when($1).thenThrow($2);"
 		],
 		"description": "Test add when mockito"
+	},
+	"test_mock": {
+		"prefix": "fu-test-mock",
+		"body": [
+			"class $1 extends Mock implements $2 {}"
+		],
+		"description": "Create mock class"
 	}
 }

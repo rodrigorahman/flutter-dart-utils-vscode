@@ -73,6 +73,7 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-test-when-async`             | Add when mockito async                               |
 | `fu-test-when`                   | Add when mockito sync                                |
 | `fu-test-when-throw`             | Add when mockito sync                                |
+| `fu-test-mock`                   | Create a mock class                                  |
 
 
 
@@ -109,3 +110,4 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 ## Release Notes
 * 0.0.34 - Add snippets for mockito
 * 0.0.35 - Restructuring clean architecture folder generation
+* 0.0.36 - New mockito snippet
