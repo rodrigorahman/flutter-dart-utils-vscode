@@ -28,5 +28,15 @@
 		"body": [
 			"Bind((i) => $1($2)),"
 		]
+	},
+	"modular-codegen-inject": {
+		"prefix": "fu-modular_codegen_inject",
+		"body": [
+			"part '${TM_FILENAME_BASE}.g.dart';",
+			"",
+			"@Injectable($1)"
+		]
 	}
+	
+
 }
