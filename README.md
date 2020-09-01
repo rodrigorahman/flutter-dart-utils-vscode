@@ -115,4 +115,4 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 * 0.0.34 - Add snippets for mockito
 * 0.0.35 - Restructuring clean architecture folder generation
 * 0.0.36 - New mockito snippet
-* 0.0.37 - Three layers Folders
+* 0.0.39 - 3-Tiers Folders
