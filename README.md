@@ -94,6 +94,10 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 ### Generate Folders Clean Architecture for Flutter
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean_generate_flutter.gif)
 
+### Generate Folders 3-Tiers Architecture
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_folder_3-tiers.gif)
+
+
 ### Generate Folders for test
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_folder_test_flutter.gif)
 
@@ -111,3 +115,4 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 * 0.0.34 - Add snippets for mockito
 * 0.0.35 - Restructuring clean architecture folder generation
 * 0.0.36 - New mockito snippet
+* 0.0.37 - Three layers Folders

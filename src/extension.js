@@ -161,12 +161,28 @@ class${implementationName} implements ${interfaceName} {
 		}
 	});
 
+
+
+	let threeTiersFolders = vscode.commands.registerCommand("extension.3-tiers", async function (uri) {
+		const featureName = await promptForFeatureName();
+		if (featureName) {
+			mkdirp(uri.fsPath + '/' + featureName)
+			const baseUrl = uri.fsPath + '/' + featureName
+			mkdirp(baseUrl + '/data').catch((err) => console.log(err));
+			mkdirp(baseUrl + '/controller').catch((err) => console.log(err));
+			mkdirp(baseUrl + '/service').catch((err) => console.log(err));
+			mkdirp(baseUrl + '/view_models').catch((err) => console.log(err));
+		}
+
+	});
+
 	context.subscriptions.push(disposable);
 	context.subscriptions.push(disposableGenerateTest);
 	context.subscriptions.push(cleanForFlutter);
 	context.subscriptions.push(createInterface);
 	context.subscriptions.push(createClass);
 	context.subscriptions.push(implementsInterface);
+	context.subscriptions.push(threeTiersFolders);
 }
 
 

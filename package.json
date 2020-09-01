@@ -3,7 +3,7 @@
 	"displayName": "Flutter & Dart Utilities",
 	"description": "Flutter & Dart Utilities, Clean Architecture Helper",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.37",
+	"version": "0.0.38",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@gmail.com"
@@ -39,6 +39,10 @@
 				"title": "Clean Arch.: New Feature Flutter "
 			},
 			{
+				"command": "extension.3-tiers",
+				"title": "3-Tiers: New Feature "
+			},
+			{
 				"command": "extension.generateTestFile",
 				"title": "Generate Test Folder"
 			},
@@ -69,18 +73,23 @@
 				},
 				{
 					"when": "explorerResourceIsFolder",
-					"command": "extension.clean-architecture-folders",
+					"command": "extension.3-tiers",
 					"group": "1_modification@3"
 				},
 				{
 					"when": "explorerResourceIsFolder",
-					"command": "extension.clean-architecture-folders-for-flutter",
+					"command": "extension.clean-architecture-folders",
 					"group": "1_modification@4"
 				},
 				{
 					"when": "explorerResourceIsFolder",
-					"command": "extension.generateTestFile",
+					"command": "extension.clean-architecture-folders-for-flutter",
 					"group": "1_modification@5"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.generateTestFile",
+					"group": "1_modification@6"
 				},
 				{
 					"command": "extension.implementsInterface",
