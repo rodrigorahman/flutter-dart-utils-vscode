@@ -24,7 +24,7 @@
 			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends StatefulWidget {",
 			"  @override",
 			"  _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}State createState() => _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}State();",
-			"},",
+			"}",
 			"",
 			"class _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}State extends State<${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}> {",
 			"",
