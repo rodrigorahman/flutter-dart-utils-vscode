@@ -138,7 +138,7 @@ function activate(context) {
 
 		const indexStart = textFile.indexOf('abstract class ');
 		const indexEnd = textFile.indexOf(' {');
-		const interfaceName = textFile.substr(indexStart, indexEnd).replace('abstract class', '').replace(' {', '');
+		const interfaceName = textFile.substr(indexStart, indexEnd - indexStart).replace('abstract class', '').replace(' {', '');
 		const implementationName = interfaceName.replace('I', '');
 		let wsedit = new vscode.WorkspaceEdit();
 		const basePath = editor.document.uri.path.replace(`/${_.snakeCase(interfaceName)}.dart`, '/');
