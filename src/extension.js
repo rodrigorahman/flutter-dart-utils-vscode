@@ -39,11 +39,11 @@ function activate(context) {
 				})
 				.catch((err) => console.log(err));
 
-			mkdirp(baseUrl + '/presentation')
+			mkdirp(baseUrl + '/presenter')
 				.then(() => {
-					mkdirp(baseUrl + '/presentation/controllers')
-					mkdirp(baseUrl + '/presentation/models')
-					mkdirp(baseUrl + '/presentation/usecases')
+					mkdirp(baseUrl + '/presenter/controllers')
+					mkdirp(baseUrl + '/presenter/models')
+					mkdirp(baseUrl + '/presenter/usecases')
 				})
 				.catch((err) => console.log(err));
 		}
@@ -74,10 +74,13 @@ function activate(context) {
 				})
 				.catch((err) => console.log(err));
 
-			mkdirp(baseUrl + '/presentation')
+			mkdirp(baseUrl + '/ui')
+				.catch((err) => console.log(err));
+
+			mkdirp(baseUrl + '/presenter')
 				.then(() => {
-					mkdirp(baseUrl + '/presentation/pages')
-					mkdirp(baseUrl + '/presentation/usecases')
+					mkdirp(baseUrl + '/presenter/controllers')
+					mkdirp(baseUrl + '/presenter/usecases')
 				})
 				.catch((err) => console.log(err));
 		}
