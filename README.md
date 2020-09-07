@@ -50,6 +50,8 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-mir`                         | Creates router module with Modular.initialRoute      |
 | `fu-mirp`                        | Creates router page with Modular.initialRoute        |
 | `fu-mbind`                       | Create Bind for modular                              |
+| `fu-modular_codegen_inject`      | Modular codegen inject                               |
+| `fu-modular_module`              | Create Module                                        |
 
 ## Flutter Bloc Snippets Usage
 
@@ -119,3 +121,4 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 * 0.0.40 - Bug fix StatefulWidget generate
 * 0.0.41 - Bug fix Implements Interface
 * 0.0.42 - Bug fix folder for clean architecture
+* 0.0.43 - Add news modular snipets
