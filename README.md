@@ -1,6 +1,6 @@
 # flutter-dart-utils README
 
-Extension that assists in the creation of tests, interfaces, classes and to work with clean architecture having the possibility to create features and create folder tests.
+Extension that assists in the creation of tests, interfaces, classes and to work with clean architecture, 3-tiers or MVC having the possibility to create features and create tests folder.
 
 * Dart Snippets
 * Flutter Snippets
@@ -81,26 +81,29 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 
 ## Features
 
-### Generate Dart Interface
+### Generate folders for MVC architecture
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_folder_MVC.gif)
+
+### Generate dart interface
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_interface_flutter.gif)
 
-### Generate Dart Class
+### Generate dart class
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_class_flutter.gif)
 
-### Implements Dart Interface
+### Implements dart interface
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/implements_class_flutter.gif)
 
-### Generate Folders Clean Architecture for Backend
+### Generate folders clean architecture for backend
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean-example.gif)
 
-### Generate Folders Clean Architecture for Flutter
+### Generate folders clean architecture for flutter
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean_generate_flutter.gif)
 
-### Generate Folders 3-Tiers Architecture
+### Generate folders 3-tiers architecture
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_folder_3-tiers.gif)
 
 
-### Generate Folders for test
+### Generate folder for test
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_folder_test_flutter.gif)
 
 
@@ -122,3 +125,4 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 * 0.0.41 - Bug fix Implements Interface
 * 0.0.42 - Bug fix folder for clean architecture
 * 0.0.44 - Add news modular snipets
+* 0.0.45 - MVC new features

@@ -178,6 +178,19 @@ class${implementationName} implements ${interfaceName} {
 		}
 
 	});
+	
+	let MVCFlutterFolders = vscode.commands.registerCommand("extension.mvc-feature", async function (uri) {
+		const featureName = await promptForFeatureName();
+		if (featureName) {
+			mkdirp(uri.fsPath + '/' + featureName)
+			const baseUrl = uri.fsPath + '/' + featureName
+			mkdirp(baseUrl + '/model').catch((err) => console.log(err));
+			mkdirp(baseUrl + '/view_models').catch((err) => console.log(err));
+			mkdirp(baseUrl + '/view').catch((err) => console.log(err));
+			mkdirp(baseUrl + '/controller').catch((err) => console.log(err));
+		}
+
+	});
 
 	context.subscriptions.push(disposable);
 	context.subscriptions.push(disposableGenerateTest);
@@ -186,6 +199,7 @@ class${implementationName} implements ${interfaceName} {
 	context.subscriptions.push(createClass);
 	context.subscriptions.push(implementsInterface);
 	context.subscriptions.push(threeTiersFolders);
+	context.subscriptions.push(MVCFlutterFolders);
 }
 
 
