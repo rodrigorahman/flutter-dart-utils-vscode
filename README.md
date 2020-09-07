@@ -121,4 +121,4 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 * 0.0.40 - Bug fix StatefulWidget generate
 * 0.0.41 - Bug fix Implements Interface
 * 0.0.42 - Bug fix folder for clean architecture
-* 0.0.43 - Add news modular snipets
+* 0.0.44 - Add news modular snipets

@@ -44,13 +44,14 @@
 			"",
 			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends ChildModule {",
 			"",
-			"@override",
-			"List<Bind> get binds => [];",
+			"   @override",
+			"   List<Bind> get binds => [];",
 			"",
-			"@override",
-			"List<ModularRouter> get routers => [];",
+			"   @override",
+			"   List<ModularRouter> get routers => [];",
 			"",
-			"static Inject get to => Inject<${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}>.of();"
+			"   static Inject get to => Inject<${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}>.of();",
+			"}"
 		]
 	}
 	
