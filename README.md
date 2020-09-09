@@ -140,4 +140,3 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
     - New Snippets ChangeNotifier
     - New Snippets ValueNotifier
     - Change Snippets Modular
-* 0.0.47 - Bug fix wrap outside widgets

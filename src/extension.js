@@ -235,10 +235,13 @@ class CodeActionProvider {
 
 		const textFile = editor.document.getText();
 		const codeActions = [];
-		const selection = getSelectedText(editor);
-		const widget = editor.document.getText(selection);
 		
-		if(widget != '') {
+		if (textFile.includes('abstract')) {
+			codeActions.push({
+				command: "extension.implementsInterface",
+				title: "Implements interface"
+			});
+		}else{
 			codeActions.push(
 				{
 					command: "extension.wrap-with-value-notifier",
@@ -250,11 +253,6 @@ class CodeActionProvider {
 					title: "Wrap with Consumer"
 				}
 			);
-		} else if (textFile.includes('abstract')) {
-			codeActions.push({
-				command: "extension.implementsInterface",
-				title: "Implements interface"
-			});
 		}
 
 		return codeActions;
