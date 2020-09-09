@@ -6,6 +6,8 @@ const fs = require('fs');
 const _ = require('lodash');
 const { wrapWithProviderConsumerBuilder, wrapWithValueListenableBuilder } = require('./commands/wrap-with');
 const wrapWith = require('./utils/wrap-with');
+const getSelectedText = require('./utils/get-selected-text');
+const { createPrinter } = require('typescript');
 // import {
 // 	wrapWithProviderConsumerBuilder,
 // 	wrapWithValueListenableBuilder
@@ -233,12 +235,15 @@ class CodeActionProvider {
 
 		const textFile = editor.document.getText();
 		const codeActions = [];
+		const selection = getSelectedText(editor);
+		const widget = editor.document.getText(selection);
+		
 		if (textFile.includes('abstract')) {
 			codeActions.push({
 				command: "extension.implementsInterface",
 				title: "Implements interface"
 			});
-		} else {
+		} else if(widget) {
 			codeActions.push(
 				{
 					command: "extension.wrap-with-value-notifier",
