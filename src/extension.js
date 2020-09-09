@@ -5,9 +5,7 @@ const mkdirp = require('mkdirp');
 const fs = require('fs');
 const _ = require('lodash');
 const { wrapWithProviderConsumerBuilder, wrapWithValueListenableBuilder } = require('./commands/wrap-with');
-const wrapWith = require('./utils/wrap-with');
 const getSelectedText = require('./utils/get-selected-text');
-const { createPrinter } = require('typescript');
 // import {
 // 	wrapWithProviderConsumerBuilder,
 // 	wrapWithValueListenableBuilder
@@ -198,6 +196,10 @@ class${implementationName} implements ${interfaceName} {
 	});
 
 	context.subscriptions.push(
+		vscode.languages.registerCodeActionsProvider(
+			{ pattern: "**/*.{dart,dartx}", scheme: "file" },
+			new CodeActionProvider()
+		),
 		disposable,
 		disposableGenerateTest,
 		cleanForFlutter,
@@ -206,12 +208,9 @@ class${implementationName} implements ${interfaceName} {
 		implementsInterface,
 		threeTiersFolders,
 		MVCFlutterFolders,
-		vscode.commands.registerCommand('extension.wrap-with-value-notifier', wrapWithValueListenableBuilder),
-		vscode.commands.registerCommand('extension.wrap-with-consumer', wrapWithProviderConsumerBuilder),
-		vscode.languages.registerCodeActionsProvider(
-			{ pattern: "**/*.{dart,dartx}", scheme: "file" },
-			new CodeActionProvider()
-		)
+		vscode.commands.registerCommand('extension.fu-wrap-with-value-notifier', wrapWithValueListenableBuilder),
+		vscode.commands.registerCommand('extension.fu-wrap-with-consumer', wrapWithProviderConsumerBuilder),
+		
 	);
 
 	// context.subscriptions.push(disposable);
@@ -235,25 +234,28 @@ class CodeActionProvider {
 
 		const textFile = editor.document.getText();
 		const codeActions = [];
-		
+
 		if (textFile.includes('abstract')) {
 			codeActions.push({
 				command: "extension.implementsInterface",
 				title: "Implements interface"
 			});
-		}else{
-			codeActions.push(
-				{
-					command: "extension.wrap-with-value-notifier",
-					title: "Wrap with ValueListenableBuilder"
-				});
-			codeActions.push(
-				{
-					command: "extension.wrap-with-consumer",
-					title: "Wrap with Consumer"
-				}
-			);
 		}
+
+		const pickedText = editor.document.getText(editor.selection);
+
+		if(pickedText === '') return codeActions;
+		codeActions.push(
+			{
+				command: "extension.fu-wrap-with-value-notifier",
+				title: "Wrap with ValueListenableBuilder"
+			});
+		codeActions.push(
+			{
+				command: "extension.fu-wrap-with-consumer",
+				title: "Wrap with Consumer"
+			}
+		);
 
 		return codeActions;
 	}

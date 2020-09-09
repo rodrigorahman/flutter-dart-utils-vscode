@@ -3,7 +3,7 @@ const wrapWith = require('../utils/wrap-with');
 const valueListenableBuilderSnippet = (widget) => {
   return `ValueListenableBuilder(
     valueListenable: $1,
-    builder: (_, $1Value, __) {
+    builder: (_, $1Value, child) {
         return ${widget};
     },
 )`;
@@ -12,7 +12,7 @@ const valueListenableBuilderSnippet = (widget) => {
 
 const providerConsumerBuilderSnippet = (widget) => {
   return `Consumer<$1>(
-    builder: (_, $2) {
+    builder: (_, $2, __) {
         return ${widget};
     },
 )`;

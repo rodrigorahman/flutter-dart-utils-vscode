@@ -3,7 +3,7 @@
 	"displayName": "Flutter & Dart Utilities",
 	"description": "Flutter & Dart Utilities, Clean Architecture Helper",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.49",
+	"version": "0.0.55",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@gmail.com"
@@ -64,11 +64,11 @@
 				"title": "Implements interface"
 			},
 			{
-				"command": "extension.wrap-with-value-notifier",
+				"command": "extension.fu-wrap-with-value-notifier",
 				"title": "Wrap with ValueListenableBuilder"
 			},
 			{
-				"command": "extension.wrap-with-consumer",
+				"command": "extension.fu-wrap-with-consumer",
 				"title": "Wrap with Consumer"
 			}
 		],
@@ -116,11 +116,11 @@
 			],
 			"commandPalette": [
 				{
-					"command": "extension.wrap-with-value-notifier",
+					"command": "extension.fu-wrap-with-value-notifier",
 					"when": "editorLangId == dart"
 				},
 				{
-					"command": "extension.wrap-with-consumer",
+					"command": "extension.fu-wrap-with-consumer",
 					"when": "editorLangId == dart"
 				}
 			]
@@ -166,8 +166,6 @@
 		"@types/mocha": "^7.0.2",
 		"@types/node": "^13.11.0",
 		"@types/vscode": "^1.46.0",
-		"babel-preset-es2015": "^6.24.1",
-		"babel-register": "^6.26.0",
 		"eslint": "^6.8.0",
 		"glob": "^7.1.6",
 		"mkdirp": "^1.0.4",

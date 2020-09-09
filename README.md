@@ -84,34 +84,34 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 ## Features
 
 ### Generate folders for MVC architecture
-![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_folder_MVC.gif)
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/generate_folder_MVC.gif)
 
 ### Generate dart interface
-![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_interface_flutter.gif)
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/generate_interface_flutter.gif)
 
 ### Generate dart class
-![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_class_flutter.gif)
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/generate_class_flutter.gif)
 
 ### Implements dart interface
-![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/implements_class_flutter.gif)
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/implements_class_flutter.gif)
 
 ### Generate folders clean architecture for backend
-![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean-example.gif)
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/clean-example.gif)
 
 ### Generate folders clean architecture for flutter
-![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/clean_generate_flutter.gif)
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/clean_generate_flutter.gif)
 
 ### Generate folders 3-tiers architecture
-![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_folder_3-tiers.gif)
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/generate_folder_3-tiers.gif)
 
 ### Generate folder for test
-![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_folder_test_flutter.gif)
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/generate_folder_test_flutter.gif)
 
 ### Wrap with Consumer
-![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/wrap-with-consumer.gif)
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/wrap-with-consumer.gif)
 
 ### Wrap with ValueListenableBuilder
-![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/wrap-with-value-listener.gif)
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/wrap-with-value-listener.gif)
 
 
 
