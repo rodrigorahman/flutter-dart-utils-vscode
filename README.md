@@ -79,7 +79,13 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-test-when-throw`             | Add when mockito sync                                |
 | `fu-test-mock`                   | Create a mock class                                  |
 
+## Flutter Provider Snippets Usage
 
+| Shortcut                         | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| `fu-provider-watch`              | context.watch                                        |
+| `fu-provider-read`               | context.watch                                        |
+| `fu-provider-select`             | context.select                                       |
 
 ## Features
 
@@ -140,3 +146,4 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
     - New Snippets ChangeNotifier
     - New Snippets ValueNotifier
     - Change Snippets Modular
+* 0.0.56 - Add Provider Snippets
