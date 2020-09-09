@@ -31,7 +31,9 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | -------------------------------- | ---------------------------------------------------- |
 | `fu-stl`                         | Create StatelessWidget with Scaffold and AppBar      |
 | `fu-stf`                         | Create StatefulWidget with Scaffold and AppBar       |
-| `fu-f-test-init`                 | Creates a dart tests                                 |
+| `fu-f-test-init`                 | Create a dart tests                                  |
+| `fu-change_notifier`             | Create change notifier class                         |
+| `fu-value_notifier`              | Create ValueNotifier                                 |
 
 ## Aqueduct Snippets Usage
 
@@ -102,9 +104,16 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 ### Generate folders 3-tiers architecture
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_folder_3-tiers.gif)
 
-
 ### Generate folder for test
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/generate_folder_test_flutter.gif)
+
+### Wrap with Consumer
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/wrap-with-consumer.gif)
+
+### Wrap with ValueListenableBuilder
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/wrap-with-value-listener.gif)
+
+
 
 
 ## Requirements
@@ -126,3 +135,7 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 * 0.0.42 - Bug fix folder for clean architecture
 * 0.0.44 - Add news modular snipets
 * 0.0.45 - MVC new features
+* 0.0.46
+    - Add Wrap with Consumer(Provider) and ValueListenableBuilder
+    - Snippets ChangeNotifier
+    - Snippets ValueNotifier

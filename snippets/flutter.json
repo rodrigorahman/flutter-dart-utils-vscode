@@ -53,5 +53,21 @@
 			"}"
 		],
 		"description": "Test Dart Init"
+	},
+	"changeNotifier": {
+		"prefix": "fu-change_notifier",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends ChangeNotifier {}"
+		],
+		"description": "Create ChangeNotifier class"
+	},
+	"valueNotifier": {
+		"prefix": "fu-value_notifier",
+		"body": [
+			"final ValueNotifier<$1> $2 = ValueNotifier($3);"
+		],
+		"description": "Create ValueNotifier class"
 	}
 }

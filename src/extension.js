@@ -4,13 +4,22 @@ const vscode = require('vscode');
 const mkdirp = require('mkdirp');
 const fs = require('fs');
 const _ = require('lodash');
-
+const { wrapWithProviderConsumerBuilder, wrapWithValueListenableBuilder } = require('./commands/wrap-with');
+const wrapWith = require('./utils/wrap-with');
+// import {
+// 	wrapWithProviderConsumerBuilder,
+// 	wrapWithValueListenableBuilder
+//   } from "./commands";
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 
 /**
  * @param {vscode.ExtensionContext} context
  */
+
+const DART_MODE = { language: "dart", scheme: "file" };
+
+
 function activate(context) {
 
 
@@ -128,12 +137,6 @@ function activate(context) {
 		vscode.window.showInformationMessage('Created a Dart Class');
 	});
 
-	context.subscriptions.push(
-		vscode.languages.registerCodeActionsProvider(
-			{ pattern: "**/*.{dart,dartx}", scheme: "file" },
-			new CodeActionProvider()
-		)
-	);
 
 	const implementsInterface = vscode.commands.registerCommand('extension.implementsInterface', async () => {
 		let editor = vscode.window.activeTextEditor;
@@ -178,7 +181,7 @@ class${implementationName} implements ${interfaceName} {
 		}
 
 	});
-	
+
 	let MVCFlutterFolders = vscode.commands.registerCommand("extension.mvc-feature", async function (uri) {
 		const featureName = await promptForFeatureName();
 		if (featureName) {
@@ -192,14 +195,31 @@ class${implementationName} implements ${interfaceName} {
 
 	});
 
-	context.subscriptions.push(disposable);
-	context.subscriptions.push(disposableGenerateTest);
-	context.subscriptions.push(cleanForFlutter);
-	context.subscriptions.push(createInterface);
-	context.subscriptions.push(createClass);
-	context.subscriptions.push(implementsInterface);
-	context.subscriptions.push(threeTiersFolders);
-	context.subscriptions.push(MVCFlutterFolders);
+	context.subscriptions.push(
+		disposable,
+		disposableGenerateTest,
+		cleanForFlutter,
+		createInterface,
+		createClass,
+		implementsInterface,
+		threeTiersFolders,
+		MVCFlutterFolders,
+		vscode.commands.registerCommand('extension.wrap-with-value-notifier', wrapWithValueListenableBuilder),
+		vscode.commands.registerCommand('extension.wrap-with-consumer', wrapWithProviderConsumerBuilder),
+		vscode.languages.registerCodeActionsProvider(
+			{ pattern: "**/*.{dart,dartx}", scheme: "file" },
+			new CodeActionProvider()
+		)
+	);
+
+	// context.subscriptions.push(disposable);
+	// context.subscriptions.push(disposableGenerateTest);
+	// context.subscriptions.push(cleanForFlutter);
+	// context.subscriptions.push(createInterface);
+	// context.subscriptions.push(createClass);
+	// context.subscriptions.push(implementsInterface);
+	// context.subscriptions.push(threeTiersFolders);
+	// context.subscriptions.push(MVCFlutterFolders);
 }
 
 
@@ -218,6 +238,18 @@ class CodeActionProvider {
 				command: "extension.implementsInterface",
 				title: "Implements interface"
 			});
+		} else {
+			codeActions.push(
+				{
+					command: "extension.wrap-with-value-notifier",
+					title: "Wrap with ValueListenableBuilder"
+				});
+			codeActions.push(
+				{
+					command: "extension.wrap-with-consumer",
+					title: "Wrap with Consumer"
+				}
+			);
 		}
 		return codeActions;
 	}

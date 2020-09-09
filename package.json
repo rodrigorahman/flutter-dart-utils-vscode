@@ -3,7 +3,7 @@
 	"displayName": "Flutter & Dart Utilities",
 	"description": "Flutter & Dart Utilities, Clean Architecture Helper",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.45",
+	"version": "0.0.46",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@gmail.com"
@@ -21,7 +21,8 @@
 		"clean architecture"
 	],
 	"categories": [
-		"Other"
+		"Snippets",
+		"Programming Languages"
 	],
 	"activationEvents": [
 		"onCommand:extension.clean-architecture-folders",
@@ -61,6 +62,14 @@
 			{
 				"command": "extension.implementsInterface",
 				"title": "Implements interface"
+			},
+			{
+				"command": "extension.wrap-with-value-notifier",
+				"title": "Wrap with ValueListenableBuilder"
+			},
+			{
+				"command": "extension.wrap-with-consumer",
+				"title": "Wrap with Consumer"
 			}
 		],
 		"menus": {
@@ -104,6 +113,16 @@
 					"command": "extension.implementsInterface",
 					"when": "editorLangId == dart"
 				}
+			],
+			"commandPalette": [
+				{
+					"command": "extension.wrap-with-value-notifier",
+					"when": "editorLangId == dart"
+				},
+				{
+					"command": "extension.wrap-with-consumer",
+					"when": "editorLangId == dart"
+				}
 			]
 		},
 		"snippets": [
@@ -143,16 +162,18 @@
 		"test": "node ./test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.46.0",
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^7.0.2",
 		"@types/node": "^13.11.0",
+		"@types/vscode": "^1.46.0",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-register": "^6.26.0",
 		"eslint": "^6.8.0",
 		"glob": "^7.1.6",
+		"mkdirp": "^1.0.4",
 		"mocha": "^7.1.1",
 		"typescript": "^3.8.3",
-		"vscode-test": "^1.3.0",
-		"mkdirp": "^1.0.4"
+		"vscode-test": "^1.3.0"
 	},
 	"dependencies": {
 		"lodash": "^4.17.19",
