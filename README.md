@@ -46,14 +46,14 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 ## Modular Snippets Usage
 
 | Shortcut                         | Description                                          |
-| -------------------------------- | ---------------------------------------------------- |
-| `fu-mcr`                         | Creates router with page                             |
-| `fu-mr`                          | Creates router module                                |
-| `fu-mir`                         | Creates router module with Modular.initialRoute      |
-| `fu-mirp`                        | Creates router page with Modular.initialRoute        |
-| `fu-mbind`                       | Create Bind for modular                              |
-| `fu-modular_codegen_inject`      | Modular codegen inject                               |
-| `fu-modular_module`              | Create Module                                        |
+| --------------------------------   | ---------------------------------------------------- |
+| `fu-modular-router-child`          | Creates router with page                             |
+| `fu-modular-router`                | Creates router module                                |
+| `fu-modular-initial-router-module` | Creates router module with Modular.initialRoute      |
+| `fu-modular-initial-router-child`  | Creates router page with Modular.initialRoute        |
+| `fu-modular-bind`                  | Create Bind for modular                              |
+| `fu-modular_codegen_inject`        | Modular codegen inject                               |
+| `fu-modular_module`                | Create Module                                        |
 
 ## Flutter Bloc Snippets Usage
 
@@ -137,5 +137,6 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 * 0.0.45 - MVC new features
 * 0.0.46
     - Add Wrap with Consumer(Provider) and ValueListenableBuilder
-    - Snippets ChangeNotifier
-    - Snippets ValueNotifier
+    - New Snippets ChangeNotifier
+    - New Snippets ValueNotifier
+    - Change Snippets Modular
