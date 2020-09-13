@@ -32,8 +32,9 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-stl`                         | Create StatelessWidget with Scaffold and AppBar      |
 | `fu-stf`                         | Create StatefulWidget with Scaffold and AppBar       |
 | `fu-f-test-init`                 | Create a dart tests                                  |
-| `fu-change_notifier`             | Create change notifier class                         |
-| `fu-value_notifier`              | Create ValueNotifier                                 |
+| `fu-change-notifier`             | Create change notifier class                         |
+| `fu-value-notifier`              | Create ValueNotifier                                 |
+| `fu-text-editing-controller`     | Create TextEditingController                         |
 
 ## Aqueduct Snippets Usage
 
@@ -147,3 +148,4 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
     - New Snippets ValueNotifier
     - Change Snippets Modular
 * 0.0.56 - Add Provider Snippets
+* 0.0.57 - Add Flutter Snippet TextEditingController

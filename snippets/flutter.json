@@ -55,7 +55,7 @@
 		"description": "Test Dart Init"
 	},
 	"changeNotifier": {
-		"prefix": "fu-change_notifier",
+		"prefix": "fu-change-notifier",
 		"body": [
 			"import 'package:flutter/material.dart';",
 			"",
@@ -64,10 +64,17 @@
 		"description": "Create ChangeNotifier class"
 	},
 	"valueNotifier": {
-		"prefix": "fu-value_notifier",
+		"prefix": "fu-value-notifier",
 		"body": [
-			"final ValueNotifier<$1> $2 = ValueNotifier($3);"
+			"final $1 = ValueNotifier<$2>($3);"
 		],
-		"description": "Create ValueNotifier class"
+		"description": "Create ValueNotifier"
+	},
+	"textEditingController": {
+		"prefix": "fu-text-editing-controller",
+		"body": [
+			"final $1EditingController = TextEditingController($2)"
+		],
+		"description": "Create TextEditingController"
 	}
 }
