@@ -2,19 +2,19 @@
     "provider-read": {
 		"prefix": "fu-provider-read",
 		"body": [
-			"context.read<$1>()"
+			"context.read<$1>();"
 		]
     },
     "provider-watch": {
 		"prefix": "fu-provider-watch",
 		"body": [
-			"context.watch<$1>()"
+			"context.watch<$1>();"
 		]
     },
     "provider-select": {
 		"prefix": "fu-provider-select",
 		"body": [
-			"context.select<$1, ?2>((value) {})"
+			"context.select<$1, ?2>((value) {});"
 		]
 	}
 }

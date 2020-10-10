@@ -8,6 +8,7 @@ Extension that assists in the creation of tests, interfaces, classes and to work
 * Cubit Snippets
 * flutter_bloc Snippets
 * Mockito Snippets
+* GetX Snippets
 
 ## Installation
 Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=RodrigoRahman.flutter-dart-utils) or by [searching within VSCode](https://code.visualstudio.com/docs/editor/extension-gallery#_search-for-an-extension).
@@ -88,6 +89,17 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-provider-read`               | context.watch                                        |
 | `fu-provider-select`             | context.select                                       |
 
+
+## Flutter GetX Snippets Usage
+
+| Shortcut                         | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| `fu-getxbinding`                 | Create Binding                                       |
+| `fu-getxcontroller`              | Create Controller                                    |
+| `fu-getxrx`                      | Create Rx variable                                   |
+| `fu-getxobs`                     | Create .obs variable                                 |
+
+
 ## Features
 
 ### Generate folders for MVC architecture
@@ -149,3 +161,4 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
     - Change Snippets Modular
 * 0.0.56 - Add Provider Snippets
 * 0.0.57 - Add Flutter Snippet TextEditingController
+* 0.0.59 - Add GetX Snippets

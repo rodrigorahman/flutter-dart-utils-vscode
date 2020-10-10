@@ -73,7 +73,7 @@
 	"textEditingController": {
 		"prefix": "fu-text-editing-controller",
 		"body": [
-			"final $1EditingController = TextEditingController($2)"
+			"final $1EditingController = TextEditingController($2);"
 		],
 		"description": "Create TextEditingController"
 	}

@@ -1,0 +1,41 @@
+{
+	"getxbindings": {
+		"prefix": "fu-getxbinding",
+		"body": [
+			"import 'package:get/get.dart';",
+			"",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} implements Bindings {",
+			"   @override",
+			"   void dependencies() {",
+			"       ",
+			"   }",
+			"}"
+		],
+		"description": "Create GetX Binding"
+    },
+    "getxcontroller": {
+		"prefix": "fu-getxcontroller",
+		"body": [
+			"import 'package:get/get.dart';",
+			"",
+            "class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends GetxController { ",
+            "",
+			"}"
+		],
+		"description": "Create GetX Controller"
+    }, 
+    "getxRx": {
+		"prefix": "fu-getxrx",
+		"body": [
+            "Rx<$1> $2 = Rx<$1>($3);"
+		],
+		"description": "Create GetX Rx"
+    }, 
+    "getxObs": {
+		"prefix": "fu-getxobs",
+		"body": [
+            "final $1 = $2.obs;"
+		],
+		"description": "Create GetX Rx with .obs"
+	}
+}
