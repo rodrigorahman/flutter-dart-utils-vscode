@@ -27,7 +27,7 @@
     "getxRx": {
 		"prefix": "fu-getxrx",
 		"body": [
-            "final $2 = Rx<$1>($3);"
+            "final $1 = Rx<$2>($3);"
 		],
 		"description": "Create GetX Rx"
     }, 
