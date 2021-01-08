@@ -4,7 +4,7 @@ const vscode = require('vscode');
 const mkdirp = require('mkdirp');
 const fs = require('fs');
 const _ = require('lodash');
-const { wrapWithProviderConsumerBuilder, wrapWithValueListenableBuilder } = require('./commands/wrap-with');
+const { wrapWithProviderConsumerBuilder, wrapWithValueListenableBuilder, wrapWithMobXObserverBuilder } = require('./commands/wrap-with');
 const getSelectedText = require('./utils/get-selected-text');
 // import {
 // 	wrapWithProviderConsumerBuilder,
@@ -210,6 +210,7 @@ class${implementationName} implements ${interfaceName} {
 		MVCFlutterFolders,
 		vscode.commands.registerCommand('extension.fu-wrap-with-value-notifier', wrapWithValueListenableBuilder),
 		vscode.commands.registerCommand('extension.fu-wrap-with-consumer', wrapWithProviderConsumerBuilder),
+		vscode.commands.registerCommand('extension.fu-wrap-with-observer', wrapWithMobXObserverBuilder),
 		
 	);
 
@@ -254,6 +255,12 @@ class CodeActionProvider {
 			{
 				command: "extension.fu-wrap-with-consumer",
 				title: "Wrap with Consumer"
+			}
+		);
+		codeActions.push(
+			{
+				command: "extension.fu-wrap-with-observer",
+				title: "Wrap with MobX Observer"
 			}
 		);
 

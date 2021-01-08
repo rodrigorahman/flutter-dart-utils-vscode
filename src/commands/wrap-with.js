@@ -18,8 +18,17 @@ const providerConsumerBuilderSnippet = (widget) => {
 )`;
 };
 
+const mobxObserverBuilderSnippet = (widget) => {
+  return `Observer(
+    builder: (_) {
+        return ${widget};
+    },
+)`;
+};
+
 
 const wrapWithValueListenableBuilder = async () => wrapWith(valueListenableBuilderSnippet);
 const wrapWithProviderConsumerBuilder = async () => wrapWith(providerConsumerBuilderSnippet);
+const wrapWithMobXObserverBuilder = async () => wrapWith(mobxObserverBuilderSnippet);
 
-module.exports = { wrapWithValueListenableBuilder, wrapWithProviderConsumerBuilder };
+module.exports = { wrapWithValueListenableBuilder, wrapWithProviderConsumerBuilder, wrapWithMobXObserverBuilder };

@@ -9,6 +9,7 @@ Extension that assists in the creation of tests, interfaces, classes and to work
 * flutter_bloc Snippets
 * Mockito Snippets
 * GetX Snippets
+* Shelf Snippets
 
 ## Installation
 Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=RodrigoRahman.flutter-dart-utils) or by [searching within VSCode](https://code.visualstudio.com/docs/editor/extension-gallery#_search-for-an-extension).
@@ -100,6 +101,15 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-getxobs`                     | Create .obs variable                                 |
 
 
+## Shelf/Shelf-Router Snippets Usage
+
+| Shortcut                         | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| `fu-shelf-controller`            | Create Controller with shelf-router                  |
+| `fu-shelf-operation`             | Create Rest Operation                                |
+
+
+
 ## Features
 
 ### Generate folders for MVC architecture
@@ -162,3 +172,5 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 * 0.0.56 - Add Provider Snippets
 * 0.0.57 - Add Flutter Snippet TextEditingController
 * 0.0.59 - Add GetX Snippets
+* 0.0.63 - Add Wrap with Observer(MobX)
+* 0.0.64 - add Shelf Snippets

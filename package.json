@@ -3,7 +3,7 @@
 	"displayName": "Flutter & Dart Utilities",
 	"description": "Flutter & Dart Utilities, Clean Architecture Helper",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.62",
+	"version": "0.0.64",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@gmail.com"
@@ -70,6 +70,10 @@
 			{
 				"command": "extension.fu-wrap-with-consumer",
 				"title": "Wrap with Consumer"
+			},
+			{
+				"command": "extension.fu-wrap-with-observer",
+				"title": "Wrap with Mobx Observer"
 			}
 		],
 		"menus": {
@@ -122,6 +126,10 @@
 				{
 					"command": "extension.fu-wrap-with-consumer",
 					"when": "editorLangId == dart"
+				},
+				{
+					"command": "extension.fu-wrap-with-observer",
+					"when": "editorLangId == dart"
 				}
 			]
 		},
@@ -145,6 +153,10 @@
 			{
 				"language": "dart",
 				"path": "./snippets/aqueduct.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/shelf.json"
 			},
 			{
 				"language": "dart",
