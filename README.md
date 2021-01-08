@@ -173,4 +173,5 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 * 0.0.57 - Add Flutter Snippet TextEditingController
 * 0.0.59 - Add GetX Snippets
 * 0.0.63 - Add Wrap with Observer(MobX)
-* 0.0.64 - add Shelf Snippets
+* 0.0.64 - Add Shelf Snippets
+* 0.0.65 - Bugfix Shelf controller Snippets
