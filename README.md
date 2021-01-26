@@ -99,6 +99,8 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-getxcontroller`              | Create Controller                                    |
 | `fu-getxrx`                      | Create Rx variable                                   |
 | `fu-getxobs`                     | Create .obs variable                                 |
+| `fu-getxoninit`                  | Create onInit method                                 |
+| `fu-getxonclose`                 | Create onClose method                                |
 
 
 ## Shelf/Shelf-Router Snippets Usage
@@ -175,3 +177,4 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 * 0.0.63 - Add Wrap with Observer(MobX)
 * 0.0.64 - Add Shelf Snippets
 * 0.0.65 - Bugfix Shelf controller Snippets
+* 0.0.66 - Add new snippets from GetX

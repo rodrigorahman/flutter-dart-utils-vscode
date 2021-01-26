@@ -37,5 +37,27 @@
             "final $1 = $2.obs;"
 		],
 		"description": "Create GetX Rx with .obs"
+	}, 
+    "getxcontrollerOnInit": {
+		"prefix": "fu-getxoninit",
+		"body": [
+            "@override",
+			  "void onInit() {",
+			  	"super.onInit();",
+			  	"$1",
+  			"}"
+		],
+		"description": "GetX lifeCycle onInit"
+	}, 
+    "getxcontrollerOnClose": {
+		"prefix": "fu-getxonclose",
+		"body": [
+            "@override",
+			  "void onClose() {",
+				"super.onClose();",
+				"$1",
+  			"}"
+		],
+		"description": "GetX lifeCycle onClose"
 	}
 }
