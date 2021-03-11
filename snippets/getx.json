@@ -59,5 +59,23 @@
   			"}"
 		],
 		"description": "GetX lifeCycle onClose"
+	},
+	"getxpage": {
+		"prefix": "fu-getxpage",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"import 'package:get/get.dart';",
+			"",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends GetView<$2Controller> {",
+			"   @override",
+			"   Widget build(BuildContext context) {",
+			"       return Scaffold(",
+			"           appBar: AppBar(title: Text('${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}'),),",
+			"           body: Container(),",
+			"       );",
+			"  }",
+			"}"
+		],
+		"description": "Create Page with GetView"
 	}
 }

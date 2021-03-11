@@ -5,6 +5,7 @@ Extension that assists in the creation of tests, interfaces, classes and to work
 * Dart Snippets
 * Flutter Snippets
 * Modular Snippets
+* Modular3 Snippets
 * Cubit Snippets
 * flutter_bloc Snippets
 * Mockito Snippets
@@ -58,6 +59,23 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-modular_codegen_inject`        | Modular codegen inject                               |
 | `fu-modular_module`                | Create Module                                        |
 
+## Modular3 Snippets Usage
+| Shortcut                                      | Description                                                           |
+| --------------------------------              | --------------------------------------------------------------------  |
+| `fu-modular3-router-child`                    | Creates router with page                                              |
+| `fu-modular3-router`                          | Creates router module                                                 |
+| `fu-modular3-initial-router-child`            | Creates router page with Modular.initialRoute                         |
+| `fu-modular3-bind-factory`                    | Create Bind Factory for modular                                       |
+| `fu-modular3-bind-instance`                   | Create Bind Instance for modular                                      |
+| `fu-modular3-bind-singleton`                  | Create Bind Singleton for modular                                     |
+| `fu-modular3-bind-lazySingleton`              | Create Bind Lazy Singleton for modular with interface                 |
+| `fu-modular3-bind-factory-interface`          | Create Bind Factory for modular with interface                        |
+| `fu-modular3-bind-instance-interface`         | Create Bind Instance for modular with interface                       |
+| `fu-modular3-bind-singleton-interface`        | Create Bind Singleton for modular with interface                      |
+| `fu-modular3-bind-lazySingleton-interface`    | Create Bind Lazy Singleton for modular with interface                 |
+| `fu-modular3_module`                          | Create Module                                                         |
+
+
 ## Flutter Bloc Snippets Usage
 
 | Shortcut                         | Description                                          |
@@ -101,6 +119,7 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-getxobs`                     | Create .obs variable                                 |
 | `fu-getxoninit`                  | Create onInit method                                 |
 | `fu-getxonclose`                 | Create onClose method                                |
+| `fu-getxpage`                    | Create Page with GetView                             |
 
 
 ## Shelf/Shelf-Router Snippets Usage
@@ -178,3 +197,5 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 * 0.0.64 - Add Shelf Snippets
 * 0.0.65 - Bugfix Shelf controller Snippets
 * 0.0.66 - Add new snippets from GetX
+* 0.0.67 - Add new snippets from GetX GetView
+* 0.0.68 - Add new snippets from Modular3

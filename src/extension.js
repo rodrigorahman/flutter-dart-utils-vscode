@@ -78,7 +78,7 @@ function activate(context) {
 			mkdirp(baseUrl + '/domain')
 				.then(() => {
 					mkdirp(baseUrl + '/domain/entities')
-					mkdirp(baseUrl + '/domain/datasource')
+					mkdirp(baseUrl + '/domain/infra')
 					mkdirp(baseUrl + '/domain/usecases')
 				})
 				.catch((err) => console.log(err));
