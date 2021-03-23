@@ -19,9 +19,63 @@ const getSelectedText = require('./utils/get-selected-text');
 
 const DART_MODE = { language: "dart", scheme: "file" };
 
+async function createFile(fileName) {
+	let wsedit = new vscode.WorkspaceEdit();
+	const filePath = vscode.Uri.file(fileName);
+	wsedit.createFile(filePath);
+	await vscode.workspace.applyEdit(wsedit);
+}
 
 function activate(context) {
 
+	let getxfeature = vscode.commands.registerCommand("extension.getxfeature", async function (uri) {
+		const featureName = await promptForFeatureName();
+		if (featureName) {
+			mkdirp(uri.fsPath + '/' + featureName);
+			const baseUrl = uri.fsPath + '/' + featureName
+			const page = `${baseUrl}/${featureName}_page.dart`;
+			const bindings = `${baseUrl}/${featureName}_bindings.dart`;
+			const controller = `${baseUrl}/${featureName}_controller.dart`;
+
+			await createFile(page);
+			await createFile(bindings);
+			await createFile(controller);
+
+			const pageNameFile = _.upperFirst(_.camelCase(`${featureName}Page`));
+			const bindingNameFile = _.upperFirst(_.camelCase(`${featureName}Bindings`));
+			const controllerNameFile = _.upperFirst(_.camelCase(`${featureName}Controller`));
+
+			fs.writeFileSync(page, `import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+import './${featureName}_controller.dart';
+
+class ${pageNameFile} extends GetView<${controllerNameFile}> {
+	@override
+	Widget build(BuildContext context) {
+		return Scaffold(
+			appBar: AppBar(title: Text('${pageNameFile}'),),
+			body: Container(),
+		);
+   }
+}`, 'utf8');
+
+			fs.writeFileSync(bindings, `import 'package:get/get.dart';
+import './${featureName}_controller.dart';
+
+class ${bindingNameFile} implements Bindings {
+	@override
+	void dependencies() {
+		Get.put(${controllerNameFile}());
+	}
+}`, 'utf8');
+
+			fs.writeFileSync(controller, `import 'package:get/get.dart';
+
+class ${controllerNameFile} extends GetxController {}`, 'utf8');
+
+			vscode.window.showInformationMessage('GetX new feature created');
+		}
+	});
 
 	let disposable = vscode.commands.registerCommand("extension.clean-architecture-folders", async function (uri) {
 		const featureName = await promptForFeatureName();
@@ -211,7 +265,8 @@ class${implementationName} implements ${interfaceName} {
 		vscode.commands.registerCommand('extension.fu-wrap-with-value-notifier', wrapWithValueListenableBuilder),
 		vscode.commands.registerCommand('extension.fu-wrap-with-consumer', wrapWithProviderConsumerBuilder),
 		vscode.commands.registerCommand('extension.fu-wrap-with-observer', wrapWithMobXObserverBuilder),
-		
+		getxfeature,
+
 	);
 
 	// context.subscriptions.push(disposable);
@@ -245,7 +300,7 @@ class CodeActionProvider {
 
 		const pickedText = editor.document.getText(editor.selection);
 
-		if(pickedText === '') return codeActions;
+		if (pickedText === '') return codeActions;
 		codeActions.push(
 			{
 				command: "extension.fu-wrap-with-value-notifier",
