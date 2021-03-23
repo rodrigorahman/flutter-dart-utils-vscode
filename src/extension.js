@@ -29,7 +29,7 @@ async function createFile(fileName) {
 function activate(context) {
 
 	let getxfeature = vscode.commands.registerCommand("extension.getxfeature", async function (uri) {
-		const featureName = await promptForFeatureName();
+		const featureName = await promptForFeatureName("Feature GetX Name");
 		if (featureName) {
 			mkdirp(uri.fsPath + '/' + featureName);
 			const baseUrl = uri.fsPath + '/' + featureName
@@ -78,7 +78,7 @@ class ${controllerNameFile} extends GetxController {}`, 'utf8');
 	});
 
 	let disposable = vscode.commands.registerCommand("extension.clean-architecture-folders", async function (uri) {
-		const featureName = await promptForFeatureName();
+		const featureName = await promptForFeatureName("Feature Clean Architecture Name");
 		if (featureName) {
 			mkdirp(uri.fsPath + '/' + featureName)
 			const baseUrl = uri.fsPath + '/' + featureName
@@ -113,7 +113,7 @@ class ${controllerNameFile} extends GetxController {}`, 'utf8');
 	});
 
 	let cleanForFlutter = vscode.commands.registerCommand("extension.clean-architecture-folders-for-flutter", async function (uri) {
-		const featureName = await promptForFeatureName();
+		const featureName = await promptForFeatureName("Feature Clean Architecture Name");
 		if (featureName) {
 			mkdirp(uri.fsPath + '/' + featureName)
 			const baseUrl = uri.fsPath + '/' + featureName
@@ -158,7 +158,7 @@ class ${controllerNameFile} extends GetxController {}`, 'utf8');
 
 
 	const createInterface = vscode.commands.registerCommand('extension.generateInterface', async (uri) => {
-		const interfaceName = await promptForFeatureName();
+		const interfaceName = await promptForFeatureName("Interface Name");
 		let wsedit = new vscode.WorkspaceEdit();
 		const path = `${uri.path}/${interfaceName}.dart`;
 		const filePath = vscode.Uri.file(path);
@@ -175,7 +175,7 @@ class ${controllerNameFile} extends GetxController {}`, 'utf8');
 	});
 
 	const createClass = vscode.commands.registerCommand('extension.generateClass', async (uri) => {
-		const className = await promptForFeatureName();
+		const className = await promptForFeatureName("Class Name");
 		let wsedit = new vscode.WorkspaceEdit();
 		const path = `${uri.path}/${className}.dart`;
 		const filePath = vscode.Uri.file(path);
@@ -224,7 +224,7 @@ class${implementationName} implements ${interfaceName} {
 
 
 	let threeTiersFolders = vscode.commands.registerCommand("extension.3-tiers", async function (uri) {
-		const featureName = await promptForFeatureName();
+		const featureName = await promptForFeatureName("Feature 3 Tiers Name");
 		if (featureName) {
 			mkdirp(uri.fsPath + '/' + featureName)
 			const baseUrl = uri.fsPath + '/' + featureName
@@ -237,7 +237,7 @@ class${implementationName} implements ${interfaceName} {
 	});
 
 	let MVCFlutterFolders = vscode.commands.registerCommand("extension.mvc-feature", async function (uri) {
-		const featureName = await promptForFeatureName();
+		const featureName = await promptForFeatureName("MVC Feature Name");
 		if (featureName) {
 			mkdirp(uri.fsPath + '/' + featureName)
 			const baseUrl = uri.fsPath + '/' + featureName
@@ -323,9 +323,9 @@ class CodeActionProvider {
 	}
 }
 
-function promptForFeatureName() {
+function promptForFeatureName(prompt) {
 	const FeatureNamePromptOptions = {
-		prompt: "Feature Clean Architecture Name",
+		prompt: prompt,
 		placeHolder: "Feature Name"
 	};
 	return vscode.window.showInputBox(FeatureNamePromptOptions);
