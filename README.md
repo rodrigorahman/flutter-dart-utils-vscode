@@ -200,3 +200,4 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 * 0.0.67 - Add new snippets from GetX GetView
 * 0.0.68 - Add new snippets from Modular3
 * 0.0.71 - GetX create new feature
+* 0.0.73 - Mysql Connection template

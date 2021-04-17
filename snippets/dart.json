@@ -92,5 +92,20 @@
 			"}"
 		],
 		"description": "Create class"
+	},
+	"mysql_template": {
+		"prefix": "fu-mysql-connection-template",
+		"body": [
+			" MySqlConnection? conn;",
+			"  try {",
+			"    conn = await $1;",
+			"    await conn.query(''' ''', []);",
+			"} on MySqlException catch (e, s) {",
+			"  throw $2();",
+			"} finally {",
+			"  await conn?.close();",
+			"}"
+		],
+		"description": "Mysql connection template"
 	}
 }
