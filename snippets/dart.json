@@ -107,5 +107,35 @@
 			"}"
 		],
 		"description": "Mysql connection template"
+	},
+	"fu-test": {
+		"prefix": "fu-test",
+		"body": [
+			"test('$1', () async {",
+			"  //Arrange",
+			"  ",
+			"  //Act",
+			"  ",
+			"  //Assert",
+			"  ",
+			"});"
+		],
+		"description": "Test template"
+	},
+	"fu-group-test": {
+		"prefix": "fu-group-test",
+		"body": [
+			"group('$1', () async {",
+			"  test('$2', () async {",
+			"    //Arrange",
+			"    ",
+			"    //Act",
+			"    ",
+			"    //Assert",
+			"    ",
+			"  });",
+			"});"
+		],
+		"description": "Test template"
 	}
 }
