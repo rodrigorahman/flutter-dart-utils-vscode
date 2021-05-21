@@ -15,6 +15,31 @@ Extension that assists in the creation of tests, interfaces, classes and to work
 ## Installation
 Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=RodrigoRahman.flutter-dart-utils) or by [searching within VSCode](https://code.visualstudio.com/docs/editor/extension-gallery#_search-for-an-extension).
 
+## Features Wrap With
+***Important!!!*** 
+Select the full widget to find these options
+
+| Features Wrap With                   |
+| ------------------------------------ |
+| `Wrap with LayoutBuilder`            |
+| `Wrap with Builder`                  |
+| `Wrap with ValueListenableBuilder`   |
+| `Wrap with Consumer`                 |
+| `Wrap with MobX Observer`            |
+
+
+## Menu Features:
+| Menu Features                        |
+| ------------------------------------ |
+| `Clean Arch.: New Feature Backend`   |
+| `Clean Arch.: New Feature Flutter`   |
+| `3-Tiers Back: New Feature`          |
+| `Create Dart Interface`              |
+| `Create Dart Class`                  |
+| `GetX: New Feature`                  |
+| `Flutter Modular: New Feature`       |
+
+
 ## Dart Snippets Usage
 
 | Shortcut                         | Description                                          |
@@ -130,9 +155,6 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 | `fu-shelf-operation`             | Create Rest Operation                                |
 
 
-
-## Features
-
 ### Generate folders for MVC architecture
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/generate_folder_MVC.gif)
 
@@ -163,7 +185,11 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 ### Wrap with ValueListenableBuilder
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/wrap-with-value-listener.gif)
 
+### Wrap with Builder
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/wrap-with-value-listener.gif)
 
+### Wrap with LayoutBuilder
+![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/wrap-with-value-listener.gif)
 
 
 ## Requirements
@@ -202,3 +228,5 @@ Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace
 * 0.0.71 - GetX create new feature
 * 0.0.73 - Mysql Connection template
 * 0.0.74 - New snippets of test
+* 0.0.75 - Bugfix - snippets group test
+* 0.0.76 - Code Review, refatoring and add new features

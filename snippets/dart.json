@@ -125,7 +125,7 @@
 	"fu-group-test": {
 		"prefix": "fu-group-test",
 		"body": [
-			"group('$1', () async {",
+			"group('$1', () {",
 			"  test('$2', () async {",
 			"    //Arrange",
 			"    ",

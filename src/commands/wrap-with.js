@@ -26,9 +26,27 @@ const mobxObserverBuilderSnippet = (widget) => {
 )`;
 };
 
+const layoutBuilderSnippet = (widget) => {
+  return `LayoutBuilder(
+    builder: (_, constrains) { 
+        return ${widget};
+    },
+  )`;
+};
+
+const builderSnippet = (widget) => {
+  return `Builder(
+    builder: (context) { 
+        return ${widget};
+    },
+  )`;
+};
+
 
 const wrapWithValueListenableBuilder = async () => wrapWith(valueListenableBuilderSnippet);
 const wrapWithProviderConsumerBuilder = async () => wrapWith(providerConsumerBuilderSnippet);
 const wrapWithMobXObserverBuilder = async () => wrapWith(mobxObserverBuilderSnippet);
+const wrapWithLayoutBuilder = async () => wrapWith(layoutBuilderSnippet);
+const wrapWithBuilder = async () => wrapWith(builderSnippet);
 
-module.exports = { wrapWithValueListenableBuilder, wrapWithProviderConsumerBuilder, wrapWithMobXObserverBuilder };
+module.exports = { wrapWithValueListenableBuilder, wrapWithProviderConsumerBuilder, wrapWithMobXObserverBuilder, wrapWithLayoutBuilder, wrapWithBuilder };
