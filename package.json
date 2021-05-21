@@ -1,9 +1,9 @@
 {
 	"name": "flutter-dart-utils",
 	"displayName": "Flutter & Dart Utilities",
-	"description": "Flutter & Dart Utilities, Clean Architecture Helper",
+	"description": "Flutter & Dart Utilities",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.74",
+	"version": "0.0.76",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@gmail.com"
@@ -24,13 +24,37 @@
 		"Snippets",
 		"Programming Languages"
 	],
+	
 	"activationEvents": [
 		"onCommand:extension.clean-architecture-folders",
 		"onCommand:extension.extension.getxfeature",
+		"onCommand:extension.extension.modularfeature",
 		"workspaceContains:**/pubspec.yaml"
 	],
 	"main": "./src/extension.js",
 	"contributes": {
+		"configuration": [
+			{
+				"title": "Flutter & Dart Utilities",
+				"properties": {
+					"generate.template.type": {
+						"type": "string",
+						"default": "I Generated",
+						"description": "Choose the pattern that the extension will generate your classes",
+						"enum": [
+							"Clean Code",
+							"Clean Code choice suffix",
+							"I Prefix"
+						],
+						"enumDescriptions": [
+							"Use prefix I in the interfaces and remove the I when implementing the class",
+							"Use the clean code standard to create the interfaces and classes and choice a suffix class name",
+							"Use the clean code standard to create the interfaces and classes"
+						]
+					}
+				}
+			}
+		],
 		"commands": [
 			{
 				"command": "extension.clean-architecture-folders",
@@ -77,8 +101,20 @@
 				"title": "Wrap with Mobx Observer"
 			},
 			{
+				"command": "extension.fu-wrap-with-builder",
+				"title": "Wrap with Builder"
+			},
+			{
+				"command": "extension.fu-wrap-with-layout-builder",
+				"title": "Wrap with LayoutBuilder"
+			},
+			{
 				"command": "extension.getxfeature",
 				"title": "GetX: New Feature"
+			},
+			{
+				"command": "extension.modularfeature",
+				"title": "Flutter Modular: New Feature"
 			}
 		],
 		"menus": {
@@ -124,11 +160,24 @@
 					"group": "1_modification@7"
 				},
 				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.modularfeature",
+					"group": "1_modification@7"
+				},
+				{
 					"command": "extension.implementsInterface",
 					"when": "editorLangId == dart"
 				}
 			],
 			"commandPalette": [
+				{
+					"command": "extension.fu-wrap-with-layout-builder",
+					"when": "editorLangId == dart"
+				},
+				{
+					"command": "extension.fu-wrap-with-builder",
+					"when": "editorLangId == dart"
+				},
 				{
 					"command": "extension.fu-wrap-with-value-notifier",
 					"when": "editorLangId == dart"
