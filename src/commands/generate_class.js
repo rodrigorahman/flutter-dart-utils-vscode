@@ -5,7 +5,7 @@ const _ = require('lodash');
 async function generateClass(uri) {
     const className = await promptForFeatureName("Class Name");
     let wsedit = new vscode.WorkspaceEdit();
-    const path = `${uri.path}/${className}.dart`;
+    const path = `${uri.fsPath}/${className}.dart`;
     const filePath = vscode.Uri.file(path);
     wsedit.createFile(filePath);
     vscode.workspace.applyEdit(wsedit);

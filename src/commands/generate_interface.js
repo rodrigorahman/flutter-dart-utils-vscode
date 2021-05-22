@@ -4,9 +4,16 @@ const fs = require('fs');
 const _ = require('lodash');
 
 async function generateInterface(uri) {
-    const interfaceName = await promptForFeatureName("Interface Name");
+    let interfaceName = await promptForFeatureName("Interface Name");
     let wsedit = new vscode.WorkspaceEdit();
-    const path = `${uri.path}/${interfaceName}.dart`;
+    const configType = vscode.workspace.getConfiguration("generate").get("template.type");
+    if(configType == 'I Prefix') {
+        if(!interfaceName.startsWith('i_')){
+            interfaceName = `i_${interfaceName}`;
+        }
+    }
+
+    const path = `${uri.fsPath}/${interfaceName}.dart`;
     const filePath = vscode.Uri.file(path);
     wsedit.createFile(filePath);
     vscode.workspace.applyEdit(wsedit);

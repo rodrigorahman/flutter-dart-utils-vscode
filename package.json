@@ -3,7 +3,7 @@
 	"displayName": "Flutter & Dart Utilities",
 	"description": "Flutter & Dart Utilities",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.76",
+	"version": "0.0.77",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@gmail.com"
@@ -39,7 +39,7 @@
 				"properties": {
 					"generate.template.type": {
 						"type": "string",
-						"default": "I Generated",
+						"default": "I Prefix",
 						"description": "Choose the pattern that the extension will generate your classes",
 						"enum": [
 							"Clean Code",
