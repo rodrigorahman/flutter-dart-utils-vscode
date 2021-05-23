@@ -27,7 +27,7 @@ async function implementsInterface(uri) {
     }
 
     let wsedit = new vscode.WorkspaceEdit();
-    const basePath = editor.document.uri.fsPath.replace(`/${_.snakeCase(interfaceName)}.dart`, '/');
+    const basePath = editor.document.uri.fsPath.replace(`${_.snakeCase(interfaceName)}.dart`, '');
     if (basePath) {
         const path = `${basePath}/${_.snakeCase(implementationName)}.dart`;
         const filePath = vscode.Uri.file(path);

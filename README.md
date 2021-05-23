@@ -231,3 +231,4 @@ Select the full widget to find these options
 * 0.0.75 - Bugfix - snippets group test
 * 0.0.76 - Code Review, refatoring and add new features
 * 0.0.77 - Bugfix on windows system
+* 0.0.78 - Bugfix on windows system for implementation interface
