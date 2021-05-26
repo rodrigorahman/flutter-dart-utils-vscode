@@ -4,11 +4,11 @@
 		"body": [
 			"import 'package:flutter/material.dart';",
 			"",
-			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends StatelessWidget {",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends StatelessWidget {",
 			"   @override",
 			"   Widget build(BuildContext context) {",
 			"       return Scaffold(",
-			"           appBar: AppBar(title: Text('$2'),),",
+			"           appBar: AppBar(title: Text('$1'),),",
 			"           body: Container(),",
 			"       );",
 			"  }",
@@ -21,17 +21,17 @@
 		"body": [
 			"import 'package:flutter/material.dart';",
 			"",
-			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends StatefulWidget {",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends StatefulWidget {",
 			"  @override",
-			"  _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}State createState() => _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}State();",
+			"  _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State createState() => _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State();",
 			"}",
 			"",
-			"class _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}State extends State<${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}> {",
+			"class _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State extends State<${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}> {",
 			"",
 			"   @override",
 			"   Widget build(BuildContext context) {",
 			"       return Scaffold(",
-			"           appBar: AppBar(title: Text('$2'),),",
+			"           appBar: AppBar(title: Text('$1'),),",
 			"           body: Container(),",
 			"       );",
 			"  }",
@@ -59,7 +59,9 @@
 		"body": [
 			"import 'package:flutter/material.dart';",
 			"",
-			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends ChangeNotifier {}"
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends ChangeNotifier {",
+			"  $1",
+			"}"
 		],
 		"description": "Create ChangeNotifier class"
 	},
@@ -73,7 +75,7 @@
 	"textEditingController": {
 		"prefix": "fu-text-editing-controller",
 		"body": [
-			"final $1EditingController = TextEditingController($2);"
+			"final $1EC = TextEditingController($2);"
 		],
 		"description": "Create TextEditingController"
 	}

@@ -42,15 +42,15 @@
 		"body": [
 			"import 'package:flutter_modular/flutter_modular.dart';",
 			"",
-			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends ChildModule {",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends ChildModule {",
 			"",
 			"   @override",
 			"   List<Bind> get binds => [];",
 			"",
 			"   @override",
-			"   List<ModularRouter> get routers => [];",
+			"   List<ModularRouter> get routers => [$1];",
 			"",
-			"   static Inject get to => Inject<${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}>.of();",
+			"   static Inject get to => Inject<${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}>.of();",
 			"}"
 		]
 	}

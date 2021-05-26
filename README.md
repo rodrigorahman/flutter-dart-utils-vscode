@@ -45,15 +45,16 @@ Select the full widget to find these options
 ## Dart Snippets Usage
 
 | Shortcut                         | Description                                          |
-| -------------------------------- | ---------------------------------------------------- |
-| `fu-freezed`                     | Creates a Freezed class                              |
-| `fu-freezed-json-serializable`   | Creates a Freezed with JsonSerializable              |
-| `fu-interface`                   | Creates a Interfaces                                 |
-| `fu-class-interface`             | Creates a Classes with interface                     |
-| `fu-callable-class`              | Creates a Callable Classes                           |
-| `fu-d-test-init`                 | Creates a dart tests                                 |
-| `fu-class`                       | Creates class with file name                         |
-| `fu-class-equatable`             | Creates class with file name and add Equatable       |
+| -------------------------------- | ------------------------------------------------------ |
+| `fu-freezed`                     | Creates a Freezed class                                |
+| `fu-freezed-json-serializable`   | Creates a Freezed with JsonSerializable                |
+| `fu-interface`                   | Creates a Interfaces                                   |
+| `fu-class-interface`             | Creates a Classes with interface                       |
+| `fu-callable-class`              | Create a Callable Classes                              |
+| `fu-d-test-init`                 | Create a dart tests                                    |
+| `fu-class`                       | Create class with file name                            |
+| `fu-class-equatable`             | Create class with file name and add Equatable          |
+| `fu-constructor`                 | Create constructor with file name based                |
 
 
 ## Flutter  Snippets Usage
@@ -235,3 +236,4 @@ Select the full widget to find these options
 * 0.0.77 - Bugfix on windows system
 * 0.0.78 - Bugfix on windows system for implementation interface
 * 0.0.79 - Add wrap with Obx e GetX
+* 0.0.81 - Constructor snippet, and bugfix any snippets

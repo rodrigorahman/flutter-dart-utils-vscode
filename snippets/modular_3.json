@@ -77,13 +77,13 @@
 		"body": [
 			"import 'package:flutter_modular/flutter_modular.dart';",
 			"",
-			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends Module {",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Module {",
 			"",
 			"   @override",
 			"   final List<Bind> binds = [];",
 			"",
 			"   @override",
-			"   final List<ModularRoute> routes = [];",
+			"   final List<ModularRoute> routes = [$1];",
 			"",
 			"}"
 		]

@@ -9,14 +9,14 @@
 			"",
 			"part '${TM_FILENAME_BASE}.g.dart';",
 			"",
-			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
 			"",
 			"   @Route.get('/')",
             "   Future<Response> find(Request request) async { ",
-			"      return Response.ok(jsonEncode(''));",
+			"      $1return Response.ok(jsonEncode(''));",
 			"   }",
 			"",
-			"   Router get router => _$${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Router(this);",
+			"   Router get router => _$${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Router(this);",
 			"}"
 		],
 		"description": "Create controller shelf"

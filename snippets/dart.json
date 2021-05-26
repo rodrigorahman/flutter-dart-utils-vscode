@@ -22,9 +22,9 @@
 			"part '$TM_FILENAME_BASE.g.dart';",
 			"",
 			"@freezed",
-			"abstract class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} with _$${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
-			"   factory ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}($2) = _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}};",
-			"   factory ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}.fromJson(Map<String, dynamic> json) => _$${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}FromJson(json);",
+			"abstract class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} with _$${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"   factory ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}($1) = _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+			"   factory ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.fromJson(Map<String, dynamic> json) => _$${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}FromJson(json);",
 			"}"
 		],
 		"description": "Freezed snippet with jsonSerializable"
@@ -32,7 +32,8 @@
 	"interface": {
 		"prefix": "fu-interface",
 		"body": [
-			"abstract class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
+			"abstract class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"$1",
 			"}"
 		],
 		"description": "Create abstract class 'interface'"
@@ -40,10 +41,25 @@
 	"class_interface_i_prefix": {
 		"prefix": "fu-class-interface",
 		"body": [
-			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} implements I${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} implements I${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"$1",
 			"}"
 		],
 		"description": "Create class with interface only i prefix"
+	},
+	"constructor": {
+		"prefix": "fu-constructor",
+		"body": [
+			"${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}($1);"
+		],
+		"description": "Create abstract class 'interface'"
+	},
+	"named-constructor": {
+		"prefix": "fu-named-constructor",
+		"body": [
+			"${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.$1($2);"
+		],
+		"description": "Create abstract class 'interface'"
 	},
 	"dart_test_init": {
 		"prefix": "fu-d-test-init",
@@ -64,8 +80,8 @@
 		"prefix": "fu-callable-class",
 		"body": [
 			"",
-			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
-			"  $2 call($3) {}",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"  $1 call($2) {}",
 			"}"
 		],
 		"description": "Create callable class"
@@ -75,8 +91,8 @@
 		"body": [
 			"import 'package:equatable/equatable.dart';",
 			"",
-			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends Equatable {",
-			"",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Equatable {",
+			"$1",
 			"  @override",
 			"  List<Object> get props => [];",
 			"}"
@@ -87,8 +103,8 @@
 		"prefix": "fu-class",
 		"body": [
 			"",
-			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
-			"  $2",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"  $1",
 			"}"
 		],
 		"description": "Create class"

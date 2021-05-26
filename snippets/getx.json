@@ -4,11 +4,11 @@
 		"body": [
 			"import 'package:get/get.dart';",
 			"",
-			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} implements Bindings {",
-			"   @override",
-			"   void dependencies() {",
-			"       ",
-			"   }",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} implements Bindings {",
+			"  @override",
+			"  void dependencies() {",
+			"    $1",
+			"  }",
 			"}"
 		],
 		"description": "Create GetX Binding"
@@ -18,8 +18,8 @@
 		"body": [
 			"import 'package:get/get.dart';",
 			"",
-            "class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends GetxController { ",
-            "",
+            "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends GetxController { ",
+            "$1",
 			"}"
 		],
 		"description": "Create GetX Controller"
@@ -30,6 +30,13 @@
             "final $1 = Rx<$2>($3);"
 		],
 		"description": "Create GetX Rx"
+    }, 
+	"getxRxn": {
+		"prefix": "fu-getxrxn",
+		"body": [
+            "final $1 = Rxn<$2>();"
+		],
+		"description": "Create GetX Rxn"
     }, 
     "getxObs": {
 		"prefix": "fu-getxobs",
@@ -66,11 +73,11 @@
 			"import 'package:flutter/material.dart';",
 			"import 'package:get/get.dart';",
 			"",
-			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends GetView<$2Controller> {",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends GetView<$2Controller> {",
 			"   @override",
 			"   Widget build(BuildContext context) {",
 			"       return Scaffold(",
-			"           appBar: AppBar(title: Text('${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}'),),",
+			"           appBar: AppBar(title: Text('${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}'),),",
 			"           body: Container(),",
 			"       );",
 			"  }",
