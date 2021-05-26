@@ -42,11 +42,30 @@ const builderSnippet = (widget) => {
   )`;
 };
 
+const obxSnippet = (widget) => {
+  return `Obx(() { 
+        return ${widget};
+    }
+  )`;
+};
+
+const getXSnippet = (widget) => {
+  return `GetX<$1>(
+    init: $1(),
+    initState: (_) {},
+    builder: (_) {
+        return ${widget};
+    },
+)`;
+};
+
 
 const wrapWithValueListenableBuilder = async () => wrapWith(valueListenableBuilderSnippet);
 const wrapWithProviderConsumerBuilder = async () => wrapWith(providerConsumerBuilderSnippet);
 const wrapWithMobXObserverBuilder = async () => wrapWith(mobxObserverBuilderSnippet);
 const wrapWithLayoutBuilder = async () => wrapWith(layoutBuilderSnippet);
 const wrapWithBuilder = async () => wrapWith(builderSnippet);
+const wrapWithObxGetX = async () => wrapWith(obxSnippet);
+const wrapWithGetx = async () => wrapWith(getXSnippet);
 
-module.exports = { wrapWithValueListenableBuilder, wrapWithProviderConsumerBuilder, wrapWithMobXObserverBuilder, wrapWithLayoutBuilder, wrapWithBuilder };
+module.exports = { wrapWithValueListenableBuilder, wrapWithProviderConsumerBuilder, wrapWithMobXObserverBuilder, wrapWithLayoutBuilder, wrapWithBuilder, wrapWithObxGetX, wrapWithGetx };

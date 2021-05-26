@@ -37,13 +37,21 @@
 		],
 		"description": "Create abstrct class 'interface'"
 	},
-	"class_interface": {
-		"prefix": "fu-class-interface",
+	"class_interface_i_prefix": {
+		"prefix": "fu-class-interface-i-prefix",
 		"body": [
 			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} implements I${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
 			"}"
 		],
 		"description": "Create class with interface"
+	},
+	"class_interface_impl": {
+		"prefix": "fu-class-interface-clean-code",
+		"body": [
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} implements ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
+			"}"
+		],
+		"description": "Create class with interface using clean code standard"
 	},
 	"dart_test_init": {
 		"prefix": "fu-d-test-init",

@@ -3,7 +3,7 @@
 	"displayName": "Flutter & Dart Utilities",
 	"description": "Flutter & Dart Utilities",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.78",
+	"version": "0.0.79",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@gmail.com"
@@ -103,6 +103,14 @@
 			{
 				"command": "extension.fu-wrap-with-builder",
 				"title": "Wrap with Builder"
+			},
+			{
+				"command": "extension.fu-wrap-with-obx-getx",
+				"title": "Wrap with Obx"
+			},
+			{
+				"command": "extension.fu-wrap-with-getx",
+				"title": "Wrap with GetX"
 			},
 			{
 				"command": "extension.fu-wrap-with-layout-builder",

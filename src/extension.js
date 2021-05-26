@@ -4,7 +4,7 @@ const vscode = require('vscode');
 const mkdirp = require('mkdirp');
 const fs = require('fs');
 const _ = require('lodash');
-const { wrapWithProviderConsumerBuilder, wrapWithValueListenableBuilder, wrapWithMobXObserverBuilder, wrapWithLayoutBuilder, wrapWithBuilder } = require('./commands/wrap-with');
+const { wrapWithProviderConsumerBuilder, wrapWithValueListenableBuilder, wrapWithMobXObserverBuilder, wrapWithLayoutBuilder, wrapWithBuilder, wrapWithObxGetX, wrapWithGetx } = require('./commands/wrap-with');
 const { getXNewFeature } = require('./commands/getx_new_feature');
 const { createCleanArchFolders } = require('./commands/clean_arch_folders');
 const { createCleanArchFoldersForFlutter } = require('./commands/clean_arch_folders_for_flutter');
@@ -62,6 +62,8 @@ function activate(context) {
 		vscode.commands.registerCommand('extension.fu-wrap-with-observer', wrapWithMobXObserverBuilder),
 		vscode.commands.registerCommand('extension.fu-wrap-with-layout-builder', wrapWithLayoutBuilder),
 		vscode.commands.registerCommand('extension.fu-wrap-with-builder', wrapWithBuilder),
+		vscode.commands.registerCommand('extension.fu-wrap-with-obx-getx', wrapWithObxGetX),
+		vscode.commands.registerCommand('extension.fu-wrap-with-getx', wrapWithGetx),
 		getxfeature,
 		modularfeature,
 
@@ -111,6 +113,21 @@ class CodeActionProvider {
 				title: "Wrap with Builder"
 			}
 		);
+
+		codeActions.push(
+			{
+				command: "extension.fu-wrap-with-obx-getx",
+				title: "Wrap with Obx"
+			}
+		);
+		
+		codeActions.push(
+			{
+				command: "extension.fu-wrap-with-getx",
+				title: "Wrap with GetX"
+			}
+		);
+		
 		codeActions.push(
 			{
 				command: "extension.fu-wrap-with-value-notifier",

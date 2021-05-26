@@ -26,6 +26,8 @@ Select the full widget to find these options
 | `Wrap with ValueListenableBuilder`   |
 | `Wrap with Consumer`                 |
 | `Wrap with MobX Observer`            |
+| `Wrap with Obx`                      |
+| `Wrap with Getx`                     |
 
 
 ## Menu Features:
@@ -232,3 +234,4 @@ Select the full widget to find these options
 * 0.0.76 - Code Review, refatoring and add new features
 * 0.0.77 - Bugfix on windows system
 * 0.0.78 - Bugfix on windows system for implementation interface
+* 0.0.79 - Add wrap with Obx e GetX
