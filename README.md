@@ -237,3 +237,4 @@ Select the full widget to find these options
 * 0.0.78 - Bugfix on windows system for implementation interface
 * 0.0.79 - Add wrap with Obx e GetX
 * 0.0.81 - Constructor snippet, and bugfix any snippets
+* 0.0.82 - Change snippets Flutter modular 3

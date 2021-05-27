@@ -26,7 +26,7 @@
 	"modular3-bind-factory": {
 		"prefix": "fu-modular3-bind-factory",
 		"body": [
-			"Bind.factory((i) => $1($2)),"
+			"Bind.factory((i) => $1),"
 		]
 	},	
 	"modular3-bind-instance": {
@@ -38,38 +38,38 @@
 	"modular3-bind-singleton": {
 		"prefix": "fu-modular3-bind-singleton",
 		"body": [
-			"Bind.singleton((i) => $1($2)),"
+			"Bind.singleton((i) => $1),"
 		]
 	},
 	"modular3-bind-lazySingleton": {
 		"prefix": "fu-modular3-bind-lazySingleton",
 		"body": [
-			"Bind.lazySingleton((i) => $1($2)),"
+			"Bind.lazySingleton((i) => $1),"
 		]
 	},
 	"modular3-bind-lazySingleton-interface": {
 		"prefix": "fu-modular3-bind-lazySingleton-interface",
 		"body": [
-			"Bind.lazySingleton<I$1>((i) => $1($2)),"
+			"Bind.lazySingleton<$1>((i) => $2),"
 		]
 	},
 
 	"modular3-bind-factory-interface": {
 		"prefix": "fu-modular3-bind-factory-interface",
 		"body": [
-			"Bind.factory<I$1>((i) => $1($2)),"
+			"Bind.factory<$1>((i) => $2),"
 		]
 	},	
 	"modular3-bind-instance-interface": {
 		"prefix": "fu-modular3-bind-instance-interface",
 		"body": [
-			"Bind.instance<I$1>($1),"
+			"Bind.instance<$1>($2),"
 		]
 	},
 	"modular3-bind-singleton-interface": {
 		"prefix": "fu-modular3-bind-singleton-interface",
 		"body": [
-			"Bind.singleton<I$1>((i) => $1($2)),"
+			"Bind.singleton<$1>((i) => $2),"
 		]
 	},
 	"modular3-generate-mdule": {
