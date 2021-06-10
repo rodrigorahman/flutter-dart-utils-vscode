@@ -1,0 +1,15 @@
+{
+	"mobx-store": {
+		"prefix": "fu-mobx-store",
+		"body": [
+			"import 'package:mobx/mobx.dart';",
+			"part 'register_controller.g.dart';",
+			"",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Base with _$${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+			"",
+			"abstract class _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Base with Store {",
+			"",
+			"}"
+		]
+	}
+}

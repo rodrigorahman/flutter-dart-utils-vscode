@@ -6,6 +6,7 @@ Extension that assists in the creation of tests, interfaces, classes and to work
 * Flutter Snippets
 * Modular Snippets
 * Modular3 Snippets
+* Mobx Snippets
 * Cubit Snippets
 * flutter_bloc Snippets
 * Mockito Snippets
@@ -238,3 +239,4 @@ Select the full widget to find these options
 * 0.0.79 - Add wrap with Obx e GetX
 * 0.0.81 - Constructor snippet, and bugfix any snippets
 * 0.0.82 - Change snippets Flutter modular 3
+* 0.0.83 - Mobx Snippets
