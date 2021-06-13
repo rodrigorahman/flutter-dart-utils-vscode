@@ -54,6 +54,13 @@
 		],
 		"description": "Create abstract class 'interface'"
 	},
+	"private-constructor": {
+		"prefix": "fu-private-constructor",
+		"body": [
+			"${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();"
+		],
+		"description": "Create abstract class 'interface'"
+	},
 	"named-constructor": {
 		"prefix": "fu-named-constructor",
 		"body": [

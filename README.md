@@ -240,3 +240,4 @@ Select the full widget to find these options
 * 0.0.81 - Constructor snippet, and bugfix any snippets
 * 0.0.82 - Change snippets Flutter modular 3
 * 0.0.83 - Mobx Snippets
+* 0.0.84 - Add new snippet (private constructor)
