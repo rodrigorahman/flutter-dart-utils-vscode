@@ -47,6 +47,16 @@
 		],
 		"description": "Create class with interface only i prefix"
 	},
+
+	"class_exception": {
+		"prefix": "fu-class-exception",
+		"body": [
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} implements Exception {",
+			"$1",
+			"}"
+		],
+		"description": "Create class with interface only i prefix"
+	},
 	"constructor": {
 		"prefix": "fu-constructor",
 		"body": [
