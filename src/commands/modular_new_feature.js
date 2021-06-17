@@ -50,7 +50,7 @@ import './${featureName}_page.dart';
 class ${moduleNameFile} extends Module {
     @override
     final List<Bind> binds = [
-      Bind.factory((i) => ${controllerNameFile}()),
+      Bind.lazySingleton((i) => ${controllerNameFile}()),
     ];
  
     @override
