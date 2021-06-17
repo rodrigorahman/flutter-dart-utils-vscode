@@ -1,7 +1,7 @@
 {
 	"name": "flutter-dart-utils",
 	"displayName": "Flutter & Dart Utilities",
-	"description": "Official package of Academia do Flutter(BR)",
+	"description": "Official package of Academia do Flutter (BR) the best flutter course in Brazil",
 	"publisher": "RodrigoRahman",
 	"homepage": "http://academiadoflutter.com.br",
 	"author": {
@@ -9,7 +9,7 @@
 		"email": "rodrigorahman@academiadoflutter.com.br",
 		"url": "http://academiadoflutter.com.br"
 	},
-	"version": "0.0.86",
+	"version": "0.0.87",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@academiadoflutter.com.br"
