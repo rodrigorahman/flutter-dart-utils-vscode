@@ -1,12 +1,18 @@
 {
 	"name": "flutter-dart-utils",
 	"displayName": "Flutter & Dart Utilities",
-	"description": "Flutter & Dart Utilities",
+	"description": "Official package of Academia do Flutter(BR)",
 	"publisher": "RodrigoRahman",
-	"version": "0.0.85",
+	"homepage": "http://academiadoflutter.com.br",
+	"author": {
+		"name": "Rodrigo Rahman",
+		"email": "rodrigorahman@academiadoflutter.com.br",
+		"url": "http://academiadoflutter.com.br"
+	},
+	"version": "0.0.86",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
-		"email": "rodrigorahman@gmail.com"
+		"email": "rodrigorahman@academiadoflutter.com.br"
 	},
 	"repository": {
 		"type": "git",
@@ -18,7 +24,10 @@
 	"keywords": [
 		"dart",
 		"flutter",
-		"clean architecture"
+		"clean architecture",
+		"mobx",
+		"getx",
+		"bloc"
 	],
 	"categories": [
 		"Snippets",
