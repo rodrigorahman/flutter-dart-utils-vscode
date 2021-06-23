@@ -243,3 +243,4 @@ Select the full widget to find these options
 * 0.0.84 - Add new snippet (private constructor)
 * 0.0.85 - Add new snippet (class exception)
 * 0.0.86 - bugfix mobxstore generate
+* 0.0.89 - add key on flutter snippets
