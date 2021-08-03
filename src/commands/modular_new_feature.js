@@ -15,7 +15,7 @@ async function modularNewFeature(uri) {
         const controller = `${baseUrl}/${featureName}_controller.dart`;
 
         await createFile(page);
-        await createFile(module);
+        await createFile(modularModule);
         await createFile(controller);
 
         const pageNameFile = _.upperFirst(_.camelCase(`${featureName}Page`));
