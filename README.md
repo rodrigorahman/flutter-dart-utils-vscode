@@ -41,6 +41,8 @@ Select the full widget to find these options
 | `3-Tiers Back: New Feature`          |
 | `Create Dart Interface`              |
 | `Create Dart Class`                  |
+| `Create Stateless Widget`            |
+| `Create Stateful Widget`             |
 | `GetX: New Feature`                  |
 | `Flutter Modular: New Feature`       |
 
@@ -247,3 +249,4 @@ Select the full widget to find these options
 * 0.0.86 - bugfix mobxstore generate
 * 0.0.89 - add key on flutter snippets
 * 0.0.91 - add 'const' in flutter e getx snippets
+* 0.0.92 - add Create Stateless Widget e Create Stateful Widget on menu

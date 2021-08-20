@@ -9,7 +9,7 @@
 		"email": "rodrigorahman@academiadoflutter.com.br",
 		"url": "http://academiadoflutter.com.br"
 	},
-	"version": "0.0.91",
+	"version": "0.0.92",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@academiadoflutter.com.br"
@@ -33,7 +33,6 @@
 		"Snippets",
 		"Programming Languages"
 	],
-	
 	"activationEvents": [
 		"onCommand:extension.clean-architecture-folders",
 		"onCommand:extension.extension.getxfeature",
@@ -94,6 +93,14 @@
 				"title": "Create Dart Class"
 			},
 			{
+				"command": "extension.generateStatelessWidget",
+				"title": "Create Stateless Widget"
+			},	
+			{
+				"command": "extension.generateStatefulWidget",
+				"title": "Create Stateful Widget"
+			},
+			{
 				"command": "extension.implementsInterface",
 				"title": "Implements interface"
 			},
@@ -139,6 +146,16 @@
 				{
 					"when": "explorerResourceIsFolder",
 					"command": "extension.generateClass",
+					"group": "1_modification@1"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.generateStatelessWidget",
+					"group": "1_modification@1"
+				},	
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.generateStatefulWidget",
 					"group": "1_modification@1"
 				},
 				{

@@ -11,6 +11,8 @@ const { createCleanArchFoldersForFlutter } = require('./commands/clean_arch_fold
 const { generateTestFile } = require('./commands/generate_test_file');
 const { generateInterface } = require('./commands/generate_interface');
 const { generateClass } = require('./commands/generate_class');
+const { generateStatelessWidget } = require('./commands/generate_stateless_widget');
+const { generateStatefulWidget } = require('./commands/generate_stateful_widget');
 const { implementsInterface: implementsInterfaceFun } = require('./commands/implements_interface');
 const { three_tiers } = require('./commands/three_tiers');
 const { mvnfeature } = require('./commands/mvc_feature');
@@ -37,6 +39,8 @@ function activate(context) {
 	const createInterface = vscode.commands.registerCommand('extension.generateInterface', generateInterface);
 
 	const createClass = vscode.commands.registerCommand('extension.generateClass', generateClass);
+	const createStatelessWidget = vscode.commands.registerCommand('extension.generateStatelessWidget', generateStatelessWidget);
+	const createStatefulWidget = vscode.commands.registerCommand('extension.generateStatefulWidget', generateStatefulWidget);
 
 	const implementsInterface = vscode.commands.registerCommand('extension.implementsInterface', implementsInterfaceFun);
 
@@ -54,6 +58,8 @@ function activate(context) {
 		cleanForFlutter,
 		createInterface,
 		createClass,
+		createStatelessWidget,
+		createStatefulWidget,
 		implementsInterface,
 		threeTiersFolders,
 		MVCFlutterFolders,
