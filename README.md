@@ -250,3 +250,4 @@ Select the full widget to find these options
 * 0.0.89 - add key on flutter snippets
 * 0.0.91 - add 'const' in flutter e getx snippets
 * 0.0.92 - add Create Stateless Widget e Create Stateful Widget on menu
+* 0.0.93 - add 'const' in getxPage snippets
