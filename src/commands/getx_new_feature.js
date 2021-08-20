@@ -27,23 +27,26 @@ import 'package:flutter/material.dart';
 import './${featureName}_controller.dart';
 
 class ${pageNameFile} extends GetView<${controllerNameFile}> {
-@override
-Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: Text('${pageNameFile}'),),
-        body: Container(),
-    );
-}
+    
+    const ${pageNameFile}({Key? key}) : super(key: key);
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            appBar: AppBar(title: const Text('${pageNameFile}'),),
+            body: Container(),
+        );
+    }
 }`, 'utf8');
 
         fs.writeFileSync(bindings, `import 'package:get/get.dart';
 import './${featureName}_controller.dart';
 
 class ${bindingNameFile} implements Bindings {
-@override
-void dependencies() {
-    Get.put(${controllerNameFile}());
-}
+    @override
+    void dependencies() {
+        Get.put(${controllerNameFile}());
+    }
 }`, 'utf8');
 
         fs.writeFileSync(controller, `import 'package:get/get.dart';

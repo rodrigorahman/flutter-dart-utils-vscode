@@ -16,6 +16,8 @@ Extension that assists in the creation of tests, interfaces, classes and to work
 ## Installation
 Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=RodrigoRahman.flutter-dart-utils) or by [searching within VSCode](https://code.visualstudio.com/docs/editor/extension-gallery#_search-for-an-extension).
 
+## Youtube movie for examples
+[Youtube](https://youtu.be/YlL0KJhDFEM) (https://youtu.be/YlL0KJhDFEM)
 ## Features Wrap With
 ***Important!!!*** 
 Select the full widget to find these options
@@ -244,3 +246,4 @@ Select the full widget to find these options
 * 0.0.85 - Add new snippet (class exception)
 * 0.0.86 - bugfix mobxstore generate
 * 0.0.89 - add key on flutter snippets
+* 0.0.91 - add 'const' in flutter e getx snippets
