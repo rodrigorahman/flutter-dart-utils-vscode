@@ -73,6 +73,7 @@ Select the full widget to find these options
 | `fu-change-notifier`             | Create change notifier class                         |
 | `fu-value-notifier`              | Create ValueNotifier                                 |
 | `fu-text-editing-controller`     | Create TextEditingController                         |
+| `fu-separator`                   | Create SizedBox separator                            |
 
 ## Aqueduct Snippets Usage
 
@@ -254,3 +255,4 @@ Select the full widget to find these options
 * 0.0.92 - add Create Stateless Widget e Create Stateful Widget on menu
 * 0.0.93 - add 'const' in getxPage snippets
 * 0.0.94 - add template to create static attributes
+* 0.0.95 - add template to create SizedBox separator

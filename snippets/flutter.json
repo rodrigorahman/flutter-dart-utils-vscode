@@ -84,5 +84,14 @@
 			"final $1EC = TextEditingController($2);"
 		],
 		"description": "Create TextEditingController"
+	},
+	"sized-box-spacer": {
+		"prefix": "fu-separator",
+		"body": [
+			"const SizedBox(",
+			"   height: $1,",
+			"),"
+		],
+		"description": "Create SizedBox separator"
 	}
 }
