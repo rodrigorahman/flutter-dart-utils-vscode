@@ -60,6 +60,8 @@ Select the full widget to find these options
 | `fu-class`                       | Create class with file name                            |
 | `fu-class-equatable`             | Create class with file name and add Equatable          |
 | `fu-constructor`                 | Create constructor with file name based                |
+| `fu-private-constructor`         | Create private constructor with file name based        |
+| `fu-static-attribute`            | Create static atribute in class                        |
 
 
 ## Flutter  Snippets Usage
@@ -251,3 +253,4 @@ Select the full widget to find these options
 * 0.0.91 - add 'const' in flutter e getx snippets
 * 0.0.92 - add Create Stateless Widget e Create Stateful Widget on menu
 * 0.0.93 - add 'const' in getxPage snippets
+* 0.0.94 - add template to create static attributes

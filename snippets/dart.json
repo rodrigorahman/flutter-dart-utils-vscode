@@ -170,5 +170,12 @@
 			"});"
 		],
 		"description": "Test template"
+	},
+	"fu-static-attribute": {
+		"prefix": "fu-static-attribute",
+		"body": [
+			"  static final $1 = $2;"
+		],
+		"description": "create static atribute"
 	}
 }
