@@ -85,6 +85,13 @@
 		],
 		"description": "Create TextEditingController"
 	},
+	"global_form_key": {
+		"prefix": "fu-form-key",
+		"body": [
+			"final formKey = GlobalKey<FormState>();"
+		],
+		"description": "Create TextEditingController"
+	},
 	"sized-box-spacer": {
 		"prefix": "fu-separator",
 		"body": [

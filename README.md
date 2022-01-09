@@ -74,6 +74,7 @@ Select the full widget to find these options
 | `fu-value-notifier`              | Create ValueNotifier                                 |
 | `fu-text-editing-controller`     | Create TextEditingController                         |
 | `fu-separator`                   | Create SizedBox separator                            |
+| `fu-form-key`                    | Create formKey GlobalKey<FormState>                  |
 
 ## Aqueduct Snippets Usage
 
@@ -256,3 +257,4 @@ Select the full widget to find these options
 * 0.0.93 - add 'const' in getxPage snippets
 * 0.0.94 - add template to create static attributes
 * 0.0.95 - add template to create SizedBox separator
+* 0.0.96 - add template to create GlobalKey<FormState>
