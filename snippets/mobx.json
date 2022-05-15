@@ -5,9 +5,9 @@
 			"import 'package:mobx/mobx.dart';",
 			"part '${TM_FILENAME_BASE}.g.dart';",
 			"",
-			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Base with _$${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} = ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Base with _$${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
 			"",
-			"abstract class _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Base with Store {",
+			"abstract class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Base with Store {",
 			"",
 			"}"
 		]
