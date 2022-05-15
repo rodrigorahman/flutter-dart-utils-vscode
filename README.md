@@ -258,3 +258,4 @@ Select the full widget to find these options
 * 0.0.94 - add template to create static attributes
 * 0.0.95 - add template to create SizedBox separator
 * 0.0.96 - add template to create GlobalKey<FormState>
+* 0.0.97 - lint fix createState

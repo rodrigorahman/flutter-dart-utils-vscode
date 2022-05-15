@@ -29,7 +29,7 @@
 			"  const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}({ Key? key }) : super(key: key);",
 			"",
 			"  @override",
-			"  _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State createState() => _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State();",
+			"  State<${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}> createState() => _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State();",
 			"}",
 			"",
 			"class _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State extends State<${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}> {",
