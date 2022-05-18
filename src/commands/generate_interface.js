@@ -5,6 +5,10 @@ const _ = require('lodash');
 
 async function generateInterface(uri) {
     let interfaceName = await promptForFeatureName("Interface Name");
+    if(!interfaceName){
+        vscode.window.showInformationMessage('Creating a Dart Interface Canceled');
+        return;
+    }
     let wsedit = new vscode.WorkspaceEdit();
     const configType = vscode.workspace.getConfiguration("generate").get("template.type");
     if(configType == 'I Prefix') {

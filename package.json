@@ -9,7 +9,7 @@
 		"email": "rodrigorahman@academiadoflutter.com.br",
 		"url": "http://academiadoflutter.com.br"
 	},
-	"version": "0.0.98",
+	"version": "0.0.103",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@academiadoflutter.com.br"
@@ -95,7 +95,7 @@
 			{
 				"command": "extension.generateStatelessWidget",
 				"title": "Create Stateless Widget"
-			},	
+			},
 			{
 				"command": "extension.generateStatefulWidget",
 				"title": "Create Stateful Widget"
@@ -152,7 +152,7 @@
 					"when": "explorerResourceIsFolder",
 					"command": "extension.generateStatelessWidget",
 					"group": "1_modification@1"
-				},	
+				},
 				{
 					"when": "explorerResourceIsFolder",
 					"command": "extension.generateStatefulWidget",
@@ -289,9 +289,8 @@
 		"@types/vscode": "^1.46.0",
 		"eslint": "^6.8.0",
 		"glob": "^7.1.6",
-		"mkdirp": "^1.0.4",
 		"mocha": "^7.1.1",
-		"typescript": "^3.8.3",
+		"typescript": "^3.9.10",
 		"vscode-test": "^1.3.0"
 	},
 	"dependencies": {
