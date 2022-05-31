@@ -9,7 +9,7 @@
 		"email": "rodrigorahman@academiadoflutter.com.br",
 		"url": "http://academiadoflutter.com.br"
 	},
-	"version": "0.0.103",
+	"version": "0.0.104",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@academiadoflutter.com.br"
@@ -197,10 +197,6 @@
 					"when": "explorerResourceIsFolder",
 					"command": "extension.modularfeature",
 					"group": "1_modification@7"
-				},
-				{
-					"command": "extension.implementsInterface",
-					"when": "editorLangId == dart"
 				}
 			],
 			"commandPalette": [

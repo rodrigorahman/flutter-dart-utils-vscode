@@ -177,5 +177,19 @@
 			"  static final $1 = $2;"
 		],
 		"description": "create static atribute"
+	},
+	"fu-seconds-delay": {
+		"prefix": "fu-seconds-delay",
+		"body": [
+			"await Future.delayed(Duration(seconds: $1));"
+		],
+		"description": "Create Future.delayed in seconds"
+	},
+	"fu-milliseconds-delay": {
+		"prefix": "fu-milliseconds-delay",
+		"body": [
+			"await Future.delayed(Duration(milliseconds: $1));"
+		],
+		"description": "Create Future.delayed in milliseconds'"
 	}
 }
