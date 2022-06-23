@@ -11,6 +11,7 @@ const { createCleanArchFoldersForFlutter } = require('./commands/clean_arch_fold
 const { generateTestFile } = require('./commands/generate_test_file');
 const { generateInterface } = require('./commands/generate_interface');
 const { generateClass } = require('./commands/generate_class');
+const { generateSingletonClass } = require('./commands/generate_singleton_class');
 const { generateStatelessWidget } = require('./commands/generate_stateless_widget');
 const { generateStatefulWidget } = require('./commands/generate_stateful_widget');
 const { implementsInterface: implementsInterfaceFun } = require('./commands/implements_interface');
@@ -39,6 +40,7 @@ function activate(context) {
 	const createInterface = vscode.commands.registerCommand('extension.generateInterface', generateInterface);
 
 	const createClass = vscode.commands.registerCommand('extension.generateClass', generateClass);
+	const createSingletonClass = vscode.commands.registerCommand('extension.generateSingletonClass', generateSingletonClass);
 	const createStatelessWidget = vscode.commands.registerCommand('extension.generateStatelessWidget', generateStatelessWidget);
 	const createStatefulWidget = vscode.commands.registerCommand('extension.generateStatefulWidget', generateStatefulWidget);
 
@@ -58,6 +60,7 @@ function activate(context) {
 		cleanForFlutter,
 		createInterface,
 		createClass,
+		createSingletonClass,
 		createStatelessWidget,
 		createStatefulWidget,
 		implementsInterface,
