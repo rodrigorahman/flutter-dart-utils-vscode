@@ -47,7 +47,6 @@
 		],
 		"description": "Create class with interface only i prefix"
 	},
-
 	"class_exception": {
 		"prefix": "fu-class-exception",
 		"body": [
@@ -125,6 +124,21 @@
 			"}"
 		],
 		"description": "Create class"
+	},
+	"dart_class_singleton": {
+		"prefix": "fu-class-singleton",
+		"body": [
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"  static ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}? _instance;",
+			"// Avoid self isntance",
+			"  ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();",
+			"  static ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} get  instance{",
+			"    _instance??=  ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();",
+			"    return _instance!;",
+			"   }",
+			"}"
+		],
+		"description": "Create a singleton class"
 	},
 	"mysql_template": {
 		"prefix": "fu-mysql-connection-template",
