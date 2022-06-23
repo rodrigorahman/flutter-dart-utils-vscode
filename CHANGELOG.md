@@ -94,6 +94,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - lint fix MobxStore (library_private_types_in_public_api)
 ## [0.0.103]
 - Fix create commands
-
 ## [0.0.104]
 - Add new snippets dart
+## [0.0.105]
+- Create a new snippet to create singleton class
