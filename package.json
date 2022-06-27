@@ -9,7 +9,7 @@
 		"email": "rodrigorahman@academiadoflutter.com.br",
 		"url": "http://academiadoflutter.com.br"
 	},
-	"version": "0.0.104",
+	"version": "0.0.105",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@academiadoflutter.com.br"
@@ -93,6 +93,10 @@
 				"title": "Create Dart Class"
 			},
 			{
+				"command": "extension.generateSingletonClass",
+				"title": "Create Dart Singleton Class"
+			},
+			{
 				"command": "extension.generateStatelessWidget",
 				"title": "Create Stateless Widget"
 			},
@@ -146,6 +150,11 @@
 				{
 					"when": "explorerResourceIsFolder",
 					"command": "extension.generateClass",
+					"group": "1_modification@1"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.generateSingletonClass",
 					"group": "1_modification@1"
 				},
 				{

@@ -58,12 +58,13 @@ Select the full widget to find these options
 | `fu-callable-class`              | Create a Callable Classes                              |
 | `fu-d-test-init`                 | Create a dart tests                                    |
 | `fu-class`                       | Create class with file name                            |
+| `fu-class-singleton`             | Create a singleton class with file name                |
 | `fu-class-equatable`             | Create class with file name and add Equatable          |
 | `fu-constructor`                 | Create constructor with file name based                |
 | `fu-private-constructor`         | Create private constructor with file name based        |
 | `fu-static-attribute`            | Create static atribute in class                        |
-| `fu-seconds-delay`               | Create Future.delayed in seconds                        |
-| `fu-milliseconds-delay`          | Create Future.delayed in milliseconds                        |
+| `fu-seconds-delay`               | Create Future.delayed in seconds                       |
+| `fu-milliseconds-delay`          | Create Future.delayed in milliseconds                   |
 
 
 ## Flutter  Snippets Usage
@@ -263,3 +264,5 @@ Select the full widget to find these options
 * 0.0.97 - lint fix createState (library_private_types_in_public_api)
 * 0.0.98 - lint fix MobxStore (library_private_types_in_public_api)
 * 0.0.103 - Fix create commands
+* 0.0.104 - Add new snippets dart
+* 0.0.105 - Create a new snippet to create singleton class
