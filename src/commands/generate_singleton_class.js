@@ -17,11 +17,11 @@ async function generateSingletonClass(uri) {
 
     fs.writeFileSync(path, `class ${singletonNameFile} {
         static ${singletonNameFile}? _instance;
-        // Avoid self isntance
+        // Avoid self instance
         ${singletonNameFile}._();
         static ${singletonNameFile} get instance{
-            _instance??=  ${singletonNameFile}._();",
-			return _instance!;",
+            _instance??=  ${singletonNameFile}._();
+			return _instance!;
         }
 }`, 'utf8');
     vscode.workspace.openTextDocument(path).then(doc => {
