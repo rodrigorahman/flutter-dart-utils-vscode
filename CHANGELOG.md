@@ -98,3 +98,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Add new snippets dart
 ## [0.0.105]
 - Create a new snippet to create singleton class
+
+## [0.1.]
+- Add snippet for create a part code based a filename ex: home_controller.dart -> home_controller.g.dart

@@ -100,5 +100,9 @@
 			"),"
 		],
 		"description": "Create SizedBox separator"
+	},
+	"part.g.dart": {
+		"prefix": "fu-part",
+		"body": "part '$TM_FILENAME_BASE.g.dart';"
 	}
 }
