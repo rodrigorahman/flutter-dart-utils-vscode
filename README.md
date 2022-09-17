@@ -78,6 +78,7 @@ Select the full widget to find these options
 | `fu-text-editing-controller`     | Create TextEditingController                         |
 | `fu-separator`                   | Create SizedBox separator                            |
 | `fu-form-key`                    | Create formKey GlobalKey<FormState>                  |
+| `fu-part`                        | Add a part based file name ex: home_controller ->  (home_controller.g.dart        |
 
 ## Aqueduct Snippets Usage
 
