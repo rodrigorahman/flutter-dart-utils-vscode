@@ -106,3 +106,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Add snippets
    - fu-stls create StatelessWidget with super.key
    - fu-stfs create StatefulWidget with super.key
+
+## [0.2.1]
+- Bugfix shotcut snippets fu-stls

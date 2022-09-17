@@ -20,7 +20,7 @@
 		"description": "Create Stateles Component with name of file and import material"
 	},
 	"statelessSuperWidget": {
-		"prefix": "fu-stl3",
+		"prefix": "fu-stls",
 		"body": [
 			"import 'package:flutter/material.dart';",
 			"",
