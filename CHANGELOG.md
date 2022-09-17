@@ -98,3 +98,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Add new snippets dart
 ## [0.0.105]
 - Create a new snippet to create singleton class
+
+## [0.2.0]
+- Add snippets
+   - fu-stls create StatelessWidget with super.key
+   - fu-stfs create StatefulWidget with super.key
