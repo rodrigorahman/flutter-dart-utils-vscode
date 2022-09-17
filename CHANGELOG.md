@@ -101,3 +101,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.1.]
 - Add snippet for create a part code based a filename ex: home_controller.dart -> home_controller.g.dart
+
+## [0.2.0]
+- Add snippets
+   - fu-stls create StatelessWidget with super.key
+   - fu-stfs create StatefulWidget with super.key

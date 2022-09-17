@@ -71,7 +71,9 @@ Select the full widget to find these options
 | Shortcut                         | Description                                          |
 | -------------------------------- | ---------------------------------------------------- |
 | `fu-stl`                         | Create StatelessWidget with Scaffold and AppBar      |
+| `fu-stls`                         | Create StatelessWidget with super.key, Scaffold and AppBar      |
 | `fu-stf`                         | Create StatefulWidget with Scaffold and AppBar       |
+| `fu-stfs`                         | Create StatefulWidget with with super.key, Scaffold and AppBar       |
 | `fu-f-test-init`                 | Create a dart tests                                  |
 | `fu-change-notifier`             | Create change notifier class                         |
 | `fu-value-notifier`              | Create ValueNotifier                                 |
