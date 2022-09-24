@@ -157,11 +157,11 @@
 		"body": "MediaQuery.of(context)"
 	},
 	"fu-sw": {
-		"prefix": "fu-mediaquerysw",
+		"prefix": "fu-sw",
 		"body": "MediaQuery.of(context).size.width"
 	},
 	"fu-sh": {
-		"prefix": "fu-mediaquerysh",
+		"prefix": "fu-sh",
 		"body": "MediaQuery.of(context).size.height"
 	}
 	
