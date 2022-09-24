@@ -154,15 +154,19 @@
 	},
 	"fu-mediaquery": {
 		"prefix": "fu-mediaquery",
-		"body": "MediaQuery.of(context)"
+		"body": "MediaQuery.of(context).$1"
 	},
 	"fu-sw": {
 		"prefix": "fu-sw",
-		"body": "MediaQuery.of(context).size.width"
+		"body": "MediaQuery.of(context).size.width$1"
 	},
 	"fu-sh": {
 		"prefix": "fu-sh",
-		"body": "MediaQuery.of(context).size.height"
+		"body": "MediaQuery.of(context).size.height$1"
+	},
+	"fu-navigator": {
+		"prefix": "fu-navigator",
+		"body": "Navigator.of(context).$1"
 	}
 	
 	

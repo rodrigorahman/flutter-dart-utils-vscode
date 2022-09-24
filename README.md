@@ -81,9 +81,10 @@ Select the full widget to find these options
 | `fu-separator`                   | Create SizedBox separator                            |
 | `fu-form-key`                    | Create formKey GlobalKey<FormState>                  |
 | `fu-part`                        | Add a part based file name ex: home_controller ->  (home_controller.g.dart        |
-| `fu-mediaquery`                  | Get MediaQuery.of                                    |
+| `fu-mediaquery`                  | Put MediaQuery.of                                    |
 | `fu-sw`                          | Get Screen size width from MediaQuery                |
 | `fu-sh`                          | Get Screen size height from MediaQuery               |
+| `fu-navigator`                   | Put Navigator.of(context).                           |
 
 ## Aqueduct Snippets Usage
 
