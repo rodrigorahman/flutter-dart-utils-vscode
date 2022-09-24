@@ -109,3 +109,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.2.1]
 - Bugfix shotcut snippets fu-stls
+
+## [0.3.0]
+- New snippets Flutter (fu-mediaquery, fu-sw, fu-sh)

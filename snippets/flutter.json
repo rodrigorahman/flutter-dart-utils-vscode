@@ -151,5 +151,19 @@
 	"part.g.dart": {
 		"prefix": "fu-part",
 		"body": "part '$TM_FILENAME_BASE.g.dart';"
+	},
+	"fu-mediaquery": {
+		"prefix": "fu-mediaquery",
+		"body": "MediaQuery.of(context)"
+	},
+	"fu-sw": {
+		"prefix": "fu-mediaquerysw",
+		"body": "MediaQuery.of(context).size.width"
+	},
+	"fu-sh": {
+		"prefix": "fu-mediaquerysh",
+		"body": "MediaQuery.of(context).size.height"
 	}
+	
+	
 }
