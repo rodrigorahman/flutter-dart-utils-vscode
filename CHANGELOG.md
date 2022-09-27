@@ -118,3 +118,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.4.0]
 - New snippets Flutter (fu-navigator)
+
+## [0.4.1]
+- New snippets Flutter (fu-snackbar)
+- Bugfix implements interface

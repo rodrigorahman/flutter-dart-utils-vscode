@@ -167,6 +167,10 @@
 	"fu-navigator": {
 		"prefix": "fu-navigator",
 		"body": "Navigator.of(context).$1"
+	},
+	"fu-snackbar": {
+		"prefix": "fu-snackbar",
+		"body": "ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('$1')));"
 	}
 	
 	
