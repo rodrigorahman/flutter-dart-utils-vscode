@@ -7,7 +7,7 @@ async function implementsInterface(uri) {
     const textFile = editor.document.getText();
 
 
-    const indexStart = textFile.indexOf('abstract class ');
+    const indexStart = textFile.lastIndexOf('abstract class ');
     let indexEnd = textFile.trim().indexOf(' {');
 
     if (textFile.includes('extends')) {
@@ -16,7 +16,7 @@ async function implementsInterface(uri) {
         indexEnd = textFile.trim().indexOf(' with');
     }
 
-    let interfaceName = textFile.substring(indexStart, indexEnd - indexStart).replace('abstract class', '').replace(' {', '');
+    let interfaceName = textFile.substring(indexStart, indexEnd).replace('abstract class', '').replace(' {', '');
     interfaceName = interfaceName.trimEnd();
     const configType = vscode.workspace.getConfiguration("generate").get("template.type");
     let implementationName = interfaceName.trim();

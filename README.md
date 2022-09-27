@@ -85,6 +85,7 @@ Select the full widget to find these options
 | `fu-sw`                          | Get Screen size width from MediaQuery                |
 | `fu-sh`                          | Get Screen size height from MediaQuery               |
 | `fu-navigator`                   | Put Navigator.of(context).                           |
+| `fu-snackbar`                    | Put ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('$1')))                           |
 
 ## Aqueduct Snippets Usage
 
