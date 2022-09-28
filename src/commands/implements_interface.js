@@ -8,7 +8,7 @@ async function implementsInterface(uri) {
 
 
     const indexStart = textFile.lastIndexOf('abstract class ');
-    let indexEnd = textFile.trim().indexOf(' {');
+    let indexEnd = textFile.indexOf(' {');
 
     if (textFile.includes('extends')) {
         indexEnd = textFile.trim().indexOf(' extends');

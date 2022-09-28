@@ -122,3 +122,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.4.1]
 - New snippets Flutter (fu-snackbar)
 - Bugfix implements interface
+
+## [0.4.3]
+- Bugfix implements interface
