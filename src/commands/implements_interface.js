@@ -11,9 +11,9 @@ async function implementsInterface(uri) {
     let indexEnd = textFile.indexOf(' {');
 
     if (textFile.includes('extends')) {
-        indexEnd = textFile.trim().indexOf(' extends');
+        indexEnd = textFile.indexOf(' extends');
     } else if (textFile.includes('with')) {
-        indexEnd = textFile.trim().indexOf(' with');
+        indexEnd = textFile.indexOf(' with');
     }
 
     let interfaceName = textFile.substring(indexStart, indexEnd).replace('abstract class', '').replace(' {', '');
