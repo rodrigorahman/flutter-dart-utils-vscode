@@ -10,6 +10,15 @@ async function implementsInterface(uri) {
     const indexStart = textFile.lastIndexOf('abstract class ');
     let indexEnd = textFile.indexOf(' {');
 
+    if(indexEnd === -1){
+        indexEnd = textFile.indexOf('{');
+    }
+
+    if(indexEnd === -1){
+        vscode.window.showErrorMessage('please format the code before running the implements interface');
+        return;
+    }
+
     if (textFile.includes('extends')) {
         indexEnd = textFile.indexOf(' extends');
     } else if (textFile.includes('with')) {
