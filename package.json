@@ -9,7 +9,7 @@
 		"email": "rodrigorahman@academiadoflutter.com.br",
 		"url": "http://academiadoflutter.com.br"
 	},
-	"version": "0.5.1",
+	"version": "0.6.0",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@academiadoflutter.com.br"
@@ -37,6 +37,7 @@
 		"onCommand:extension.clean-architecture-folders",
 		"onCommand:extension.extension.getxfeature",
 		"onCommand:extension.extension.modularfeature",
+		"onCommand:extension.extension.extension.modulariniital",
 		"workspaceContains:**/pubspec.yaml"
 	],
 	"main": "./src/extension.js",
@@ -143,6 +144,10 @@
 			{
 				"command": "extension.modularfeature",
 				"title": "Flutter Modular: New Feature"
+			},
+			{
+				"command": "extension.modulariniital",
+				"title": "Flutter Modular: Configure Framework"
 			}
 		],
 		"menus": {
@@ -205,6 +210,11 @@
 				{
 					"when": "explorerResourceIsFolder",
 					"command": "extension.modularfeature",
+					"group": "1_modification@7"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.modulariniital",
 					"group": "1_modification@7"
 				}
 			],

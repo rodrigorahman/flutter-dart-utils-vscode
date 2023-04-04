@@ -18,6 +18,7 @@ const { implementsInterface: implementsInterfaceFun } = require('./commands/impl
 const { three_tiers } = require('./commands/three_tiers');
 const { mvnfeature } = require('./commands/mvc_feature');
 const { modularNewFeature } = require('./commands/modular_new_feature');
+const { modularInitialConfig } = require('./commands/modular_initial_config');
 
 /**
  * @param {vscode.ExtensionContext} context
@@ -29,6 +30,7 @@ const { modularNewFeature } = require('./commands/modular_new_feature');
 function activate(context) {
 
 	const modularfeature = vscode.commands.registerCommand("extension.modularfeature", modularNewFeature);
+	const modularInitial = vscode.commands.registerCommand("extension.modulariniital", modularInitialConfig);
 	const getxfeature = vscode.commands.registerCommand("extension.getxfeature", getXNewFeature);
 
 	const disposable = vscode.commands.registerCommand("extension.clean-architecture-folders", createCleanArchFolders);
@@ -75,6 +77,7 @@ function activate(context) {
 		vscode.commands.registerCommand('extension.fu-wrap-with-getx', wrapWithGetx),
 		getxfeature,
 		modularfeature,
+		modularInitial
 
 	);
 
