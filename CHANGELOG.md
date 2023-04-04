@@ -141,3 +141,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.6.0]
 - Added the automatic configuration of the modular flutter by right-clicking the lib and accessing the menu Flutter Modular: Configure Framework
+
+## [0.6.1]
+- Fix on create AppWiget on Flutter Modular: Configure Framework
