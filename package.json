@@ -9,7 +9,7 @@
 		"email": "rodrigorahman@academiadoflutter.com.br",
 		"url": "http://academiadoflutter.com.br"
 	},
-	"version": "0.4.4",
+	"version": "0.4.5",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@academiadoflutter.com.br"
@@ -238,7 +238,7 @@
 			},
 			{
 				"language": "dart",
-				"path": "./snippets/modular.json"
+				"path": "./snippets/modular_old.json"
 			},
 			{
 				"language": "dart",
@@ -246,7 +246,7 @@
 			},
 			{
 				"language": "dart",
-				"path": "./snippets/modular_3.json"
+				"path": "./snippets/modular.json"
 			},
 			{
 				"language": "dart",

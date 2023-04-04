@@ -128,3 +128,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.4.4]
 - Bugfix implements interface write spaces
+
+## [0.4.5]
+- Bugfix implements interface without write spaces
