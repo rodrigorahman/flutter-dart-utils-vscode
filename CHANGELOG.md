@@ -135,3 +135,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.5.0]
 - Changing fu-modular to fu-modular-old-* to maintain compatibility with the previous version.
 - Now, fu-modular-* has been replaced to meet the latest version of the modular.
+
+## [0.5.1]
+- Correction in the modular documentation

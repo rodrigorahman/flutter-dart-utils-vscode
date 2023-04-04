@@ -5,7 +5,7 @@ Extension that assists in the creation of tests, interfaces, classes and to work
 * Dart Snippets
 * Flutter Snippets
 * Modular Snippets
-* Modular3 Snippets
+* Modular-old Snippets
 * Mobx Snippets
 * Cubit Snippets
 * flutter_bloc Snippets
@@ -95,33 +95,35 @@ Select the full widget to find these options
 | `fu-aqu-serializable`            | Creates aqueduct class serializable                  |
 
 
-## Modular Snippets Usage
+## Modular Old Version Snippets Usage
 
 | Shortcut                         | Description                                          |
 | --------------------------------   | ---------------------------------------------------- |
-| `fu-modular-router-child`          | Creates router with page                             |
-| `fu-modular-router`                | Creates router module                                |
-| `fu-modular-initial-router-module` | Creates router module with Modular.initialRoute      |
-| `fu-modular-initial-router-child`  | Creates router page with Modular.initialRoute        |
-| `fu-modular-bind`                  | Create Bind for modular                              |
-| `fu-modular_codegen_inject`        | Modular codegen inject                               |
-| `fu-modular_module`                | Create Module                                        |
+| `fu-modular-old-router-child`          | Creates router with page                             |
+| `fu-modular-old-router`                | Creates router module                                |
+| `fu-modular-old-initial-router-module` | Creates router module with Modular.initialRoute      |
+| `fu-modular-old-initial-router-child`  | Creates router page with Modular.initialRoute        |
+| `fu-modular-old-bind`                  | Create Bind for modular                              |
+| `fu-modular-old_codegen_inject`        | Modular codegen inject                               |
+| `fu-modular-old_module`                | Create Module                                        |
 
-## Modular3 Snippets Usage
+## Modular Snippets Usage
 | Shortcut                                      | Description                                                           |
 | --------------------------------              | --------------------------------------------------------------------  |
-| `fu-modular3-router-child`                    | Creates router with page                                              |
-| `fu-modular3-router`                          | Creates router module                                                 |
-| `fu-modular3-initial-router-child`            | Creates router page with Modular.initialRoute                         |
-| `fu-modular3-bind-factory`                    | Create Bind Factory for modular                                       |
-| `fu-modular3-bind-instance`                   | Create Bind Instance for modular                                      |
-| `fu-modular3-bind-singleton`                  | Create Bind Singleton for modular                                     |
-| `fu-modular3-bind-lazySingleton`              | Create Bind Lazy Singleton for modular with interface                 |
-| `fu-modular3-bind-factory-interface`          | Create Bind Factory for modular with interface                        |
-| `fu-modular3-bind-instance-interface`         | Create Bind Instance for modular with interface                       |
-| `fu-modular3-bind-singleton-interface`        | Create Bind Singleton for modular with interface                      |
-| `fu-modular3-bind-lazySingleton-interface`    | Create Bind Lazy Singleton for modular with interface                 |
-| `fu-modular3_module`                          | Create Module                                                         |
+| `fu-modular-initial-config`                   | Create a initial config main.dart                                     |
+| `fu-modular-app-widget`                       | Create a initial config main.dart                                     |
+| `fu-modular-router-child`                     | Creates router with page                                              |
+| `fu-modular-router`                           | Creates router module                                                 |
+| `fu-modular-initial-router-child`             | Creates router page with Modular.initialRoute                         |
+| `fu-modular-bind-factory`                     | Create Bind Factory for modular                                       |
+| `fu-modular-bind-instance`                    | Create Bind Instance for modular                                      |
+| `fu-modular-bind-singleton`                   | Create Bind Singleton for modular                                     |
+| `fu-modular-bind-lazySingleton`               | Create Bind Lazy Singleton for modular with interface                 |
+| `fu-modular-bind-factory-interface`           | Create Bind Factory for modular with interface                        |
+| `fu-modular-bind-instance-interface`          | Create Bind Instance for modular with interface                       |
+| `fu-modular-bind-singleton-interface`         | Create Bind Singleton for modular with interface                      |
+| `fu-modular-bind-lazySingleton-interface`     | Create Bind Lazy Singleton for modular with interface                 |
+| `fu-modular_module`                           | Create Module                                                         |
 
 
 ## Flutter Bloc Snippets Usage
