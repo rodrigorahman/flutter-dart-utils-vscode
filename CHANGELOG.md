@@ -138,3 +138,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.5.1]
 - Correction in the modular documentation
+
+## [0.6.0]
+- Added the automatic configuration of the modular flutter by right-clicking the lib and accessing the menu Flutter Modular: Configure Framework
