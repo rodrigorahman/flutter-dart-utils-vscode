@@ -289,6 +289,10 @@
 			{
 				"language": "dart",
 				"path": "./snippets/getx.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/dio.json"
 			}
 		]
 	},

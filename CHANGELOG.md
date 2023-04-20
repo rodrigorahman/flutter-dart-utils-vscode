@@ -144,3 +144,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.6.1]
 - Fix on create AppWiget on Flutter Modular: Configure Framework
+
+## [0.7.0]
+- add dio snippets

@@ -12,6 +12,7 @@ Extension that assists in the creation of tests, interfaces, classes and to work
 * Mockito Snippets
 * GetX Snippets
 * Shelf Snippets
+* Dio Snippets
 
 ## Installation
 Flutter Utils can be installed from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=RodrigoRahman.flutter-dart-utils) or by [searching within VSCode](https://code.visualstudio.com/docs/editor/extension-gallery#_search-for-an-extension).
@@ -178,6 +179,12 @@ Select the full widget to find these options
 | -------------------------------- | ---------------------------------------------------- |
 | `fu-shelf-controller`            | Create Controller with shelf-router                  |
 | `fu-shelf-operation`             | Create Rest Operation                                |
+
+## Dio Snippets Usage
+
+| Shortcut                         | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| `fu-dio-template-request`        | Template for repositories                            |
 
 
 ### Generate folders for MVC architecture

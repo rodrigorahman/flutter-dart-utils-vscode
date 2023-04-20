@@ -1,0 +1,17 @@
+{
+    "dio_request": {
+        "prefix": "fu-dio-template-request",
+        "body": [
+            "try {",
+            "  final $1 = await $2.$3(",
+            "    '$4',",
+            "  );",
+            "}",
+            "on DioError catch (e, s) {",
+            "  log('$5', error: e, stackTrace: s);",
+            "  throw $6",
+            "}"
+        ],
+        "description": "Dio template request"
+    }
+}
