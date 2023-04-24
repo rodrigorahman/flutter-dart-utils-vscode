@@ -195,7 +195,7 @@
 	"fu-zero-delay": {
 		"prefix": "fu-zero-delay",
 		"body": [
-			"await Future.delayed(const Duration.zero);"
+			"await Future.delayed(Duration.zero);"
 		],
 		"description": "Create Future.delayed zero"
 	},
