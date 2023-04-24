@@ -64,8 +64,9 @@ Select the full widget to find these options
 | `fu-constructor`                 | Create constructor with file name based                |
 | `fu-private-constructor`         | Create private constructor with file name based        |
 | `fu-static-attribute`            | Create static atribute in class                        |
+| `fu-zero-delay`                  | Create Future.delayed zero                             |
 | `fu-seconds-delay`               | Create Future.delayed in seconds                       |
-| `fu-milliseconds-delay`          | Create Future.delayed in milliseconds                   |
+| `fu-milliseconds-delay`          | Create Future.delayed in milliseconds                  |
 
 
 ## Flutter  Snippets Usage

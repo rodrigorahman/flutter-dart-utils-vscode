@@ -192,17 +192,24 @@
 		],
 		"description": "create static atribute"
 	},
+	"fu-zero-delay": {
+		"prefix": "fu-zero-delay",
+		"body": [
+			"await Future.delayed(const Duration.zero);"
+		],
+		"description": "Create Future.delayed zero"
+	},
 	"fu-seconds-delay": {
 		"prefix": "fu-seconds-delay",
 		"body": [
-			"await Future.delayed(Duration(seconds: $1));"
+			"await Future.delayed(const Duration(seconds: $1));"
 		],
 		"description": "Create Future.delayed in seconds"
 	},
 	"fu-milliseconds-delay": {
 		"prefix": "fu-milliseconds-delay",
 		"body": [
-			"await Future.delayed(Duration(milliseconds: $1));"
+			"await Future.delayed(const Duration(milliseconds: $1));"
 		],
 		"description": "Create Future.delayed in milliseconds'"
 	}

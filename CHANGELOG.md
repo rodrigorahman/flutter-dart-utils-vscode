@@ -147,3 +147,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.7.0]
 - add dio snippets
+
+## [0.8.0]
+- add snippet fu-zero-delay
