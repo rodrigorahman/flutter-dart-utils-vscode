@@ -118,9 +118,12 @@ Select the full widget to find these options
 | `fu-modular-router`                           | Creates router module                                                 |
 | `fu-modular-initial-router-child`             | Creates router page with Modular.initialRoute                         |
 | `fu-modular-bind-factory`                     | Create Bind Factory for modular                                       |
+| `fu-modular-bind-factory-cc`                  | Create Bind Factory for modular with interface and clean code pattern |
 | `fu-modular-bind-instance`                    | Create Bind Instance for modular                                      |
+| `fu-modular-bind-instance-cc`                 | Create Bind Instance for modular  with interface and clean code pattern |
 | `fu-modular-bind-singleton`                   | Create Bind Singleton for modular                                     |
 | `fu-modular-bind-lazySingleton`               | Create Bind Lazy Singleton for modular with interface                 |
+| `fu-modular-bind-lazySingleton-cc`            | Create Bind Lazy Singleton for modular with interface and clean code pattern |
 | `fu-modular-bind-factory-interface`           | Create Bind Factory for modular with interface                        |
 | `fu-modular-bind-instance-interface`          | Create Bind Instance for modular with interface                       |
 | `fu-modular-bind-singleton-interface`         | Create Bind Singleton for modular with interface                      |

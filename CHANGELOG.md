@@ -153,3 +153,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.8.1]
 - remove const variable in fu-zero-delay
+
+## [0.8.2]
+- added snippet for flutter modular bind.lazySingleton with interface and following clean code pattern
+

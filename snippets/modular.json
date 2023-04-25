@@ -83,17 +83,38 @@
 			"Bind.lazySingleton<$1>((i) => $2),"
 		]
 	},
+	"modular-bind-lazySingleton-interface-cleancode": {
+		"prefix": "fu-modular-bind-lazySingleton-cc",
+		"body": [
+			"Bind.lazySingleton<$1>((i) => $1Impl($2)),"
+		],
+		"description": "Bind.lazySingleton with interface and clean code pattern"
+	},
 	"modular-bind-factory-interface": {
 		"prefix": "fu-modular-bind-factory-interface",
 		"body": [
 			"Bind.factory<$1>((i) => $2),"
 		]
 	},
+	"modular-bind-factory-interface-cleancode": {
+		"prefix": "fu-modular-bind-factory-cc",
+		"body": [
+			"Bind.factory<$1>((i) => $1Impl($2)),"
+		],
+		"description": "Bind.factory with interface and clean code pattern"
+	},
 	"modular-bind-instance-interface": {
 		"prefix": "fu-modular-bind-instance-interface",
 		"body": [
 			"Bind.instance<$1>($2),"
 		]
+	},
+	"modular-bind-instance-interface-cleancode": {
+		"prefix": "fu-modular-bind-instance-cc",
+		"body": [
+			"Bind.instance<$1>((i) => $1Impl($2)),"
+		],
+		"description": "Bind.instance with interface and clean code pattern"
 	},
 	"modular-bind-singleton-interface": {
 		"prefix": "fu-modular-bind-singleton-interface",
