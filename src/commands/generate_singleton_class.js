@@ -19,10 +19,7 @@ async function generateSingletonClass(uri) {
         static ${singletonNameFile}? _instance;
         // Avoid self instance
         ${singletonNameFile}._();
-        static ${singletonNameFile} get instance{
-            _instance??=  ${singletonNameFile}._();
-			return _instance!;
-        }
+        static ${singletonNameFile} get instance => _instance ??= ${singletonNameFile}._();
 }`, 'utf8');
     vscode.workspace.openTextDocument(path).then(doc => {
         vscode.window.showTextDocument(doc);
