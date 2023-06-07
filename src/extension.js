@@ -30,14 +30,14 @@ const { inheritClass } = require('./commands/inherit_class');
 
 function snippetHit(context) {
 	if (isDart3()) {
-		saveSnippet(context, 'dart.json', '/dart/dart3.json');
-		saveSnippet(context, 'flutter.json', '/flutter/flutter3.10.json');
+		saveSnippet(context, 'dart.json', path.join('dart','dart3.json'));
+		saveSnippet(context, 'flutter.json', path.join('flutter','flutter3.10.json'));
 	} else {
-		saveSnippet(context, 'dart.json', '/dart/dart2.json');
+		saveSnippet(context, 'dart.json', path.join('dart','dart2.json'));
 		if (isDart("2.17.0")) {
-			saveSnippet(context, 'flutter.json', '/flutter/flutter2.17.json');
+			saveSnippet(context, 'flutter.json', path.join('flutter','flutter2.17.json'));
 		} else {
-			saveSnippet(context, 'flutter.json', '/flutter/flutter2.json');
+			saveSnippet(context, 'flutter.json', path.join('flutter','flutter2.json'));
 		}
 
 	}

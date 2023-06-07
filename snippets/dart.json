@@ -130,7 +130,7 @@
 		"body": [
 			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
 			"  static ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}? _instance;",
-			"  // Avoid self isntance",
+			"  // Avoid self instance",
 			"  ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();",
 			"  static ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} get instance{",
 			"    _instance??=  ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();",

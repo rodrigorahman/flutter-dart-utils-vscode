@@ -6,6 +6,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 # Releases
 
+## [1.0.4]
+- BugFix: the snippet loading path
 
 ## [1.0.3]
 - Change icon
