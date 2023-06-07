@@ -9,7 +9,7 @@
 		"email": "rodrigorahman@academiadoflutter.com.br",
 		"url": "http://academiadoflutter.com.br"
 	},
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@academiadoflutter.com.br"
@@ -150,7 +150,12 @@
 			{
 				"command": "extension.modulariniital",
 				"title": "Flutter Modular: Configure Framework"
+			},
+			{
+				"command": "extension.fvmConfigure",
+				"title": "FVM: Configure Version"
 			}
+			
 		],
 		"menus": {
 			"explorer/context": [
@@ -218,6 +223,11 @@
 					"when": "explorerResourceIsFolder",
 					"command": "extension.modulariniital",
 					"group": "1_modification@7"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.fvmConfigure",
+					"group": "1_modification@8"
 				}
 			],
 			"commandPalette": [

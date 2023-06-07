@@ -20,11 +20,11 @@ const { mvnfeature } = require('./commands/mvc_feature');
 const { modularNewFeature } = require('./commands/modular_new_feature');
 const { modularInitialConfig } = require('./commands/modular_initial_config');
 const path = require('path');
-const semver = require('semver');
 
 
 const { isDart3, isDart } = require('./utils/getDartSdkVersion');
 const { inheritClass } = require('./commands/inherit_class');
+const { fvmConfigure } = require('./commands/fvm_configure');
 
 
 
@@ -82,6 +82,7 @@ function activate(context) {
 	const threeTiersFolders = vscode.commands.registerCommand("extension.3-tiers", three_tiers);
 
 	const MVCFlutterFolders = vscode.commands.registerCommand("extension.mvc-feature", mvnfeature);
+	const fvmConfigureCommand = vscode.commands.registerCommand("extension.fvmConfigure", fvmConfigure);
 
 	context.subscriptions.push(
 		vscode.languages.registerCodeActionsProvider(
@@ -98,26 +99,11 @@ function activate(context) {
 		createStatefulWidget,
 		threeTiersFolders,
 		MVCFlutterFolders,
-		// vscode.commands.registerCommand('extension.fu-wrap-with-value-notifier', wrapWithValueListenableBuilder),
-		// vscode.commands.registerCommand('extension.fu-wrap-with-consumer', wrapWithProviderConsumerBuilder),
-		// vscode.commands.registerCommand('extension.fu-wrap-with-observer', wrapWithMobXObserverBuilder),
-		// vscode.commands.registerCommand('extension.fu-wrap-with-layout-builder', wrapWithLayoutBuilder),
-		// vscode.commands.registerCommand('extension.fu-wrap-with-builder', wrapWithBuilder),
-		// vscode.commands.registerCommand('extension.fu-wrap-with-obx-getx', wrapWithObxGetX),
-		// vscode.commands.registerCommand('extension.fu-wrap-with-getx', wrapWithGetx),
 		getxfeature,
 		modularfeature,
-		modularInitial
+		modularInitial,
+		fvmConfigureCommand
 	);
-
-	// context.subscriptions.push(disposable);
-	// context.subscriptions.push(disposableGenerateTest);
-	// context.subscriptions.push(cleanForFlutter);
-	// context.subscriptions.push(createInterface);
-	// context.subscriptions.push(createClass);
-	// context.subscriptions.push(implementsInterface);
-	// context.subscriptions.push(threeTiersFolders);
-	// context.subscriptions.push(MVCFlutterFolders);
 }
 
 

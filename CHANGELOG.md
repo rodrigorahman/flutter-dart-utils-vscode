@@ -6,6 +6,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 # Releases
 
+## [1.1.0]
+- Configure the FVM within the project
+
 ## [1.0.5]
 - BugFix: erro to load pubspec.yaml
 
