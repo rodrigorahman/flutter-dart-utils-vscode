@@ -1,0 +1,5 @@
+import './##IMPORT_NAME##.dart';
+
+class ##CLASS_NAME## implements ##INTERFACE_NAME## {
+
+}

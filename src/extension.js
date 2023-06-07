@@ -1,7 +1,6 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
-const mkdirp = require('mkdirp');
 const fs = require('fs');
 const _ = require('lodash');
 const { wrapWithProviderConsumerBuilder, wrapWithValueListenableBuilder, wrapWithMobXObserverBuilder, wrapWithLayoutBuilder, wrapWithBuilder, wrapWithObxGetX, wrapWithGetx } = require('./commands/wrap-with');
@@ -15,20 +14,50 @@ const { generateSingletonClass } = require('./commands/generate_singleton_class'
 const { generateStatelessWidget } = require('./commands/generate_stateless_widget');
 const { generateStatefulWidget } = require('./commands/generate_stateful_widget');
 const { implementsInterface: implementsInterfaceFun } = require('./commands/implements_interface');
+const { importGist: importGistFun } = require('./commands/import_gist');
 const { three_tiers } = require('./commands/three_tiers');
 const { mvnfeature } = require('./commands/mvc_feature');
 const { modularNewFeature } = require('./commands/modular_new_feature');
 const { modularInitialConfig } = require('./commands/modular_initial_config');
+const path = require('path');
+const semver = require('semver');
+
+
+const { isDart3, isDart } = require('./utils/getDartSdkVersion');
+const { inheritClass } = require('./commands/inherit_class');
+
+
+
+function snippetHit(context) {
+	if (isDart3()) {
+		saveSnippet(context, 'dart.json', '/dart/dart3.json');
+		saveSnippet(context, 'flutter.json', '/flutter/flutter3.10.json');
+	} else {
+		saveSnippet(context, 'dart.json', '/dart/dart2.json');
+		if (isDart("2.17.0")) {
+			saveSnippet(context, 'flutter.json', '/flutter/flutter2.17.json');
+		} else {
+			saveSnippet(context, 'flutter.json', '/flutter/flutter2.json');
+		}
+
+	}
+}
+
+
+function saveSnippet(context, snippetName, snippetFile) {
+	const snippetsPath = path.join(context.extensionPath, 'snippets', snippetFile);
+	const snippetsContent = fs.readFileSync(snippetsPath, 'utf8');
+
+	const snippetsFinalPath = path.join(context.extensionPath, 'snippets', snippetName);
+
+	fs.writeFileSync(snippetsFinalPath, snippetsContent);
+}
 
 /**
  * @param {vscode.ExtensionContext} context
  */
-
-// const DART_MODE = { language: "dart", scheme: "file" };
-
-
 function activate(context) {
-
+	snippetHit(context);
 	const modularfeature = vscode.commands.registerCommand("extension.modularfeature", modularNewFeature);
 	const modularInitial = vscode.commands.registerCommand("extension.modulariniital", modularInitialConfig);
 	const getxfeature = vscode.commands.registerCommand("extension.getxfeature", getXNewFeature);
@@ -46,7 +75,9 @@ function activate(context) {
 	const createStatelessWidget = vscode.commands.registerCommand('extension.generateStatelessWidget', generateStatelessWidget);
 	const createStatefulWidget = vscode.commands.registerCommand('extension.generateStatefulWidget', generateStatefulWidget);
 
-	const implementsInterface = vscode.commands.registerCommand('extension.implementsInterface', implementsInterfaceFun);
+	vscode.commands.registerCommand('extension.implementsInterface', implementsInterfaceFun);
+	vscode.commands.registerCommand('extension.importGist', importGistFun);
+	vscode.commands.registerCommand('extension.inheritClass', inheritClass);
 
 	const threeTiersFolders = vscode.commands.registerCommand("extension.3-tiers", three_tiers);
 
@@ -65,20 +96,18 @@ function activate(context) {
 		createSingletonClass,
 		createStatelessWidget,
 		createStatefulWidget,
-		implementsInterface,
 		threeTiersFolders,
 		MVCFlutterFolders,
-		vscode.commands.registerCommand('extension.fu-wrap-with-value-notifier', wrapWithValueListenableBuilder),
-		vscode.commands.registerCommand('extension.fu-wrap-with-consumer', wrapWithProviderConsumerBuilder),
-		vscode.commands.registerCommand('extension.fu-wrap-with-observer', wrapWithMobXObserverBuilder),
-		vscode.commands.registerCommand('extension.fu-wrap-with-layout-builder', wrapWithLayoutBuilder),
-		vscode.commands.registerCommand('extension.fu-wrap-with-builder', wrapWithBuilder),
-		vscode.commands.registerCommand('extension.fu-wrap-with-obx-getx', wrapWithObxGetX),
-		vscode.commands.registerCommand('extension.fu-wrap-with-getx', wrapWithGetx),
+		// vscode.commands.registerCommand('extension.fu-wrap-with-value-notifier', wrapWithValueListenableBuilder),
+		// vscode.commands.registerCommand('extension.fu-wrap-with-consumer', wrapWithProviderConsumerBuilder),
+		// vscode.commands.registerCommand('extension.fu-wrap-with-observer', wrapWithMobXObserverBuilder),
+		// vscode.commands.registerCommand('extension.fu-wrap-with-layout-builder', wrapWithLayoutBuilder),
+		// vscode.commands.registerCommand('extension.fu-wrap-with-builder', wrapWithBuilder),
+		// vscode.commands.registerCommand('extension.fu-wrap-with-obx-getx', wrapWithObxGetX),
+		// vscode.commands.registerCommand('extension.fu-wrap-with-getx', wrapWithGetx),
 		getxfeature,
 		modularfeature,
 		modularInitial
-
 	);
 
 	// context.subscriptions.push(disposable);
@@ -103,7 +132,12 @@ class CodeActionProvider {
 		const textFile = editor.document.getText();
 		const codeActions = [];
 
-		if (textFile.includes('abstract')) {
+
+		if (isDart3() && textFile.includes('abstract class')) {
+			codeActions.push({ command: 'extension.inheritClass', title: 'Extends Class' })
+		}
+
+		if (textFile.includes(isDart3() ? 'interface' : 'abstract')) {
 			codeActions.push({
 				command: "extension.implementsInterface",
 				title: "Implements interface"
@@ -112,64 +146,66 @@ class CodeActionProvider {
 
 		const pickedText = editor.document.getText(editor.selection);
 
-		if (pickedText === '') return codeActions;
-		codeActions.push(
-			{
-				command: "extension.fu-wrap-with-layout-builder",
-				title: "Wrap with LayoutBuilder"
-			}
-		);
-		codeActions.push(
-			{
-				command: "extension.fu-wrap-with-builder",
-				title: "Wrap with Builder"
-			}
-		);
+		if (textFile === '') {
+			codeActions.push({ command: 'extension.importGist', title: 'Import GitHub Gist from id' })
+		}
 
-		codeActions.push(
-			{
-				command: "extension.fu-wrap-with-obx-getx",
-				title: "Wrap with Obx"
-			}
-		);
+
+		if (pickedText === '') {
+			return codeActions
+		};
+
+		if(textFile.includes('build(BuildContext context)') || textFile.includes('build(context)')){
+			codeActions.push(
+				{
+					command: "extension.fu-wrap-with-layout-builder",
+					title: "Wrap with LayoutBuilder"
+				}
+			);
+			codeActions.push(
+				{
+					command: "extension.fu-wrap-with-builder",
+					title: "Wrap with Builder"
+				}
+			);
+	
+			codeActions.push(
+				{
+					command: "extension.fu-wrap-with-obx-getx",
+					title: "Wrap with Obx"
+				}
+			);
+	
+			codeActions.push(
+				{
+					command: "extension.fu-wrap-with-getx",
+					title: "Wrap with GetX"
+				}
+			);
+	
+			codeActions.push(
+				{
+					command: "extension.fu-wrap-with-value-notifier",
+					title: "Wrap with ValueListenableBuilder"
+				});
+			codeActions.push(
+				{
+					command: "extension.fu-wrap-with-consumer",
+					title: "Wrap with Consumer"
+				}
+			);
+			codeActions.push(
+				{
+					command: "extension.fu-wrap-with-observer",
+					title: "Wrap with MobX Observer"
+				}
+			);
+		}
 		
-		codeActions.push(
-			{
-				command: "extension.fu-wrap-with-getx",
-				title: "Wrap with GetX"
-			}
-		);
-		
-		codeActions.push(
-			{
-				command: "extension.fu-wrap-with-value-notifier",
-				title: "Wrap with ValueListenableBuilder"
-			});
-		codeActions.push(
-			{
-				command: "extension.fu-wrap-with-consumer",
-				title: "Wrap with Consumer"
-			}
-		);
-		codeActions.push(
-			{
-				command: "extension.fu-wrap-with-observer",
-				title: "Wrap with MobX Observer"
-			}
-		);
 
 		return codeActions;
 	}
 }
-
-function promptForFeatureName(prompt) {
-	const FeatureNamePromptOptions = {
-		prompt: prompt,
-		placeHolder: "Feature Name"
-	};
-	return vscode.window.showInputBox(FeatureNamePromptOptions);
-}
-
 
 // this method is called when your extension is deactivated
 function deactivate() { }

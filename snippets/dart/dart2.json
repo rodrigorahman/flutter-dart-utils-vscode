@@ -1,0 +1,216 @@
+{
+	"freezed": {
+		"prefix": "fu-freezed",
+		"body": [
+			"import 'package:freezed_annotation/freezed_annotation.dart';",
+			"",
+			"part '$TM_FILENAME_BASE.freezed.dart';",
+			"",
+			"@freezed",
+			"abstract class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} with _$${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} {",
+			"   factory ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}($2) = _${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}};",
+			"}"
+		],
+		"description": "Freezed snippet"
+	},
+	"freezed_json_serializable": {
+		"prefix": "fu-freezed-json-serializable",
+		"body": [
+			"import 'package:freezed_annotation/freezed_annotation.dart';",
+			"",
+			"part '$TM_FILENAME_BASE.freezed.dart';",
+			"part '$TM_FILENAME_BASE.g.dart';",
+			"",
+			"@freezed",
+			"abstract class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} with _$${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"   factory ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}($1) = _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/};",
+			"   factory ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.fromJson(Map<String, dynamic> json) => _$${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}FromJson(json);",
+			"}"
+		],
+		"description": "Freezed snippet with jsonSerializable"
+	},
+	"interface": {
+		"prefix": "fu-interface",
+		"body": [
+			"abstract class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"$1",
+			"}"
+		],
+		"description": "Create abstract class 'interface'"
+	},
+	"class_interface_i_prefix": {
+		"prefix": "fu-class-interface",
+		"body": [
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} implements I${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"$1",
+			"}"
+		],
+		"description": "Create class with interface only i prefix"
+	},
+	"class_exception": {
+		"prefix": "fu-class-exception",
+		"body": [
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} implements Exception {",
+			"$1",
+			"}"
+		],
+		"description": "Create class with interface only i prefix"
+	},
+	"constructor": {
+		"prefix": "fu-constructor",
+		"body": [
+			"${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}($1);"
+		],
+		"description": "Create abstract class 'interface'"
+	},
+	"private-constructor": {
+		"prefix": "fu-private-constructor",
+		"body": [
+			"${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();"
+		],
+		"description": "Create abstract class 'interface'"
+	},
+	"named-constructor": {
+		"prefix": "fu-named-constructor",
+		"body": [
+			"${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.$1($2);"
+		],
+		"description": "Create abstract class 'interface'"
+	},
+	"dart_test_init": {
+		"prefix": "fu-d-test-init",
+		"body": [
+			"import 'package:test/test.dart';",
+			"",
+			"void main() {",
+			"",
+			"  setUp((){});",
+			"",
+			"  test('$1', () async {});",
+			"",
+			"}"
+		],
+		"description": "Test Dart Init"
+	},
+	"dart_callable_class": {
+		"prefix": "fu-callable-class",
+		"body": [
+			"",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"  $1 call($2) {}",
+			"}"
+		],
+		"description": "Create callable class"
+	},
+	"dart_class_equatable": {
+		"prefix": "fu-class-equatable",
+		"body": [
+			"import 'package:equatable/equatable.dart';",
+			"",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Equatable {",
+			"$1",
+			"  @override",
+			"  List<Object> get props => [];",
+			"}"
+		],
+		"description": "create class with equatable"
+	},
+	"dart_class": {
+		"prefix": "fu-class",
+		"body": [
+			"",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"  $1",
+			"}"
+		],
+		"description": "Create class"
+	},
+	"dart_class_singleton": {
+		"prefix": "fu-class-singleton",
+		"body": [
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"  static ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}? _instance;",
+			"  // Avoid self isntance",
+			"  ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();",
+			"  static ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} get instance{",
+			"    _instance??=  ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();",
+			"    return _instance!;",
+			"   }",
+			"}"
+		],
+		"description": "Create a singleton class"
+	},
+	"mysql_template": {
+		"prefix": "fu-mysql-connection-template",
+		"body": [
+			" MySqlConnection? conn;",
+			"  try {",
+			"    conn = await $1;",
+			"    await conn.query(''' ''', []);",
+			"} on MySqlException catch (e, s) {",
+			"  throw $2();",
+			"} finally {",
+			"  await conn?.close();",
+			"}"
+		],
+		"description": "Mysql connection template"
+	},
+	"fu-test": {
+		"prefix": "fu-test",
+		"body": [
+			"test('$1', () async {",
+			"  //Arrange",
+			"  ",
+			"  //Act",
+			"  ",
+			"  //Assert",
+			"  ",
+			"});"
+		],
+		"description": "Test template"
+	},
+	"fu-group-test": {
+		"prefix": "fu-group-test",
+		"body": [
+			"group('$1', () {",
+			"  test('$2', () async {",
+			"    //Arrange",
+			"    ",
+			"    //Act",
+			"    ",
+			"    //Assert",
+			"    ",
+			"  });",
+			"});"
+		],
+		"description": "Test template"
+	},
+	"fu-static-attribute": {
+		"prefix": "fu-static-attribute",
+		"body": [
+			"  static final $1 = $2;"
+		],
+		"description": "create static atribute"
+	},
+	"fu-zero-delay": {
+		"prefix": "fu-zero-delay",
+		"body": [
+			"await Future.delayed(Duration.zero);"
+		],
+		"description": "Create Future.delayed zero"
+	},
+	"fu-seconds-delay": {
+		"prefix": "fu-seconds-delay",
+		"body": [
+			"await Future.delayed(const Duration(seconds: $1));"
+		],
+		"description": "Create Future.delayed in seconds"
+	},
+	"fu-milliseconds-delay": {
+		"prefix": "fu-milliseconds-delay",
+		"body": [
+			"await Future.delayed(const Duration(milliseconds: $1));"
+		],
+		"description": "Create Future.delayed in milliseconds'"
+	}
+}

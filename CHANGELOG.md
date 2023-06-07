@@ -4,6 +4,28 @@ All notable changes to the "flutter-dart-utils" extension will be documented in 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+# Releases
+
+## [1.0.1]
+- Add icon 
+
+## [1.0.0]
+- Now the extension understands which version of dart you are working on to adapt to the new semantics of dart 3. There is no need to have multiple snippets anymore.
+
+- In this version we made the adaptation for the snippets:
+   * **dart**
+   * **flutter**
+
+- Command:
+   * **Implements Interface**
+
+- For those who use dart 3 we added one more command:
+   * **Extends Class** and with it you can have an abstract class extended into a new implementation class 
+
+
+-----
+# Old Versions
+
 ## [0.0.34]
 - Add snippets for mockito
 ## [0.0.35]

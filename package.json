@@ -9,7 +9,7 @@
 		"email": "rodrigorahman@academiadoflutter.com.br",
 		"url": "http://academiadoflutter.com.br"
 	},
-	"version": "0.8.2",
+	"version": "1.0.2",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@academiadoflutter.com.br"
@@ -41,7 +41,9 @@
 		"workspaceContains:**/pubspec.yaml"
 	],
 	"main": "./src/extension.js",
+	"icon": "logo.png",
 	"contributes": {
+		
 		"configuration": [
 			{
 				"title": "Flutter & Dart Utilities",
@@ -313,7 +315,10 @@
 		"vscode-test": "^1.3.0"
 	},
 	"dependencies": {
+		"axios": "^1.4.0",
+		"js-yaml": "^4.1.0",
 		"lodash": "^4.17.19",
-		"mkdirp": "^1.0.4"
+		"mkdirp": "^1.0.4",
+		"semver": "^7.5.1"
 	}
 }

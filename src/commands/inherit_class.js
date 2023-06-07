@@ -4,19 +4,12 @@ const _ = require('lodash');
 const { isDart3 } = require('../utils/getDartSdkVersion');
 const { getContentTemplate } = require('./templates/read_file_template');
 
-async function implementsInterface(uri) {
+async function inheritClass(uri) {
     let editor = vscode.window.activeTextEditor;
     const textFile = editor.document.getText();
 
     let stringSearch = 'abstract class ';
-    if (isDart3()) {
-        stringSearch = 'interface class ';
-
-        if (textFile.includes('abstract interface')) {
-            stringSearch = 'abstract interface class ';
-        }
-    }
-
+    
     const indexStart = textFile.lastIndexOf(stringSearch);
     let indexEnd = textFile.indexOf(' {');
 
@@ -60,11 +53,11 @@ async function implementsInterface(uri) {
         const filePath = vscode.Uri.file(path);
         wsedit.createFile(filePath);
         vscode.workspace.applyEdit(wsedit);
-        let templateClass = getContentTemplate('dart/class_implements.template');
+        let templateClass = getContentTemplate('dart/inherit_class.template');
 
         templateClass = templateClass.replace("##IMPORT_NAME##", _.snakeCase(interfaceName));
         templateClass = templateClass.replace("##CLASS_NAME##", implementationName.trim());
-        templateClass = templateClass.replace("##INTERFACE_NAME##", interfaceName.trim());
+        templateClass = templateClass.replace("##EXTENDS_NAME##", interfaceName.trim());
 
 
         fs.writeFileSync(path, templateClass, 'utf-8');
@@ -87,4 +80,4 @@ function promptForFeatureName() {
 }
 
 
-module.exports = { implementsInterface };
+module.exports = { inheritClass };
