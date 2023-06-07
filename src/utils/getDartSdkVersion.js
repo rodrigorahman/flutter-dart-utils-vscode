@@ -11,11 +11,7 @@ let dartSDK = null;
 let _isDart3 = null;
 
 function getRootPath() {
-    const editor = vscode.window.activeTextEditor;
-    if (editor) {
-        const currentFilePath = editor.document.uri.fsPath;
-        return vscode.workspace.getWorkspaceFolder(vscode.Uri.file(currentFilePath))?.uri.fsPath;
-    }
+    return vscode.workspace.workspaceFolders[0].uri.fsPath;
 }
 
 function getDartSDKVersion(context) {
@@ -25,10 +21,8 @@ function getDartSDKVersion(context) {
 function readDartSDK(context) {
     const pubspecPath = path.join(getRootPath(), 'pubspec.yaml');
 
-    // Carrega o conteúdo do arquivo pubspec.yaml
     const pubspecContent = fs.readFileSync(pubspecPath, 'utf8');
 
-    // Analisa o conteúdo YAML
     const pubspec = yaml.load(pubspecContent);
 
     // Obtém a versão do SDK Dart

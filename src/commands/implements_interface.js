@@ -1,5 +1,6 @@
 const vscode = require('vscode');
 const fs = require('fs');
+const pathImp = require('path');
 const _ = require('lodash');
 const { isDart3 } = require('../utils/getDartSdkVersion');
 const { getContentTemplate } = require('./templates/read_file_template');
@@ -60,7 +61,7 @@ async function implementsInterface(uri) {
         const filePath = vscode.Uri.file(path);
         wsedit.createFile(filePath);
         vscode.workspace.applyEdit(wsedit);
-        let templateClass = getContentTemplate('dart/class_implements.template');
+        let templateClass = getContentTemplate(pathImp.join('dart','class_implements.template'));
 
         templateClass = templateClass.replace("##IMPORT_NAME##", _.snakeCase(interfaceName));
         templateClass = templateClass.replace("##CLASS_NAME##", implementationName.trim());

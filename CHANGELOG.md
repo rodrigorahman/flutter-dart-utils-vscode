@@ -6,6 +6,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 # Releases
 
+## [1.0.5]
+- BugFix: erro to load pubspec.yaml
+
 ## [1.0.4]
 - BugFix: the snippet loading path
 
