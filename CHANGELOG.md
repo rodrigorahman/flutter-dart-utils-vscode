@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 # Releases
 
+## [1.1.2]
+- BugFix: identify folder separator bar based on operating system
+
+
 ## [1.1.1]
 - BugFix: Wraps commands not found
 

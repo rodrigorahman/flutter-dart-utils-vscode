@@ -4,48 +4,49 @@ const fs = require('fs');
 const _ = require('lodash');
 // const { wrapWithProviderConsumerBuilder, wrapWithValueListenableBuilder, wrapWithMobXObserverBuilder } = require('../commands/wrap-with');
 const { createFile } = require('../commands/create_file');
+const path = require('path');
 
 async function createCleanArchFolders(uri) {
     const featureName = await promptForFeatureName("Feature Clean Architecture Name");
     if (featureName) {
-        mkdirp(uri.fsPath + '/' + featureName)
-        const baseUrl = uri.fsPath + '/' + featureName
-        mkdirp(baseUrl + '/data')
+        mkdirp(path.join(uri.fsPath, featureName))
+        const baseUrl = path.join(uri.fsPath, featureName);
+        mkdirp(path.join(baseUrl, '/data'))
             .then(() => {
-                mkdirp(baseUrl + '/data/datasource')
-                mkdirp(baseUrl + '/data/drivers')
+                mkdirp(path.join(baseUrl, '/data/datasource'))
+                mkdirp(path.join(baseUrl, '/data/drivers'))
             })
             .catch((err) => console.log(err));
-        mkdirp(baseUrl + '/infra').then(() => {
-            mkdirp(baseUrl + '/infra/repository')
-            mkdirp(baseUrl + '/infra/datasources')
-            mkdirp(baseUrl + '/infra/models')
+        mkdirp(path.join(baseUrl, '/infra')).then(() => {
+            mkdirp(path.join(baseUrl, '/infra/repository'))
+            mkdirp(path.join(baseUrl, '/infra/datasources'))
+            mkdirp(path.join(baseUrl, '/infra/models'))
         })
 
-        mkdirp(baseUrl + '/domain')
+        mkdirp(path.join(baseUrl, '/domain'))
             .then(() => {
-                mkdirp(baseUrl + '/domain/entities')
-                mkdirp(baseUrl + '/domain/repositories')
-                mkdirp(baseUrl + '/domain/usecases')
+                mkdirp(path.join(baseUrl, '/domain/entities'))
+                mkdirp(path.join(baseUrl, '/domain/repositories'))
+                mkdirp(path.join(baseUrl, '/domain/usecases'))
             })
             .catch((err) => console.log(err));
 
-        mkdirp(baseUrl + '/presenter')
+        mkdirp(path.join(baseUrl, '/presenter'))
             .then(() => {
-                mkdirp(baseUrl + '/presenter/controllers')
-                mkdirp(baseUrl + '/presenter/models')
-                mkdirp(baseUrl + '/presenter/usecases')
+                mkdirp(path.join(baseUrl, '/presenter/controllers'))
+                mkdirp(path.join(baseUrl, '/presenter/models'))
+                mkdirp(path.join(baseUrl, '/presenter/usecases'))
             })
             .catch((err) => console.log(err));
     }
 }
 
 function promptForFeatureName(prompt) {
-	const FeatureNamePromptOptions = {
-		prompt: prompt,
-		placeHolder: "Feature Name"
-	};
-	return vscode.window.showInputBox(FeatureNamePromptOptions);
+    const FeatureNamePromptOptions = {
+        prompt: prompt,
+        placeHolder: "Feature Name"
+    };
+    return vscode.window.showInputBox(FeatureNamePromptOptions);
 }
 
-module.exports = {createCleanArchFolders};
+module.exports = { createCleanArchFolders };
