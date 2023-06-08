@@ -30,14 +30,14 @@ const { fvmConfigure } = require('./commands/fvm_configure');
 
 function snippetHit(context) {
 	if (isDart3()) {
-		saveSnippet(context, 'dart.json', path.join('dart','dart3.json'));
-		saveSnippet(context, 'flutter.json', path.join('flutter','flutter3.10.json'));
+		saveSnippet(context, 'dart.json', path.join('dart', 'dart3.json'));
+		saveSnippet(context, 'flutter.json', path.join('flutter', 'flutter3.10.json'));
 	} else {
-		saveSnippet(context, 'dart.json', path.join('dart','dart2.json'));
+		saveSnippet(context, 'dart.json', path.join('dart', 'dart2.json'));
 		if (isDart("2.17.0")) {
-			saveSnippet(context, 'flutter.json', path.join('flutter','flutter2.17.json'));
+			saveSnippet(context, 'flutter.json', path.join('flutter', 'flutter2.17.json'));
 		} else {
-			saveSnippet(context, 'flutter.json', path.join('flutter','flutter2.json'));
+			saveSnippet(context, 'flutter.json', path.join('flutter', 'flutter2.json'));
 		}
 
 	}
@@ -83,6 +83,13 @@ function activate(context) {
 
 	const MVCFlutterFolders = vscode.commands.registerCommand("extension.mvc-feature", mvnfeature);
 	const fvmConfigureCommand = vscode.commands.registerCommand("extension.fvmConfigure", fvmConfigure);
+	vscode.commands.registerCommand('extension.fu-wrap-with-value-notifier', wrapWithValueListenableBuilder);
+	vscode.commands.registerCommand('extension.fu-wrap-with-consumer', wrapWithProviderConsumerBuilder);
+	vscode.commands.registerCommand('extension.fu-wrap-with-observer', wrapWithMobXObserverBuilder);
+	vscode.commands.registerCommand('extension.fu-wrap-with-layout-builder', wrapWithLayoutBuilder);
+	vscode.commands.registerCommand('extension.fu-wrap-with-builder', wrapWithBuilder);
+	vscode.commands.registerCommand('extension.fu-wrap-with-obx-getx', wrapWithObxGetX);
+	vscode.commands.registerCommand('extension.fu-wrap-with-getx', wrapWithGetx);
 
 	context.subscriptions.push(
 		vscode.languages.registerCodeActionsProvider(
@@ -141,7 +148,7 @@ class CodeActionProvider {
 			return codeActions
 		};
 
-		if(textFile.includes('build(BuildContext context)') || textFile.includes('build(context)')){
+		if (textFile.includes('build(BuildContext context)') || textFile.includes('build(context)')) {
 			codeActions.push(
 				{
 					command: "extension.fu-wrap-with-layout-builder",
@@ -154,21 +161,21 @@ class CodeActionProvider {
 					title: "Wrap with Builder"
 				}
 			);
-	
+
 			codeActions.push(
 				{
 					command: "extension.fu-wrap-with-obx-getx",
 					title: "Wrap with Obx"
 				}
 			);
-	
+
 			codeActions.push(
 				{
 					command: "extension.fu-wrap-with-getx",
 					title: "Wrap with GetX"
 				}
 			);
-	
+
 			codeActions.push(
 				{
 					command: "extension.fu-wrap-with-value-notifier",
@@ -187,7 +194,7 @@ class CodeActionProvider {
 				}
 			);
 		}
-		
+
 
 		return codeActions;
 	}
