@@ -9,7 +9,7 @@
 		"email": "rodrigorahman@academiadoflutter.com.br",
 		"url": "http://academiadoflutter.com.br"
 	},
-	"version": "1.1.2",
+	"version": "1.2.0",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@academiadoflutter.com.br"
@@ -43,7 +43,6 @@
 	"main": "./src/extension.js",
 	"icon": "logo.png",
 	"contributes": {
-		
 		"configuration": [
 			{
 				"title": "Flutter & Dart Utilities",
@@ -152,10 +151,13 @@
 				"title": "Flutter Modular: Configure Framework"
 			},
 			{
+				"command": "extension.fvmInstallConfigure",
+				"title": "FVM: Install and Configure Version"
+			},
+			{
 				"command": "extension.fvmConfigure",
 				"title": "FVM: Configure Version"
 			}
-			
 		],
 		"menus": {
 			"explorer/context": [
@@ -227,6 +229,11 @@
 				{
 					"when": "explorerResourceIsFolder",
 					"command": "extension.fvmConfigure",
+					"group": "1_modification@8"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.fvmInstallConfigure",
 					"group": "1_modification@8"
 				}
 			],

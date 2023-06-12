@@ -25,6 +25,7 @@ const path = require('path');
 const { isDart3, isDart } = require('./utils/getDartSdkVersion');
 const { inheritClass } = require('./commands/inherit_class');
 const { fvmConfigure } = require('./commands/fvm_configure');
+const { fvmInstallConfigure } = require('./commands/fvm_install_configure');
 
 
 
@@ -83,6 +84,7 @@ function activate(context) {
 
 	const MVCFlutterFolders = vscode.commands.registerCommand("extension.mvc-feature", mvnfeature);
 	const fvmConfigureCommand = vscode.commands.registerCommand("extension.fvmConfigure", fvmConfigure);
+	const fvmInstallConfigureCommand = vscode.commands.registerCommand("extension.fvmInstallConfigure", fvmInstallConfigure);
 	vscode.commands.registerCommand('extension.fu-wrap-with-value-notifier', wrapWithValueListenableBuilder);
 	vscode.commands.registerCommand('extension.fu-wrap-with-consumer', wrapWithProviderConsumerBuilder);
 	vscode.commands.registerCommand('extension.fu-wrap-with-observer', wrapWithMobXObserverBuilder);
@@ -109,7 +111,8 @@ function activate(context) {
 		getxfeature,
 		modularfeature,
 		modularInitial,
-		fvmConfigureCommand
+		fvmConfigureCommand,
+		fvmInstallConfigureCommand
 	);
 }
 

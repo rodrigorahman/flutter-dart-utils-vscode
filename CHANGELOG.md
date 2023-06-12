@@ -6,6 +6,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 # Releases
 
+## [1.2.0]
+- New Feature: Add feature fvm configure
+
 ## [1.1.2]
 - BugFix: identify folder separator bar based on operating system
 
