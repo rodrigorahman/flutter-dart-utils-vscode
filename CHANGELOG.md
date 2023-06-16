@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 # Releases
 
+## [1.2.1]
+- fix: placeholder fvm install and configure
+
+
 ## [1.2.0]
 - New Feature: Add feature fvm configure
 

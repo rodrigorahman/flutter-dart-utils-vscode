@@ -47,7 +47,7 @@ async function fvmInstallConfigure(uri) {
 
 }
 
-function promptForFeatureName(prompt, placeHolder = 'Feature Name') {
+function promptForFeatureName(prompt, placeHolder = 'Ex: 3.0.0') {
     const FeatureNamePromptOptions = {
         prompt: prompt,
         placeHolder: placeHolder
