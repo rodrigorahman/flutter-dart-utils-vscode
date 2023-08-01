@@ -67,6 +67,7 @@ Select the full widget to find these options
 | `fu-zero-delay`                  | Create Future.delayed zero                             |
 | `fu-seconds-delay`               | Create Future.delayed in seconds                       |
 | `fu-milliseconds-delay`          | Create Future.delayed in milliseconds                  |
+| `fu-mixin`                       | Create mixin with file name                            |
 
 
 ## Flutter  Snippets Usage
