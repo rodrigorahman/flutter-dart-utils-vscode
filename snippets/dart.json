@@ -125,6 +125,16 @@
 		],
 		"description": "Create class"
 	},
+	"dart_mixin": {
+		"prefix": "fu-mixin",
+		"body": [
+			"",
+			"mixin ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"  $1",
+			"}"
+		],
+		"description": "Create mixin"
+	},
 	"dart_class_singleton": {
 		"prefix": "fu-class-singleton",
 		"body": [
@@ -132,10 +142,8 @@
 			"  static ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}? _instance;",
 			"  // Avoid self instance",
 			"  ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();",
-			"  static ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} get instance{",
-			"    _instance??=  ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();",
-			"    return _instance!;",
-			"   }",
+			"  static ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} get instance =>",
+			"    _instance ??= ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();",
 			"}"
 		],
 		"description": "Create a singleton class"
