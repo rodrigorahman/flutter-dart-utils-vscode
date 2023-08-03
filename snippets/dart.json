@@ -132,10 +132,8 @@
 			"  static ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}? _instance;",
 			"  // Avoid self instance",
 			"  ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();",
-			"  static ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} get instance{",
-			"    _instance??=  ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();",
-			"    return _instance!;",
-			"   }",
+			"  static ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} get instance =>",
+			"    _instance ??= ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();",
 			"}"
 		],
 		"description": "Create a singleton class"
