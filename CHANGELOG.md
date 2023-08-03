@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 # Releases
 
+## [1.4.0]
+- feat: add snippet WidgetsBinding.instance.addPostFrameCallback
+
+
 ## [1.3.0]
 - feat: mixin suporte
 - refactor: template singleton class 

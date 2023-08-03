@@ -171,6 +171,14 @@
 	"fu-snackbar": {
 		"prefix": "fu-snackbar",
 		"body": "ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('$1')));"
+	},
+	"fu-postframecallback": {
+		"prefix": "fu-postframecallback",
+		"body": [
+			"WidgetsBinding.instance.addPostFrameCallback((_) { ",
+			"  $1",
+			"});"
+		]
 	}
 	
 	
