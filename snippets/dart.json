@@ -125,6 +125,24 @@
 		],
 		"description": "Create class"
 	},
+	"dart_enum": {
+		"prefix": "fu-enum",
+		"body": [
+			"enum ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"  $1",
+			"}"
+		],
+		"description": "Create enum"
+	},
+	"dart_extension": {
+		"prefix": "fu-extension",
+		"body": [
+			"extension ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} on $1 {",
+			"  $2",
+			"}"
+		],
+		"description": "Create extension"
+	},
 	"dart_mixin": {
 		"prefix": "fu-mixin",
 		"body": [
