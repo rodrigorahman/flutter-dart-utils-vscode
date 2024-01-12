@@ -1,5 +1,5 @@
 {
-	"modular-initial-config": {
+	"modular5-initial-config": {
 		"prefix": "fu-modular-initial-config",
 		"body": [
 			"import 'package:flutter/material.dart';",
@@ -10,7 +10,7 @@
 			"}"
 		]
 	},
-	"modular-app-widget": {
+	"modular5-app-widget": {
 		"prefix": "fu-modular-app-widget",
 		"body": [
 			"import 'package:flutter/material.dart';",
@@ -22,106 +22,107 @@
 			"     return MaterialApp.router(",
 			"       title: '$1',",
 			"       theme: ThemeData(primarySwatch: Colors.blue),",
-			"       routerConfig: Modular.routerConfig,",
+			"       routeInformationParser: Modular.routeInformationParser,",
+			"       routerDelegate: Modular.routerDelegate,",
 			"     );",
 			"   }",
 			"}"
 		]
 	},
-	"modular-child-router": {
+	"modular5-child-router": {
 		"prefix": "fu-modular-router-child",
 		"body": [
-			"r.child($1, child: (context) => $2);"
+			"ChildRoute($1, child: (_, args) => $2),"
 		]
 	},
-	"modular-router": {
+	"modular5-router": {
 		"prefix": "fu-modular-router",
 		"body": [
-			"r.module($1, module: $2);"
+			"ModuleRoute($1, module: $2),"
 		]
 	},
-	"modular-WildcardRoute": {
+	"modular5-WildcardRoute": {
 		"prefix": "fu-modular-wildcard-route",
 		"body": [
-			"r.wildcard($1, child: (context) => $2);"
+			"WildcardRoute($1, child: (_, args) => $2),"
 		]
 	},
-	"modular-inital-page-router": {
+	"modular5-inital-page-router": {
 		"prefix": "fu-modular-initial-router-child",
 		"body": [
-			"r.child(Modular.initialRoute, child: (context, args) => $2);"
+			"ChildRoute(Modular.initialRoute, child: (context, args) => $2)"
 		]
 	},
-	"modular-bind-factory": {
+	"modular5-bind-factory": {
 		"prefix": "fu-modular-bind-factory",
 		"body": [
-			"i.add($1),"
+			"Bind.factory((i) => $1),"
 		]
 	},
-	"modular-bind-instance": {
+	"modular5-bind-instance": {
 		"prefix": "fu-modular-bind-instance",
 		"body": [
-			"i.addInstance($1),"
+			"Bind.instance($1),"
 		]
 	},
-	"modular-bind-singleton": {
+	"modular5-bind-singleton": {
 		"prefix": "fu-modular-bind-singleton",
 		"body": [
-			"i.addSingleton($1),"
+			"Bind.singleton((i) => $1),"
 		]
 	},
-	"modular-bind-lazySingleton": {
+	"modular5-bind-lazySingleton": {
 		"prefix": "fu-modular-bind-lazySingleton",
 		"body": [
-			"i.addLazySingleton($1),"
+			"Bind.lazySingleton((i) => $1),"
 		]
 	},
-	"modular-bind-lazySingleton-interface": {
+	"modular5-bind-lazySingleton-interface": {
 		"prefix": "fu-modular-bind-lazySingleton-interface",
 		"body": [
-			"i.addLazySingleton<$1>($2),"
+			"Bind.lazySingleton<$1>((i) => $2),"
 		]
 	},
-	"modular-bind-lazySingleton-interface-cleancode": {
+	"modular5-bind-lazySingleton-interface-cleancode": {
 		"prefix": "fu-modular-bind-lazySingleton-cc",
 		"body": [
-			"i.addLazySingleton<$1>($1Impl($2)),"
+			"Bind.lazySingleton<$1>((i) => $1Impl($2)),"
 		],
 		"description": "Bind.lazySingleton with interface and clean code pattern"
 	},
-	"modular-bind-factory-interface": {
+	"modular5-bind-factory-interface": {
 		"prefix": "fu-modular-bind-factory-interface",
 		"body": [
-			"i.add<$1>($2),"
+			"Bind.factory<$1>((i) => $2),"
 		]
 	},
-	"modular-bind-factory-interface-cleancode": {
+	"modular5-bind-factory-interface-cleancode": {
 		"prefix": "fu-modular-bind-factory-cc",
 		"body": [
-			"i.add<$1>($1Impl($2)),"
+			"Bind.factory<$1>((i) => $1Impl($2)),"
 		],
 		"description": "Bind.factory with interface and clean code pattern"
 	},
-	"modular-bind-instance-interface": {
+	"modular5-bind-instance-interface": {
 		"prefix": "fu-modular-bind-instance-interface",
 		"body": [
-			"i.addInstance<$1>($2),"
+			"Bind.instance<$1>($2),"
 		]
 	},
-	"modular-bind-instance-interface-cleancode": {
+	"modular5-bind-instance-interface-cleancode": {
 		"prefix": "fu-modular-bind-instance-cc",
 		"body": [
-			"i.addInstance<$1>($1Impl($2)),"
+			"Bind.instance<$1>((i) => $1Impl($2)),"
 		],
 		"description": "Bind.instance with interface and clean code pattern"
 	},
-	"modular-bind-singleton-interface": {
+	"modular5-bind-singleton-interface": {
 		"prefix": "fu-modular-bind-singleton-interface",
 		"body": [
-			"i.addSingleton<$1>($2),"
+			"Bind.singleton<$1>((5i) => $2),"
 		]
 	},
-	"modular-generate-module": {
+	"modular5-generate-mdule": {
 		"prefix": "fu-modular-module",
 		"body": [
 			"import 'package:flutter_modular/flutter_modular.dart';",
@@ -129,12 +130,12 @@
 			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Module {",
 			"",
 			"   @override",
-			"   void binds(Injector I) {};",
+			"   List<Bind> get binds => [];",
 			"",
 			"   @override",
-			"   void routes(RouteManager r) {",
-			"      r.child('/', child: (context) => $1);",
-			"   }",
+			"   List<ModularRoute> get routes => [",
+			"      ChildRoute('/', child: (context, args) => $1)",
+			"   ];",
 			"",
 			"}"
 		]
