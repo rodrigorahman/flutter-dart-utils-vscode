@@ -9,7 +9,7 @@
 		"email": "rodrigorahman@academiadoflutter.com.br",
 		"url": "http://academiadoflutter.com.br"
 	},
-	"version": "1.4.0",
+	"version": "1.5.0",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@academiadoflutter.com.br"
@@ -111,6 +111,10 @@
 				"title": "Implements interface"
 			},
 			{
+				"command": "extension.generateGetter",
+				"title": "Generate Getter"
+			},
+			{
 				"command": "extension.fu-wrap-with-value-notifier",
 				"title": "Wrap with ValueListenableBuilder"
 			},
@@ -137,6 +141,10 @@
 			{
 				"command": "extension.fu-wrap-with-layout-builder",
 				"title": "Wrap with LayoutBuilder"
+			},
+			{
+				"command": "extension.fu-wrap-with-watch-signals",
+				"title": "Wrap with Watch of Signals"
 			},
 			{
 				"command": "extension.getxfeature",

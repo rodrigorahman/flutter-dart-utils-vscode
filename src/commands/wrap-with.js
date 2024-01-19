@@ -59,6 +59,13 @@ const getXSnippet = (widget) => {
 )`;
 };
 
+const watchSignalsSnippet = (widget) => {
+  return `Watch((_) {
+        return ${widget};
+    },
+)`;
+};
+
 
 const wrapWithValueListenableBuilder = async () => wrapWith(valueListenableBuilderSnippet);
 const wrapWithProviderConsumerBuilder = async () => wrapWith(providerConsumerBuilderSnippet);
@@ -67,5 +74,6 @@ const wrapWithLayoutBuilder = async () => wrapWith(layoutBuilderSnippet);
 const wrapWithBuilder = async () => wrapWith(builderSnippet);
 const wrapWithObxGetX = async () => wrapWith(obxSnippet);
 const wrapWithGetx = async () => wrapWith(getXSnippet);
+const wrapWithSignals = async () => wrapWith(watchSignalsSnippet);
 
-module.exports = { wrapWithValueListenableBuilder, wrapWithProviderConsumerBuilder, wrapWithMobXObserverBuilder, wrapWithLayoutBuilder, wrapWithBuilder, wrapWithObxGetX, wrapWithGetx };
+module.exports = { wrapWithValueListenableBuilder, wrapWithProviderConsumerBuilder, wrapWithMobXObserverBuilder, wrapWithLayoutBuilder, wrapWithBuilder, wrapWithObxGetX, wrapWithGetx, wrapWithSignals };

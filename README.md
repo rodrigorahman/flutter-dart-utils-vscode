@@ -32,6 +32,7 @@ Select the full widget to find these options
 | `Wrap with MobX Observer`            |
 | `Wrap with Obx`                      |
 | `Wrap with Getx`                     |
+| `Wrap with Watch of Signals`         |
 
 
 ## Menu Features:

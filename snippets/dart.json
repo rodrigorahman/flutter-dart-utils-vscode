@@ -32,11 +32,20 @@
 	"interface": {
 		"prefix": "fu-interface",
 		"body": [
+			"abstract interface class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+			"$1",
+			"}"
+		],
+		"description": "Create abstract interface"
+	},
+	"abstract class": {
+		"prefix": "fu-abstract-class",
+		"body": [
 			"abstract class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
 			"$1",
 			"}"
 		],
-		"description": "Create abstract class 'interface'"
+		"description": "Create abstract class"
 	},
 	"class_interface_i_prefix": {
 		"prefix": "fu-class-interface",
@@ -54,28 +63,28 @@
 			"$1",
 			"}"
 		],
-		"description": "Create class with interface only i prefix"
+		"description": "Create Exception Class "
 	},
 	"constructor": {
 		"prefix": "fu-constructor",
 		"body": [
 			"${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}($1);"
 		],
-		"description": "Create abstract class 'interface'"
+		"description": "Create constructor'"
 	},
 	"private-constructor": {
 		"prefix": "fu-private-constructor",
 		"body": [
 			"${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}._();"
 		],
-		"description": "Create abstract class 'interface'"
+		"description": "Create private constructor"
 	},
 	"named-constructor": {
 		"prefix": "fu-named-constructor",
 		"body": [
 			"${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.$1($2);"
 		],
-		"description": "Create abstract class 'interface'"
+		"description": "Create named constructor"
 	},
 	"dart_test_init": {
 		"prefix": "fu-d-test-init",

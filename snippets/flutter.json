@@ -6,26 +6,6 @@
 			"",
 			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends StatelessWidget {",
 			"",
-			"  const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}({ Key? key }) : super(key: key);",
-			"",
-			"   @override",
-			"   Widget build(BuildContext context) {",
-			"       return Scaffold(",
-			"           appBar: AppBar(title: const Text('$1'),),",
-			"           body: Container(),",
-			"       );",
-			"  }",
-			"}"
-		],
-		"description": "Create Stateles Component with name of file and import material"
-	},
-	"statelessSuperWidget": {
-		"prefix": "fu-stls",
-		"body": [
-			"import 'package:flutter/material.dart';",
-			"",
-			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends StatelessWidget {",
-			"",
 			"  const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}({ super.key });",
 			"",
 			"   @override",
@@ -41,33 +21,6 @@
 	},
 	"statefulWidget": {
 		"prefix": "fu-stf",
-		"body": [
-			"import 'package:flutter/material.dart';",
-			"",
-			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends StatefulWidget {",
-			"",
-			"  const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}({ Key? key }) : super(key: key);",
-			"",
-			"  @override",
-			"  State<${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}> createState() => _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State();",
-			"}",
-			"",
-			"class _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State extends State<${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}> {",
-			"",
-			"   @override",
-			"   Widget build(BuildContext context) {",
-			"       return Scaffold(",
-			"           appBar: AppBar(title: const Text('$1'),),",
-			"           body: Container(),",
-			"       );",
-			"  }",
-			"}"
-		],
-		"description": "Create Stateles Component with name of file and import material"
-	},
-
-	"statefulSuperWidget": {
-		"prefix": "fu-stfs",
 		"body": [
 			"import 'package:flutter/material.dart';",
 			"",
@@ -171,6 +124,14 @@
 	"fu-snackbar": {
 		"prefix": "fu-snackbar",
 		"body": "ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('$1')));"
+	},
+	"fu-postframecallback": {
+		"prefix": "fu-postframecallback",
+		"body": [
+			"WidgetsBinding.instance.addPostFrameCallback((_) { ",
+			"  $1",
+			"});"
+		]
 	}
 	
 	
