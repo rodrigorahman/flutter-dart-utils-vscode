@@ -69,6 +69,8 @@ Select the full widget to find these options
 | `fu-seconds-delay`               | Create Future.delayed in seconds                       |
 | `fu-milliseconds-delay`          | Create Future.delayed in milliseconds                  |
 | `fu-mixin`                       | Create mixin with file name                            |
+| `fu-enum`                        | Create enum with file name                             |
+| `fu-extension`                   | Create extension with file name                        |
 
 
 ## Flutter  Snippets Usage
