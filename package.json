@@ -9,7 +9,7 @@
 		"email": "rodrigorahman@academiadoflutter.com.br",
 		"url": "http://academiadoflutter.com.br"
 	},
-	"version": "1.5.1",
+	"version": "1.7.1",
 	"bugs": {
 		"url": "https://github.com/rodrigorahman/flutter-dart-utils-vscode/issues",
 		"email": "rodrigorahman@academiadoflutter.com.br"
@@ -320,6 +320,10 @@
 			{
 				"language": "dart",
 				"path": "./snippets/dio.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/json_serializable.json"
 			}
 		]
 	},

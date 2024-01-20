@@ -102,6 +102,12 @@ Select the full widget to find these options
 | `fu-aqu-serializable`            | Creates aqueduct class serializable                  |
 
 
+## Json Serializable
+
+| Shortcut                         | Description                                          |
+| -------------------------------- | ---------------------------------------------------- |
+| `fu-class-json-serializable`     | Generate class with json_serializable pattern        |
+
 ## Modular Old Version Snippets Usage
 
 | Shortcut                         | Description                                          |
@@ -231,6 +237,8 @@ Select the full widget to find these options
 
 ### Wrap with LayoutBuilder
 ![demo](https://raw.githubusercontent.com/rodrigorahman/flutter-dart-utils-vscode/master/assets/wrap-with-value-listener.gif)
+
+
 
 
 ## Requirements

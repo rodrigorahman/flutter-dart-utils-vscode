@@ -26,6 +26,9 @@ const { isDart3, isDart } = require('./utils/getDartSdkVersion');
 const { inheritClass } = require('./commands/inherit_class');
 const { fvmConfigure } = require('./commands/fvm_configure');
 const { fvmInstallConfigure } = require('./commands/fvm_install_configure');
+const { snakeCaseTransform } = require('./commands/snake_case_transform');
+const { jsonSerializableGenerateJsonKey } = require('./commands/json_serializable_generate_json_key');
+const { createGetter } = require('./commands/create_getter');
 
 
 
@@ -79,6 +82,9 @@ function activate(context) {
 	vscode.commands.registerCommand('extension.implementsInterface', implementsInterfaceFun);
 	vscode.commands.registerCommand('extension.importGist', importGistFun);
 	vscode.commands.registerCommand('extension.inheritClass', inheritClass);
+	vscode.commands.registerCommand('extension.snakeCaseTransform', snakeCaseTransform);
+	vscode.commands.registerCommand('extension.jsonSerializableGenerateJsonKey', jsonSerializableGenerateJsonKey);
+	vscode.commands.registerCommand('extension.createGetter', createGetter);
 
 	const threeTiersFolders = vscode.commands.registerCommand("extension.3-tiers", three_tiers);
 
@@ -133,6 +139,16 @@ class CodeActionProvider {
 		if (isDart3() && textFile.includes('abstract class')) {
 			codeActions.push({ command: 'extension.inheritClass', title: 'Extends Class' })
 		}
+		
+		const pickedText = editor.document.getText(editor.selection);
+		
+		if(pickedText.length > 2){
+			codeActions.push({ command: 'extension.snakeCaseTransform', title: 'Snake Case Transform'});
+		}
+		
+		codeActions.push({ command: 'extension.jsonSerializableGenerateJsonKey', title: 'Add JsonKey from json_serializable'});
+		codeActions.push({ command: 'extension.createGetter', title: 'Generate Getter'});
+	
 
 		if (textFile.includes(isDart3() ? 'interface' : 'abstract')) {
 			codeActions.push({
@@ -141,7 +157,7 @@ class CodeActionProvider {
 			});
 		}
 
-		const pickedText = editor.document.getText(editor.selection);
+		
 
 		if (textFile === '') {
 			codeActions.push({ command: 'extension.importGist', title: 'Import GitHub Gist from id' })

@@ -1,0 +1,19 @@
+{
+    "fu-class-json-serializable": {
+        "prefix": "fu-class-json-serializable",
+        "body": [
+            "import 'package:json_annotation/json_annotation.dart';",
+            "",
+            "part '$TM_FILENAME_BASE.g.dart';",
+            "",
+            "@JsonSerializable()",
+            "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {",
+            "",
+            "  factory ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}.fromJson(Map<String, dynamic> json) => _$${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}FromJson(json);",
+            "",
+            "  Map<String,dynamic> toJson() => _$${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}ToJson(this);",
+            "}"
+        ],
+        "description": "Create class with json_serializable"
+    }
+}

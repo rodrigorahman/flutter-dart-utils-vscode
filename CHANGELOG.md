@@ -6,6 +6,19 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 # Releases
 
+## [1.7.1]
+- fix: generate Getter e Add JsonKey from json_serializable
+
+## [1.7.0]
+- feat: Add commands:
+   - Snake Case Transform
+   - Add JsonKey from json_serializable
+   - Generate Getter
+
+
+## [1.6.0]
+- feat: add json_serializable snippet
+
 ## [1.4.0]
 - feat: add snippet WidgetsBinding.instance.addPostFrameCallback
 

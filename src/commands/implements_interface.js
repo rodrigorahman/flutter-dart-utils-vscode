@@ -37,7 +37,7 @@ async function implementsInterface(uri) {
     }
 
     let interfaceName = textFile.substring(indexStart, indexEnd).replace(stringSearch, ' ').replace(' {', '');
-    interfaceName = interfaceName.trimEnd();
+    interfaceName = interfaceName.trimRight();
     const configType = vscode.workspace.getConfiguration("generate").get("template.type");
     let implementationName = interfaceName.trim();
     if (configType === 'I Prefix') {
