@@ -40,18 +40,18 @@ function findInsertPosition(text) {
 
 function isPropertyDeclaration(line) {
     // Esta regex busca por linhas que parecem ser declarações de propriedades em Dart
-    return line.trim().match(/(final|const)?\s*[\w<>]+\s+\w+\s*;/);
+    return line.trim().match(/^\s*(final|const)?\s*([\w<>\?]+)\s+(\w+)\s*;/gm);
 }
 
 
 function getClassFields(text) {
-    const fieldRegex = /(?:final\s+)?([a-zA-Z0-9_<>]+)\s+([a-zA-Z0-9_]+)\s*;/g;
+    const fieldRegex = /^\s*(final|const)?\s*([\w<>\?]+)\s+(\w+)\s*;/gm;
 
     let match;
     const fields = [];
 
     while ((match = fieldRegex.exec(text)) !== null) {
-        fields.push({ type: match[1], name: match[2] });
+        fields.push({ type: match[2], name: match[3] });
     }
 
     return fields;
@@ -71,8 +71,20 @@ function getClassName(text) {
  * Gera o método copyWith
  */
 function generateConstructorText(className, fields) {
-    const parameters = fields.map(field => `required this.${field.name}`).join(', ');
+
+    const requireds = [];
+    const normals = [];
+
+    fields.forEach(field => {
+        if(field.type.endsWith('?')) {
+            normals.push(`this.${field.name}`)
+        }else{
+            requireds.push(`required this.${field.name}`);
+        }
+    });
     
+    let parameters = requireds.join(', ')
+    parameters += parameters == '' ? `${normals.join(', ')}` : `, ${normals.join(', ')}`
     return `
     ${className}({${parameters},});
 `;

@@ -35,12 +35,12 @@ function getClassName(text) {
  * Encontra os campos da classe no texto
  */
 function getClassFields(text) {
-    const fieldRegex = /(?:final\s+)?([a-zA-Z0-9_<>]+)\s+([a-zA-Z0-9_]+)\s*;/g;
+    const fieldRegex = /^\s*(final|const)?\s*([\w<>\?]+)\s+(\w+)\s*;/gm;
     let match;
     const fields = [];
 
     while ((match = fieldRegex.exec(text)) !== null) {
-        fields.push({ type: match[1], name: match[2] });
+        fields.push({ type: match[2], name: match[3] });
     }
 
     return fields;
@@ -50,7 +50,14 @@ function getClassFields(text) {
  * Gera o método copyWith
  */
 function generateCopyWithMethod(className, fields) {
-    const parameters = fields.map(field => `${field.type}? ${field.name}`).join(', ');
+    const parameters = fields.map(field => {
+        if (field.type.endsWith('?')) {
+            return `${field.type} ${field.name}`
+        } else {
+            return `${field.type}? ${field.name}`
+        }
+
+    }).join(', ');
     const assignments = fields.map(field => `${field.name}: ${field.name} ?? this.${field.name}`).join(',\n    ');
 
     return `
