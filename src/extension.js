@@ -29,6 +29,8 @@ const { fvmInstallConfigure } = require('./commands/fvm_install_configure');
 const { snakeCaseTransform } = require('./commands/snake_case_transform');
 const { jsonSerializableGenerateJsonKey } = require('./commands/json_serializable_generate_json_key');
 const { createGetter } = require('./commands/create_getter');
+const { generateCopyWith } = require('./commands/generate_copy_with');
+const { generateConstructor } = require('./commands/generate_construtor');
 
 
 
@@ -85,6 +87,8 @@ function activate(context) {
 	vscode.commands.registerCommand('extension.snakeCaseTransform', snakeCaseTransform);
 	vscode.commands.registerCommand('extension.jsonSerializableGenerateJsonKey', jsonSerializableGenerateJsonKey);
 	vscode.commands.registerCommand('extension.createGetter', createGetter);
+	vscode.commands.registerCommand('extension.generateCopyWith', generateCopyWith);
+	vscode.commands.registerCommand('extension.generateConstructor', generateConstructor);
 
 	const threeTiersFolders = vscode.commands.registerCommand("extension.3-tiers", three_tiers);
 
@@ -148,6 +152,8 @@ class CodeActionProvider {
 		
 		codeActions.push({ command: 'extension.jsonSerializableGenerateJsonKey', title: 'Add JsonKey from json_serializable'});
 		codeActions.push({ command: 'extension.createGetter', title: 'Generate Getter'});
+		codeActions.push({ command: 'extension.generateCopyWith', title: 'Generate CopyWith'});
+		codeActions.push({ command: 'extension.generateConstructor', title: 'Generate Constructor with named params'});
 	
 
 		if (textFile.includes(isDart3() ? 'interface' : 'abstract')) {

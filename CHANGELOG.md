@@ -6,6 +6,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 # Releases
 
+## [1.8.0]
+- feat: Add commands:
+   - Generate Constructor with named params
+   - Generate Copy With
+
+
 ## [1.7.1]
 - fix: generate Getter e Add JsonKey from json_serializable
 
