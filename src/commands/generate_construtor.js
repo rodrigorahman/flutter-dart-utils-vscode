@@ -93,15 +93,16 @@ function generateConstructorText(className, fields) {
 /**
  * Insere o texto no editor
  */
-function insertText(text) {
+async function insertText(text) {
     const editor = vscode.window.activeTextEditor;
     const textEditor = editor.document.getText();
     const insertPosition = findInsertPosition(textEditor);
 
     if (editor) {
-        editor.edit(editBuilder => {
+        await editor.edit(editBuilder => {
             editBuilder.insert(insertPosition, text);
         });
+        await vscode.commands.executeCommand('editor.action.formatDocument');
     }
 }
 

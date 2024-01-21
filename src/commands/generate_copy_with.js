@@ -52,13 +52,20 @@ function getClassFields(text) {
 function generateCopyWithMethod(className, fields) {
     const parameters = fields.map(field => {
         if (field.type.endsWith('?')) {
-            return `${field.type} ${field.name}`
+            return `ValueGetter<${field.type}>? ${field.name}`
         } else {
             return `${field.type}? ${field.name}`
         }
 
     }).join(', ');
-    const assignments = fields.map(field => `${field.name}: ${field.name} ?? this.${field.name}`).join(',\n    ');
+    const assignments = fields.map(field => {
+        if (field.type.endsWith('?')) { 
+            return `${field.name}: ${field.name} != null ? ${field.name}() : this.${field.name}`
+        }else{
+            return `${field.name}: ${field.name} ?? this.${field.name}`
+        }
+        
+    }).join(',\n    ');
 
     return `
     ${className} copyWith({${parameters},}) {
@@ -89,15 +96,25 @@ function findPositionBeforeClosingBrace(text) {
 /**
  * Insere o texto no editor
  */
-function insertText(text) {
+async function insertText(text) {
     const editor = vscode.window.activeTextEditor;
     const textEditor = editor.document.getText();
     const insertPosition = findPositionBeforeClosingBrace(textEditor);
 
     if (editor) {
-        editor.edit(editBuilder => {
+        await editor.edit(editBuilder => {
             editBuilder.insert(insertPosition, text);
+
+            if(text.includes('ValueGetter')) {
+                editBuilder.insert(new vscode.Position(0,0), `
+                    import 'package:flutter/material.dart';\n
+                `);
+            }
+
+
         });
+        await vscode.commands.executeCommand('editor.action.formatDocument');
+
     }
 }
 
