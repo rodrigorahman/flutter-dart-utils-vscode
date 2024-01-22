@@ -62,11 +62,10 @@ async function createGetter(uri) {
                 // const name = match[1];
                 // const getterCode = `\n${type} get ${name.replace(/^_/, "")} => ${name};\n`;
 
-                editor.edit(editBuilder => {
+                await editor.edit(editBuilder => {
                     editBuilder.insert(lineText.range.end, getterCode);
                 });
-            }else{ 
-                const match = /(\w+)\s*=/.exec(text);
+                await vscode.commands.executeCommand('editor.action.formatDocument');
             }
         }
     }

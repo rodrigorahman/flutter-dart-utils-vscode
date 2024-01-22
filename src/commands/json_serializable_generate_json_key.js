@@ -27,13 +27,14 @@ async function jsonSerializableGenerateJsonKey(uri) {
                 const name = match[match.length == 1 ? 0 : 1].replace('_', '');
                 const replacedText = name.replace(/([a-z])([A-Z])/g, '$1_$2').toLowerCase();
 
-                editor.edit(editBuilder => {
+                await editor.edit(editBuilder => {
             
                     const position = line === 0 ? 0 : line;
                     const newPosition = new vscode.Position(position, 0);
                     const textToAdd = "@JsonKey(name: '"+ replacedText + "')\n";
                     editBuilder.insert(newPosition, textToAdd);
                 });
+                await vscode.commands.executeCommand('editor.action.formatDocument');
             }
         }else {
             

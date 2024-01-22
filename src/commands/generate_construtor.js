@@ -18,7 +18,7 @@ async function generateConstructor(uri) {
     } else {
         vscode.window.showInformationMessage('Nenhuma classe Dart válida encontrada');
     }
-   
+
 }
 
 function findInsertPosition(text) {
@@ -45,17 +45,30 @@ function isPropertyDeclaration(line) {
 
 
 function getClassFields(text) {
-    const fieldRegex = /^\s*(final|const)?\s*([\w<>\?]+)\s+(\w+)\s*;/gm;
+    const fieldRegex = /^\s*(final|const|var)?\s*([\w<>\?]+)?\s+(\w+)(\s*=\s*[^;]+;|;)/gm;
 
     let match;
-    const fields = [];
+    const fields = [];  
 
     while ((match = fieldRegex.exec(text)) !== null) {
-        fields.push({ type: match[2], name: match[3] });
+        const type = match[2] ? match[2].trim() : 'dynamic';
+        const name = match[3].trim();
+        
+        
+        if(match[0].includes('final') && match[0].includes('=')){
+            vscode.window.showWarningMessage(`Field ${name} is already initialized and final, cannot add to constructor`);
+        }else{
+            fields.push({ type: type, name: name });
+        }
+
+        
     }
+
+    
 
     return fields;
 }
+
 
 /**
  * Encontra o nome da classe no texto
@@ -76,15 +89,23 @@ function generateConstructorText(className, fields) {
     const normals = [];
 
     fields.forEach(field => {
-        if(field.type.endsWith('?')) {
+        if (field.type.endsWith('?')) {
             normals.push(`this.${field.name}`)
-        }else{
+        } else {
             requireds.push(`required this.${field.name}`);
         }
     });
-    
-    let parameters = requireds.join(', ')
-    parameters += parameters == '' ? `${normals.join(', ')}` : `, ${normals.join(', ')}`
+
+    let parameters = '';
+    const totalRequireds = requireds.length;
+    if (totalRequireds > 0) {
+        parameters = requireds.join(', ')
+    }
+
+    if (normals.length > 0) {
+        parameters += totalRequireds > 0 ? `, ${normals.join(', ')}` : `${normals.join(', ')}`
+    }
+
     return `
     ${className}({${parameters},});
 `;

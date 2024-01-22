@@ -31,20 +31,30 @@ function getClassName(text) {
     return match ? match[1] : null;
 }
 
-/**
- * Encontra os campos da classe no texto
- */
 function getClassFields(text) {
-    const fieldRegex = /^\s*(final|const)?\s*([\w<>\?]+)\s+(\w+)\s*;/gm;
+    const fieldRegex = /^\s*(final|const|var)?\s*([\w<>\?]+)?\s+(\w+)(\s*=\s*[^;]+;|;)/gm;
+
     let match;
     const fields = [];
 
     while ((match = fieldRegex.exec(text)) !== null) {
-        fields.push({ type: match[2], name: match[3] });
+        let type = '';
+        
+        if(!match[2] || (match[2] == 'final' || match[2] == 'const' || match[2] == 'var')) {
+            type = 'dynamic';
+        }else{
+            type = match[2].trim();
+        }
+
+        const name = match[3].trim();
+        fields.push({ type: type, name: name });
     }
+
+
 
     return fields;
 }
+
 
 /**
  * Gera o método copyWith
@@ -59,12 +69,12 @@ function generateCopyWithMethod(className, fields) {
 
     }).join(', ');
     const assignments = fields.map(field => {
-        if (field.type.endsWith('?')) { 
+        if (field.type.endsWith('?')) {
             return `${field.name}: ${field.name} != null ? ${field.name}() : this.${field.name}`
-        }else{
+        } else {
             return `${field.name}: ${field.name} ?? this.${field.name}`
         }
-        
+
     }).join(',\n    ');
 
     return `
@@ -105,8 +115,8 @@ async function insertText(text) {
         await editor.edit(editBuilder => {
             editBuilder.insert(insertPosition, text);
 
-            if(text.includes('ValueGetter')) {
-                editBuilder.insert(new vscode.Position(0,0), `
+            if (text.includes('ValueGetter')) {
+                editBuilder.insert(new vscode.Position(0, 0), `
                     import 'package:flutter/material.dart';\n
                 `);
             }

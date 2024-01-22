@@ -5,6 +5,10 @@ All notable changes to the "flutter-dart-utils" extension will be documented in 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
 # Releases
+
+## [1.8.3]
+- fix: regex copyWith and Generator Contructor
+
 ## [1.8.2]
 - fix: copyWith with ValueGetter and formatCode
 
