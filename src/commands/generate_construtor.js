@@ -1,19 +1,20 @@
 const vscode = require('vscode');
 const fs = require('fs');
 const _ = require('lodash');
+const { findClassContentAtPosition } = require('../utils/class_content_helper');
 
-async function generateConstructor(uri) {
+async function generateNamedConstructor(uri) {
     const editor = vscode.window.activeTextEditor;
     if (!editor) {
         return; // Nenhum editor ativo
     }
-
-    const text = editor.document.getText();
+    const cursorPosition = editor.selection.start;
+    const text = findClassContentAtPosition(editor.document.getText(), cursorPosition);
     const className = getClassName(text);
     const fields = getClassFields(text);
 
     if (className && fields.length > 0) {
-        const constructor = generateConstructorText(className, fields);
+        const constructor = generateNamedConstructorText(className, fields);
         insertText(constructor);
     } else {
         vscode.window.showInformationMessage('Nenhuma classe Dart válida encontrada');
@@ -40,12 +41,12 @@ function findInsertPosition(text) {
 
 function isPropertyDeclaration(line) {
     // Esta regex busca por linhas que parecem ser declarações de propriedades em Dart
-    return line.trim().match(/^\s*(final|const)?\s*([\w<>\?]+)\s+(\w+)\s*;/gm);
+    return line.trim().match(/^\s*(final|const|var)?\s*([\w<>,\?\s]+)?\s+(\w+)(\s*=\s*[^;]+;|;)/gm);
 }
 
 
 function getClassFields(text) {
-    const fieldRegex = /^\s*(final|const|var)?\s*([\w<>\?]+)?\s+(\w+)(\s*=\s*[^;]+;|;)/gm;
+    const fieldRegex = /^\s*(final|const|var)?\s*([\w<>,\?\s]+)?\s+(\w+)(\s*=\s*[^;]+;|;)/gm;
 
     let match;
     const fields = [];  
@@ -83,7 +84,7 @@ function getClassName(text) {
 /**
  * Gera o método copyWith
  */
-function generateConstructorText(className, fields) {
+function generateNamedConstructorText(className, fields) {
 
     const requireds = [];
     const normals = [];
@@ -127,4 +128,4 @@ async function insertText(text) {
     }
 }
 
-module.exports = { generateConstructor };
+module.exports = { generateNamedConstructor };

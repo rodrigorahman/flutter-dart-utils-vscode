@@ -6,6 +6,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 # Releases
 
+## [1.8.4]
+- fix: 
+   - regex GenerateConstructor and Generate CopyWith
+   - Show 'GenerateConstructor' and 'GenerateCopyWith' commands only if the user is on a class declaration line.
+
+
 ## [1.8.3]
 - fix: regex copyWith and Generator Contructor
 

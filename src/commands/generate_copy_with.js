@@ -1,6 +1,7 @@
 const vscode = require('vscode');
 const fs = require('fs');
 const _ = require('lodash');
+const { findClassContentAtPosition } = require('../utils/class_content_helper');
 
 async function generateCopyWith(uri) {
     const editor = vscode.window.activeTextEditor;
@@ -9,7 +10,8 @@ async function generateCopyWith(uri) {
         return;
     }
 
-    const text = editor.document.getText();
+    const cursorPosition = editor.selection.start;
+    const text = findClassContentAtPosition(editor.document.getText(), cursorPosition);
     const className = getClassName(text);
     const fields = getClassFields(text);
 
@@ -32,17 +34,17 @@ function getClassName(text) {
 }
 
 function getClassFields(text) {
-    const fieldRegex = /^\s*(final|const|var)?\s*([\w<>\?]+)?\s+(\w+)(\s*=\s*[^;]+;|;)/gm;
+    const fieldRegex = /^\s*(final|const|var)?\s*([\w<>,\?\s]+)?\s+(\w+)(\s*=\s*[^;]+;|;)/gm;
 
     let match;
     const fields = [];
 
     while ((match = fieldRegex.exec(text)) !== null) {
         let type = '';
-        
-        if(!match[2] || (match[2] == 'final' || match[2] == 'const' || match[2] == 'var')) {
+
+        if (!match[2] || (match[2] == 'final' || match[2] == 'const' || match[2] == 'var')) {
             type = 'dynamic';
-        }else{
+        } else {
             type = match[2].trim();
         }
 
