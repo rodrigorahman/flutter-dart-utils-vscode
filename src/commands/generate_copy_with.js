@@ -117,7 +117,7 @@ async function insertText(text) {
         await editor.edit(editBuilder => {
             editBuilder.insert(insertPosition, text);
 
-            if (text.includes('ValueGetter')) {
+            if (text.includes('ValueGetter') && !text.includes("import 'package:flutter/material.dart';")) {
                 editBuilder.insert(new vscode.Position(0, 0), `
                     import 'package:flutter/material.dart';\n
                 `);

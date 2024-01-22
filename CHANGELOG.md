@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 # Releases
 
+## [1.8.5]
+- fix: duplicate import material when create copyWith method
+
+
 ## [1.8.4]
 - fix: 
    - regex GenerateConstructor and Generate CopyWith
