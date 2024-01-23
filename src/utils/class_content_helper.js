@@ -29,7 +29,7 @@ function findClassContentAtPosition(text, position) {
     let classDeclarationLine = -1;
 
     // Encontrar a linha onde a declaração da classe começa
-    for (let i = 0; i <= position.line; i++) {
+    for (let i = position.line; i <= lines.length; i++) {
         if (lines[i].includes('class ')) {
             classDeclarationLine = i;
             break;

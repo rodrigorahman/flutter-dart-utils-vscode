@@ -33,7 +33,7 @@ function findInsertPosition(text) {
     }
 
     if (lastPropertyLineIndex !== null) {
-        return new vscode.Position(lastPropertyLineIndex + 1, 0);
+        return lastPropertyLineIndex + 1;
     }
 
     return null;
@@ -41,19 +41,22 @@ function findInsertPosition(text) {
 
 function isPropertyDeclaration(line) {
     // Esta regex busca por linhas que parecem ser declarações de propriedades em Dart
-    return line.trim().match(/^\s*(final|const|var)?\s*([\w<>,\?\s]+)?\s+(\w+)(\s*=\s*[^;]+;|;)/gm);
+    return line.trim().match(/^\s*(?!.*\b(get|set)\b)(final|const|var)?\s*([\w<>,\?\s]+)?\s+(\w+)\s*;\s*$/gm);
 }
 
 
 function getClassFields(text) {
-    const fieldRegex = /^\s*(final|const|var)?\s*([\w<>,\?\s]+)?\s+(\w+)(\s*=\s*[^;]+;|;)/gm;
+    // const fieldRegex = /^\s*(final|const|var)?\s*([\w<>,\?\s]+)?\s+(\w+)(\s*=\s*[^;]+;|;)/gm;
+    const fieldRegex = /^\s*(?!.*\b(get|set)\b)(final|const|var)?\s*([\w<>,\?\s]+)?\s+(\w+)\s*;\s*$/gm;
+
+
 
     let match;
     const fields = [];  
 
     while ((match = fieldRegex.exec(text)) !== null) {
-        const type = match[2] ? match[2].trim() : 'dynamic';
-        const name = match[3].trim();
+        const type = match[3] ? match[3].trim() : 'dynamic';
+        const name = match[4].trim();
         
         
         if(match[0].includes('final') && match[0].includes('=')){
@@ -117,12 +120,13 @@ function generateNamedConstructorText(className, fields) {
  */
 async function insertText(text) {
     const editor = vscode.window.activeTextEditor;
-    const textEditor = editor.document.getText();
+    // const textEditor = editor.document.getText();
+    const textEditor = findClassContentAtPosition(editor.document.getText(), editor.selection.start);
     const insertPosition = findInsertPosition(textEditor);
 
     if (editor) {
         await editor.edit(editBuilder => {
-            editBuilder.insert(insertPosition, text);
+            editBuilder.insert(new vscode.Position((editor.selection.start.line+1), 0), text + '\n');
         });
         await vscode.commands.executeCommand('editor.action.formatDocument');
     }

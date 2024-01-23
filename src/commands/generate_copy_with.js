@@ -34,7 +34,8 @@ function getClassName(text) {
 }
 
 function getClassFields(text) {
-    const fieldRegex = /^\s*(final|const|var)?\s*([\w<>,\?\s]+)?\s+(\w+)(\s*=\s*[^;]+;|;)/gm;
+    // const fieldRegex = /^\s*(final|const|var)?\s*([\w<>,\?\s]+)?\s+(\w+)(\s*=\s*[^;]+;|;)/gm;
+    const fieldRegex = /^\s*(?!.*\b(get|set)\b)(final|const|var)?\s*([\w<>,\?\s]+)?\s+(\w+)\s*;\s*$/gm;
 
     let match;
     const fields = [];
@@ -42,13 +43,13 @@ function getClassFields(text) {
     while ((match = fieldRegex.exec(text)) !== null) {
         let type = '';
 
-        if (!match[2] || (match[2] == 'final' || match[2] == 'const' || match[2] == 'var')) {
+        if (!match[3] || (match[3] == 'final' || match[3] == 'const' || match[3] == 'var')) {
             type = 'dynamic';
         } else {
-            type = match[2].trim();
+            type = match[3].trim();
         }
 
-        const name = match[3].trim();
+        const name = match[4].trim();
         fields.push({ type: type, name: name });
     }
 

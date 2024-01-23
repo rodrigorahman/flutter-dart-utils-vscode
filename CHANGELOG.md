@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 # Releases
 
+## [1.8.6]
+- fix: regex getFields
+
+
 ## [1.8.5]
 - fix: duplicate import material when create copyWith method
 
