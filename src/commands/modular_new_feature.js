@@ -49,14 +49,12 @@ import './${featureName}_page.dart';
 
 class ${moduleNameFile} extends Module {
     @override
-    final List<Bind> binds = [
-      Bind.lazySingleton((i) => ${controllerNameFile}()),
-    ];
+    void binds(Injector i) {}
  
     @override
-    final List<ModularRoute> routes = [
-      ChildRoute('/', child: (_, args) => ${pageNameFile}(controller: Modular.get())),
-    ];
+    void routes(RouteManager r) {
+        r.child('/', child: (context) => ${featureName}Page()),
+    }
  
 }`, 'utf8');
 

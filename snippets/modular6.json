@@ -1,0 +1,142 @@
+{
+	"modular6-initial-config": {
+		"prefix": "fu-modular-initial-config",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"import 'package:flutter_modular/flutter_modular.dart';",
+			"",
+			"void main(){",
+			"   return runApp(ModularApp(module: AppModule(), child: AppWidget()));",
+			"}"
+		]
+	},
+	"modular6-app-widget": {
+		"prefix": "fu-modular-app-widget",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"import 'package:flutter_modular/flutter_modular.dart';",
+			
+			"",
+			"class AppWidget extends StatelessWidget {",
+			"   Widget build(BuildContext context){",
+			"     return MaterialApp.router(",
+			"       title: '$1',",
+			"       theme: ThemeData(primarySwatch: Colors.blue),",
+			"       routerConfig: Modular.routerConfig,",
+			"     );",
+			"   }",
+			"}"
+		]
+	},
+	"modular6-child-router": {
+		"prefix": "fu-modular-router-child",
+		"body": [
+			"r.child($1, child: (context) => $2);"
+		]
+	},
+	"modular6-router": {
+		"prefix": "fu-modular-router",
+		"body": [
+			"r.module($1, module: $2);"
+		]
+	},
+	"modular6-WildcardRoute": {
+		"prefix": "fu-modular-wildcard-route",
+		"body": [
+			"r.wildcard($1, child: (context) => $2);"
+		]
+	},
+	"modular6-inital-page-router": {
+		"prefix": "fu-modular-initial-router-child",
+		"body": [
+			"r.child(Modular.initialRoute, child: (context, args) => $2);"
+		]
+	},
+	"modular6-bind-factory": {
+		"prefix": "fu-modular-bind-factory",
+		"body": [
+			"i.add($1),"
+		]
+	},
+	"modular6-bind-instance": {
+		"prefix": "fu-modular-bind-instance",
+		"body": [
+			"i.addInstance($1),"
+		]
+	},
+	"modular6-bind-singleton": {
+		"prefix": "fu-modular-bind-singleton",
+		"body": [
+			"i.addSingleton($1),"
+		]
+	},
+	"modular6-bind-lazySingleton": {
+		"prefix": "fu-modular-bind-lazySingleton",
+		"body": [
+			"i.addLazySingleton($1),"
+		]
+	},
+	"modular6-bind-lazySingleton-interface": {
+		"prefix": "fu-modular-bind-lazySingleton-interface",
+		"body": [
+			"i.addLazySingleton<$1>($2),"
+		]
+	},
+	"modular-bind-lazySingleton-interface-cleancode": {
+		"prefix": "fu-modular-bind-lazySingleton-cc",
+		"body": [
+			"i.addLazySingleton<$1>($1Impl($2)),"
+		],
+		"description": "Bind.lazySingleton with interface and clean code pattern"
+	},
+	"modular6-bind-factory-interface": {
+		"prefix": "fu-modular-bind-factory-interface",
+		"body": [
+			"i.add<$1>($2),"
+		]
+	},
+	"modular6-bind-factory-interface-cleancode": {
+		"prefix": "fu-modular-bind-factory-cc",
+		"body": [
+			"i.add<$1>($1Impl($2)),"
+		],
+		"description": "Bind.factory with interface and clean code pattern"
+	},
+	"modular6-bind-instance-interface": {
+		"prefix": "fu-modular-bind-instance-interface",
+		"body": [
+			"i.addInstance<$1>($2),"
+		]
+	},
+	"modular6-bind-instance-interface-cleancode": {
+		"prefix": "fu-modular-bind-instance-cc",
+		"body": [
+			"i.addInstance<$1>($1Impl($2)),"
+		],
+		"description": "Bind.instance with interface and clean code pattern"
+	},
+	"modular6-bind-singleton-interface": {
+		"prefix": "fu-modular-bind-singleton-interface",
+		"body": [
+			"i.addSingleton<$1>($2),"
+		]
+	},
+	"modular6-generate-module": {
+		"prefix": "fu-modular-module",
+		"body": [
+			"import 'package:flutter_modular/flutter_modular.dart';",
+			"",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends Module {",
+			"",
+			"   @override",
+			"   void binds(Injector I) {};",
+			"",
+			"   @override",
+			"   void routes(RouteManager r) {",
+			"      r.child('/', child: (context) => $1);",
+			"   }",
+			"",
+			"}"
+		]
+	}
+}
