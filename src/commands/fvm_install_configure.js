@@ -37,7 +37,7 @@ async function fvmInstallConfigure(uri) {
                 }
                 const templateSettings = getContentTemplate(path.join('fvm', 'settings.template'));
                 fs.writeFileSync(path.join(folder, 'settings.json'), templateSettings, 'utf-8');
-                fs.appendFileSync(path.join(rootPath, ".gitignore"), '\n\n.fvm/flutter_sdk')
+                fs.appendFileSync(path.join(rootPath, ".gitignore"), '\n\n.fvm')
             }
         });
 

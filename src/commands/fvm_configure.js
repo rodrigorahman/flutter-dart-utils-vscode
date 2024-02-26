@@ -11,7 +11,20 @@ async function fvmConfigure(uri) {
     }
     const templateSettings = getContentTemplate(path.join('fvm', 'settings.template'));
     fs.writeFileSync(path.join(folder, 'settings.json'), templateSettings, 'utf-8');
-    fs.appendFileSync(path.join(rootPath, ".gitignore"), '\n\n.fvm/flutter_sdk')
-    vscode.window.showInformationMessage('FVM configured successfully')
+    fs.appendFileSync(path.join(rootPath, ".gitignore"), '\n\n.fvm/')
+
+    const options = ["Yes", "No"];
+
+    vscode.window.showInformationMessage("Would you like to run fvm install?", ...options).then(async selection => {
+        if (selection === "Yes") {
+            const terminal = vscode.window.createTerminal(`FVM Terminal`);
+            terminal.show(true);
+    
+            // Executa um comando no terminal
+            terminal.sendText("fvm install");
+            vscode.window.showInformationMessage('FVM config successfully')
+        }
+    });
+
 }
 module.exports = { fvmConfigure };
