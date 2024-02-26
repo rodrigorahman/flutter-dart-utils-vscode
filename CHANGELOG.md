@@ -5,6 +5,8 @@ All notable changes to the "flutter-dart-utils" extension will be documented in 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
 # Releases
+## [1.8.7]
+- change: FVM 3.0
 
 ## [1.8.6]
 - fix: regex getFields
